@@ -1,0 +1,6 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# title here
+
+body body body
+

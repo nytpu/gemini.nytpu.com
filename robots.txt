@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /photos/watermark.xcf
+Disallow: /gemlog/template.gmi

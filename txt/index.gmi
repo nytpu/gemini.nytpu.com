@@ -1,0 +1,20 @@
+```txt
+░░░░░░░▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▓
+░░██████████▓▓██▒▒▒▒▒▒██▒▒██████████▓▓
+░░░░░▓██▓▓▓▓▓▓▓▒██▒▒██▒▒▒░░░░░██░░░▓▓▓
+░░░░▓▓██▓▓▓▓▓▓▒▒▒▒██▒▒▒▒░░░░░░██░░▓▓▓▓
+░░░▓▓▓██▓▓▓▓▓▒▒▒██▒▒██▒░░░░░░░██░▓▓▓▓▓
+░░▓▓▓▓██▓▓▓▓▒▒██▒▒▒▒▒▒██░░░░░░██▓▓▓▓▓▓
+░▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▓▓▓▓▓▓▓
+```
+
+=> / go back home
+
+i was digging through some old drives and found some old text files (you know, the kind that would circulate on bbses and usenet) and figured that it would be nice to host a selection of my favorites. i'm still sorting through it all so more will occationally be added.
+
+=> codepage437.txt for your unicode ansi art needs, a table i made of the unicode equivalents of the characters in ibm code page 437
+=> myart.txt ascii and ansi art i've made. 
+
+=> airlines.txt if operating systems ran the airlines
+=> real_programmers.txt real programmers don't use pascal
+

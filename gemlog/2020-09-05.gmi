@@ -1,0 +1,32 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# experimenting with ways to format documents on gemini
+
+As of writing this post, I'm in the middle of writing a really long gemlog post (like, >5 print pages) analyzing Ad Astra, and it's forced me to decide on how I want to format images, links, cross-references, etc. on gemini. I need to include screenshots of certain points, and I'm linking heavily to places like tmdb when I mention other movies, and I'm occasionally cross-referencing within my post itself. I've experimented with a number of options, which I'll enumerate here.
+
+### the ones i decided to use (i'm not sure which one though)
+
+I finally decided to use the "footnote" style of links taken from markdown's id links[1], where I add a number and at the bottom of the paragraph I add all the links, but the main thing I can't decide on is whether to link at the end of a paragraph or at the end of a section. It's not easily apparent or demonstrable here, but if I have a long section then you'll have to scroll all the way down, view the link, then scroll back up and try to find where you were reading. However, having it at the end of a paragraph breaks the flow of writing, and if the section is small then it destroys having nice, organized links in one place. I think I'm going to go with at the end of a section. I need more links here, so here's a cooper's hawk[2] and a red-tailed hawk[3].
+
+=> https://daringfireball.net/projects/markdown/syntax#link [1]: https://daringfireball.net/projects/markdown/syntax#link
+=> /photos/20200904_Coopers_2_small.png                     [2]: /photos/20200904_Coopers_2_small.png
+=> /photos/20200513_Red-Tailed_2_small.png                  [3]: /photos/20200513_Red-Tailed_2_small.png
+
+### other ones i considered
+
+The most obvious course of action is to just use links a lot more sparingly or not at all in your main body of writing, but that's stupid so I didn't even consider this one.
+
+=> /photos/20190610_jupiter_cropped_small.png The first one I thought of, and also the easiest to discount, is to have the entire paragraph be a link. This makes it formatted weird on some clients, and doesn't allow you to have more than one link per paragraph. It also doesn't allow the reader to easily see what part of the paragraph the link applies to unless you make it really obvious, which can break up the flow of your writing.
+
+The next one that I came up with was to break up the link onto a new line, but it completely destroys the formatting of the document and makes the paragraph hard to read. For instance, isn't
+=> /photos/20190630_spire_small.png this rock thing
+pretty interesting? I think I prefer
+=> /photos/2018-08-20_small.png this sand dunes picture
+more though.
+
+The next one I thought of was to bundle all the links at the end of the paragraph, but like the one where the whole paragraph is a link it makes it hard to determine where in the paragraph each link refers to. This led to the simple solution of adding footnote numbers within the paragraph to indicate when each link should be read. This also has the benefit of letting me put "metadata" about the link like if it's cross-scheme and lets me put what url the link goes to, so people can see it if their client doesn't easily show that. They still have to trust me so this doesn't combat malicious links, but is nice for people I presume.
+
+=> /photos/20200726_Amur-Tiger_2_small.png           /photos/20200726_Amur-Tiger_2_small.png
+=> https://letterboxd.com/film/ad-astra-2019/        https://letterboxd.com/film/ad-astra-2019/
+=> https://invidious.snopyta.org/watch?v=dQw4w9WgXcQ https://duckduckgo.com/?q=this+link+definitely+goes+where+i+say+it+does
+

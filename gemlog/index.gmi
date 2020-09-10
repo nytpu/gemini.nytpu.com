@@ -1,0 +1,23 @@
+```yet another tech gemlog (yatg) by nytpu
+  ,───────────────.
+ (_\   _________   \                  __
+   │  /__|___|__\  │     __  ______ _/ /_____ _
+   │  `. \   / ,'  │    / / / / __ `/ __/ __ `/
+   │    `.\ /,'    │   / /_/ / /_/ / /_/ /_/ /
+   │      `.'      │   \__, /\__,_/\__/\__, /
+   │ YET ANOTHER   │  /____/          /____/
+  _│   TECH GEMLOG │                   by nytpu
+ (_/_______________/
+```
+
+=> gemini://nytpu.com/gemlog/2020-09-05.gmi 2020-09-05 — experimenting with ways to format documents on gemini
+=> gemini://nytpu.com/gemlog/2020-09-02.gmi 2020-09-02 — re: so who/what is swiftmandolin?
+
+
+=> / go home
+=> /gemlog/old/ click here to view an archive of my old gemlog
+
+=> https://nytpu.com/files/atom.xml this gemlog has an atom feed at: https://nytpu.com/files/atom.xml
+=> gemini://nytpu.com/gemlog/atom.xml or through gemini at: gemini://nytpu.com/gemlog/atom.xml
+
+=> https://tildegit.org/nytpu/gemlog.sh generated with gemlog.sh

@@ -1,0 +1,35 @@
+```nytpu — creating lackluster content since who knows when
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+┌─║ ░▒▓██   ░▒▓██  ░▒▓██   ░▒▓██  ░▒▓██████████  ░▒▓████████    ░▒▓██   ░▒▓██ ║
+│ ║ ░▒▓████ ░▒▓██    ░▒▓██▒▓██        ░▒▓██      ░▒▓██   ░▒▓██  ░▒▓██   ░▒▓██ ║
+│ ║ ░▒▓██▒▓██▒▓██      ░▒▓██          ░▒▓██      ░▒▓██   ░▒▓██  ░▒▓██   ░▒▓██ ║
+│ ║ ░▒▓██ ░▒▓████      ░▒▓██          ░▒▓██      ░▒▓████████    ░▒▓██   ░▒▓██ ║
+│ ║ ░▒▓██   ░▒▓██      ░▒▓██          ░▒▓██      ░▒▓██          ░▒▓██   ░▒▓██ ║
+│ ║ ░▒▓██   ░▒▓██      ░▒▓██          ░▒▓██      ░▒▓██          ░▒▓██████████ ║
+│ ╚═══════════════════════════════════════════════════════════════════════════╝
+└────────────────────────────────────────────────────────────────────────────┘
+
+░▒▓█████████████████████████████████████████████████████████████████████████▓▒░
+░▒▓█            creating lackluster content since who knows when           █▓▒░
+░▒▓█████████████████████████████████████████████████████████████████████████▓▒░
+```
+
+
+
+stuff i make & do:
+=> gemini://nytpu.com/gemlog/ my gemlog where i write on a variety of topics
+=> gemini://nytpu.com/photos/ (mediocre) photos i've taken
+=> gemini://nytpu.com/txt/ text files, ascii art, and more
+=> gemini://nytpu.com/about.gmi about & contact
+=> gopher://nytpu.com/ check me out on gopher if you prefer that (i have a lot more content here though)
+
+
+stuff i like:
+=> gemini://astrobotany.mozz.us astrobotany
+=> gemini://tilde.team:1965/ tilde.team
+=> gemini://rawtext.club/~sloum/geminews/ geminews
+=> gemini://gus.guru gemini universal search
+=> gemini://gemini.circumlunar.space/capcom/ capcom geminispace aggregator
+=> gemini://rawtext.club:1965/~sloum/spacewalk.gmi spacewalk geminispace aggregator
+=> gopher://gopherpedia.com:70/1/ gopherpedia
+
