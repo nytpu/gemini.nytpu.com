@@ -26,6 +26,6 @@ a: well if you're reading this then you're using it too, and are probably pretty
 ## copyright
 this site is © 2020 nytpu
 => https://www.gnu.org/licenses/agpl-3.0.html the source of this gemsite is covered under the terms of the gnu affero general public license.
-=> https://tildegit.org/nytpu/gemini-nytpu.com/ the source is available here. i moved it to github because i felt bad taking up so much space (~400mib) on tildegit
+=> https://tildegit.org/nytpu/gemini-nytpu.com/ the source is available here
 
 => https://creativecommons.org/licenses/by-nc/4.0/ all content on this site, unless otherwise noted, is licensed under the terms of the creative commons attribution-noncommercial 4.0 license.
