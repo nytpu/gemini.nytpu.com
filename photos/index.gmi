@@ -14,28 +14,28 @@
 
 i was planning on posting these pictures on the web, but instead i decided to put them up on gemini, something that is probably the third-worst medium for serving photos after gopher and ttys to dumb terminals. the photos aren't necessarily good or artistic but they are ones i like, and i organized them in roughly reverse chronological order. i'll update this page from time to time when i take another photo i like.
 
-=> 20200904_Coopers_2_small.png          [3.7mib] a cooper's hawk friend i made in my backyard
+=> 20200904_Coopers_2_small.png          [3.6mib] a cooper's hawk friend i made in my backyard
 => 20200904_Coopers_3_small.png          [2.6mib] the same cooper's hawk from a different angle
 
 => 20200726_Clouded-Leopard_small.png    [4.2mib] a clouded leopard taking a nap
 
 => 20200726_Amur-Tiger_1_small.png       [3.9mib] a big boi in a strange sleeping position
-=> 20200726_Amur-Tiger_2_small.png       [4.3mib] a hungry girl
-=> 20200726_Amur-Tiger_3_small.png       [11mib] she standing
-=> 20200726_Amur-Tiger_4_small.png       [5.4mib] nom nom
+=> 20200726_Amur-Tiger_2_small.png       [4.2mib] a hungry girl
+=> 20200726_Amur-Tiger_3_small.png       [10.4mib] she standing
+=> 20200726_Amur-Tiger_4_small.png       [5.3mib] nom nom
 
-=> 20200726_Lion_1_small.png             [4.1mib] lion around
+=> 20200726_Lion_1_small.png             [4.0mib] lion around
 => 20200726_Lion_2_small.png             [4.0mib] awoken
-=> 20200726_Lion_3_small.png             [3.8mib] annoyed
-=> 20200726_Lion_5_small.png             [4.0mib] still annoyed
-=> 20200726_Lion_6_small.png             [5.1mib] he s t r e t c h
+=> 20200726_Lion_3_small.png             [3.7mib] annoyed
+=> 20200726_Lion_5_small.png             [3.9mib] still annoyed
+=> 20200726_Lion_6_small.png             [5.0mib] he s t r e t c h
 
-=> 20200726_Serval_1_small.png           [4.6mib] the classic serval experssion
+=> 20200726_Serval_1_small.png           [4.5mib] the classic serval experssion
 => 20200726_Serval_2_small.png           [4.5mib] long legs
 
-=> 20200726_African-Wild-Dog_1_small.png [4.7mib] a sleepy african wild dog first thing in the morning
+=> 20200726_African-Wild-Dog_1_small.png [4.6mib] a sleepy african wild dog first thing in the morning
 => 20200726_African-Wild-Dog_3_small.png [4.4mib] later in the day and a little more active
-=> 20200726_African-Wild-Dog_2_small.png [4.3mib] the same awd a short while later
+=> 20200726_African-Wild-Dog_2_small.png [4.2mib] the same awd a short while later
 
 => 20200513_Red-Tailed_1_small.png       [4.4mib] a red-tailed hawk that i regularly see on a path i walk on, these are the only shots i've gotten of it though
 => 20200513_Red-Tailed_2_small.png       [4.2mib] looking around
@@ -45,29 +45,29 @@ i was planning on posting these pictures on the web, but instead i decided to pu
 => 20200418_plane-group-close_small.png  [4.0mib] f-16s flying over my house
 => 20200418_plane-group-zoom_small.png   [3.8mib] closeup
 
-=> 20200411_American-Bison_small.png     [4.0mib] american bison at rocky mountain arsenal (yum chemical weapons)
+=> 20200411_American-Bison_small.png     [3.9mib] american bison at rocky mountain arsenal (yum chemical weapons)
 
-=> 20200319_1_small.png                  [11mib] zion national park
+=> 20200319_1_small.png                  [10mib] zion national park
 => 20200321_small.png                    [4.3mib] somewhere in utah
 
 => 20191226_small.png                    [2.1mib] a reef shark
 
-=> 20190630_spire_small.png              [11mib] a spire thing at an unknown location
+=> 20190630_spire_small.png              [10.2mib] a spire thing at an unknown location
 
 in my first and only foray into astrophotography, i took a picture of jupiter when it was
 => https://bgr.com/2019/06/06/jupiter-moons-june-2019-telescope/ really close and easy to see.
 taken with a 200mm lens, around 150 shots "stacked" with the siril image processing program
-=> 20190610_jupiter_cropped_small.png    [277kib] digitally zoomed in to see more detail (and the horrible chromatic aberration of my lens)
-=> 20190610_jupiter_uncropped_small.png  [2.1mib] the uncropped version of the previous photo
+=> 20190610_jupiter_cropped_small.png    [276.1kib] digitally zoomed in to see more detail (and the horrible chromatic aberration of my lens)
+=> 20190610_jupiter_uncropped_small.png  [2.0mib] the uncropped version of the previous photo
 
-=> 20190318_14_small.png                 [2.6mib] an underwater hallway
+=> 20190318_14_small.png                 [2.5mib] an underwater hallway
 => 20190318_16_small.png                 [3.0mib] a very liminal space
 
-=> 20180820_small.png                    [1.9mib] the backside of the great sand dunes
+=> 20180820_small.png                    [1.8mib] the backside of the great sand dunes
 
-=> 20180328_Manta_small.png              [1.4mib] a manta ray
+=> 20180328_Manta_small.png              [1.3mib] a manta ray
 
-=> 20170000_small.png                    [1.7mib] the u.s. capital building
+=> 20170000_small.png                    [1.6mib] the u.s. capital building
 
 
 => http://creativecommons.org/licenses/by-nc-sa/4.0/ all images are licensed under the terms of the creative commons attribution-noncommercial-sharealike 4.0 international license.
