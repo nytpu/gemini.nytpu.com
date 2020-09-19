@@ -4,7 +4,7 @@
   <subtitle>yet another tech gemlog</subtitle>
   <link rel='self' href='https://nytpu.com/files/atom.xml'/>
   <link rel='alternate' href='gemini://nytpu.com/gemlog/index.gmi'/>
-  <updated>2020-09-10T11:04:15-06:00</updated>
+  <updated>2020-09-18T18:19:33-06:00</updated>
   <author>
     <name>nytpu</name>
     <email>alex@nytpu.com</email>
@@ -12,7 +12,15 @@
   </author>
   <id>gemini://nytpu.com/gemlog/</id>
   <generator uri='https://tildegit.org/nytpu/gemlog.sh'>gemlog.sh</generator>
-  <rights>© nytpu - CC BY-NC 4.0</rights>
+  <rights>© nytpu - CC BY-SA 4.0</rights>
+
+  <entry>
+    <title>what gemtext is and isn't</title>
+    <id>gemini://nytpu.com/gemlog/2020-09-18.gmi</id>
+    <link rel='alternate' href='gemini://nytpu.com/gemlog/2020-09-18.gmi'/>
+    <updated>2020-09-18T00:00:00-06:00</updated>
+    <summary>You need a gemini client to view this post. If you have one installed, here is the link to the post: gemini://nytpu.com/gemlog/2020-09-18.gmi</summary>
+  </entry>
 
   <entry>
     <title>experimenting with ways to format documents on gemini</title>

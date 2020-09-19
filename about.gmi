@@ -1,5 +1,4 @@
 # about
-hi! i'm alex, and i do a lot of programming and electronics projects for old things. i also watch an extreme number of movies and sometimes write about those.
 
 ## contact me / services i'm on
 => mailto:alex@nytpu.com alex@nytpu.com
@@ -12,6 +11,7 @@ hi! i'm alex, and i do a lot of programming and electronics projects for old thi
 => https://tildegit.org/nytpu tildegit
 => https://letterboxd.com/nytpu/ letterboxd
 => https://bandcamp.com/nytpu bandcamp
+=> gopher://nytpu.com/ check me out on gopher (i have nothing there though…)
 
 ## faq about me
 q: why are you so self-deprecating?
