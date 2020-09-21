@@ -30,3 +30,5 @@ The next one I thought of was to bundle all the links at the end of the paragrap
 => https://letterboxd.com/film/ad-astra-2019/        https://letterboxd.com/film/ad-astra-2019/
 => https://invidious.snopyta.org/watch?v=dQw4w9WgXcQ https://duckduckgo.com/?q=this+link+definitely+goes+where+i+say+it+does
 
+
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-05.gmi backlinks

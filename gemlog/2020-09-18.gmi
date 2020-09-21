@@ -16,3 +16,6 @@ Basically, what I'm trying to say is that gemini gives you the greatest freedom 
 => gemini://vault.transjovian.org:1965/full/en/Not%20invented%20here [1] Gemini Wikipedia: Not Invented Here Syndrome
 => https://xkcd.com/927/ [2] xkcd 927
 => gemini://vault.transjovian.org:1965/text/en/Law%20of%20triviality [3] Gemini Wikipedia: Law of triviality (bikeshedding)
+
+
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-18.gmi backlinks

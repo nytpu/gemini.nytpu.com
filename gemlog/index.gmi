@@ -10,6 +10,7 @@
  (_/_______________/
 ```
 
+=> gemini://nytpu.com/gemlog/2020-09-21.gmi 2020-09-21 — Re: Mass Produced Quality in the 21st Century
 => gemini://nytpu.com/gemlog/2020-09-18.gmi 2020-09-18 — what gemtext is and isn't
 => gemini://nytpu.com/gemlog/2020-09-05.gmi 2020-09-05 — experimenting with ways to format documents on gemini
 => gemini://nytpu.com/gemlog/2020-09-02.gmi 2020-09-02 — re: so who/what is swiftmandolin?
