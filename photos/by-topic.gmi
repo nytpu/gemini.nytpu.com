@@ -12,16 +12,24 @@
 
 => / go back home
 
-i was planning on posting these pictures on the web, but instead i decided to put them up on gemini, something that is probably the third-worst medium for serving photos after gopher and ttys to dumb terminals. the photos aren't necessarily good or artistic but they are ones i like, and i organized them in roughly reverse chronological order. i'll update this page from time to time when i take another photo i like.
+=> by-topic.gmi click here to view photos sorted chronologically
 
-=> by-topic.gmi click here to view photos sorted by subject
+# by topic
 
-# photos chronologically
+## animals
 
-## 2020
+### birds
 
 => 20200904_Coopers_2_small.png          [3.6mib] a cooper's hawk friend i made in my backyard
 => 20200904_Coopers_3_small.png          [2.6mib] the same cooper's hawk from a different angle
+
+=> 20200513_Red-Tailed_1_small.png       [4.4mib] a red-tailed hawk that i regularly see on a path i walk on, these are the only shots i've gotten of it though
+=> 20200513_Red-Tailed_2_small.png       [4.2mib] looking around
+=> 20200513_Red-Tailed_3_small.png       [3.4mib] relocated, munching on its rabbit
+=> 20200513_Red-Tailed_4_small.png       [1.5mib] very suspicious a few seconds later, i made a noise accidentally
+
+
+### kitty cats
 
 => 20200726_Clouded-Leopard_small.png    [4.2mib] a clouded leopard taking a nap
 
@@ -39,29 +47,33 @@ i was planning on posting these pictures on the web, but instead i decided to pu
 => 20200726_Serval_1_small.png           [4.5mib] the classic serval experssion
 => 20200726_Serval_2_small.png           [4.5mib] long legs
 
+
+### dogs
+
 => 20200726_African-Wild-Dog_1_small.png [4.6mib] a sleepy african wild dog first thing in the morning
 => 20200726_African-Wild-Dog_3_small.png [4.4mib] later in the day and a little more active
 => 20200726_African-Wild-Dog_2_small.png [4.2mib] the same awd a short while later
 
-=> 20200513_Red-Tailed_1_small.png       [4.4mib] a red-tailed hawk that i regularly see on a path i walk on, these are the only shots i've gotten of it though
-=> 20200513_Red-Tailed_2_small.png       [4.2mib] looking around
-=> 20200513_Red-Tailed_3_small.png       [3.4mib] relocated, munching on its rabbit
-=> 20200513_Red-Tailed_4_small.png       [1.5mib] very suspicious a few seconds later, i made a noise accidentally
 
-=> 20200418_plane-group-close_small.png  [4.0mib] f-16s flying over my house
-=> 20200418_plane-group-zoom_small.png   [3.8mib] closeup
+### other
 
 => 20200411_American-Bison_small.png     [3.9mib] american bison at rocky mountain arsenal (yum chemical weapons)
+=> 20191226_small.png                    [2.1mib] a reef shark
+=> 20180328_Manta_small.png              [1.3mib] a manta ray
+
+
+## landscapes
 
 => 20200319_1_small.png                  [10mib] zion national park
 => 20200321_small.png                    [4.3mib] somewhere in utah
-
-
-## 2019
-
-=> 20191226_small.png                    [2.1mib] a reef shark
-
 => 20190630_spire_small.png              [10.2mib] a spire thing at an unknown location
+=> 20180820_small.png                    [1.8mib] the backside of the great sand dunes
+
+
+## facing upwards
+
+=> 20200418_plane-group-close_small.png  [4.0mib] f-16s flying over my house
+=> 20200418_plane-group-zoom_small.png   [3.8mib] closeup
 
 in my first and only foray into astrophotography, i took a picture of jupiter when it was
 => https://bgr.com/2019/06/06/jupiter-moons-june-2019-telescope/ really close and easy to see.
@@ -69,18 +81,11 @@ taken with a 200mm lens, around 150 shots "stacked" with the siril image process
 => 20190610_jupiter_cropped_small.png    [276.1kib] digitally zoomed in to see more detail (and the horrible chromatic aberration of my lens)
 => 20190610_jupiter_uncropped_small.png  [2.0mib] the uncropped version of the previous photo
 
+
+## man-made things
+
 => 20190318_14_small.png                 [2.5mib] an underwater hallway
 => 20190318_16_small.png                 [3.0mib] a very liminal space
-
-
-## 2018
-
-=> 20180820_small.png                    [1.8mib] the backside of the great sand dunes
-
-=> 20180328_Manta_small.png              [1.3mib] a manta ray
-
-
-## 2017
 
 => 20170000_small.png                    [1.6mib] the u.s. capital building
 
