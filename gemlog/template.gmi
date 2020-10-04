@@ -4,3 +4,6 @@
 
 body body body
 
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/filename.gmi backlinks
