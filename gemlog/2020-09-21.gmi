@@ -8,6 +8,7 @@ I definitely can vouch for the quality older stuff, I have plenty of retro hardw
 
 => gemini://vault.transjovian.org:1965/text/en/Survivorship%20bias [1]: Gemini Wikipedia: Survivorship bias
 
+
 ## quality items
 
 ### nikon d7200
@@ -17,13 +18,16 @@ They say that standalone cameras are dying, but there's still really good stuff 
 => /gemlog/files/d7200.jpg [2]: (2.9mib) My Nikon D7200, ca. 2016
 => /gemlog/files/ae1.jpg   [3]: (3.0mib) My Canon AE-1 Program, ca. 1981
 
+
 ### sony icf-c218 alarm clock
 
 I'm pretty sure I got this at walmart for like $15 in 2010 or 2011, and it works great still. It must have some sort of cmos battery or supercapacitor in it becuase I've never had to reset the time on it other than when moving and it's unplugged for days. The only issue with it is that it's always five minutes ahead. Always. It's not like it constantly drifts because it will slowly drift to be 5 minutes ahead, then stop and won't drift any more. It's very strange, but the clock works great other than that.
 
+
 ### nintendo ds lite & gba
 
 It feels fairly cheap, but I've had mine for a very long time (since I was like 9 or 10) and still use it regularly, and it's still going strong, even the battery. My GBA is working great too even with me opening it up and fucking with it, which most electronics don't seem to take kindly to my clumsy ass doing. As a bonus, even though they don't technically count the entire Game Boy line feels very durable and generally last other than a few hardware issues (screen rot, rubber domes dry rotting, etc). The switch is nice too, the joy cons feel really cheap, but the main body is nice metal and feels sturdy.
+
 
 ### the ti-84 plus & the hp-48gx
 
@@ -33,15 +37,18 @@ Say what you want about TI's monopolization of the calculator market, but these 
 => gemini://vault.transjovian.org:1965/full/en/TI-82                 [5]: Gemini Wikipedia: TI-82 → Technical Specifications
 => https://xkcd.com/768/                                             [6]: XKCD 768
 
+
 ### fans of all sorts
 
 At risk of repeating dctrud, fans seem to be really durable no matter how plastic-y they are. The main thing you should do is every year, take the cage and blades off and literally hose them off with a garden hose. I had a fan die because the blades got all dusty and unbalanced and it burned out the motor, but with regular cleaning they last forever. The cleaning makes them push air like new too. It makes sense that they should last, it's literally a motor, a power switch, and some gears if it's oscillating, but I wouldn't put it past manufacturers to find a way to make them break if it shaves off a few pennies.
+
 
 ## things that got worse (anecdotally)
 
 ### any appliances
 
 I have a fridge that's from the '70s (early, *early* '80s at best) that's still chugging along, working fine. Yet, every person I know that's gotten a new fridge has had it die (usually the compressor, the most expensive part (coincidentally)) within 5 years. The same goes with most, seemingly all, appliances. It's almost a luxury for me to be living in such shitty places that all the appliances are so old, because I never have to worry about them.
+
 
 ### the average computer or game consoles
 
@@ -52,6 +59,7 @@ General-purpose computers have gotten worse too. My dad worked for a two-letter 
 => https://old.reddit.com/r/StallmanWasRight/comments/iwgd5d/future_is_unsupported/ [7]: Future is unsupported
 => https://xkcd.com/2033/                                                           [8]: XKCD 2033
 
+
 ## results?
 
 I think if you managed to run an accurate study on the quality of mass-produced products, you'd probably find that really cheap things (think stuff you'd find at walmart) have been around the same quality since the late '70s[9], general consumer products (game consoles, computers, appliances, etc) have gone down in quality, and relatively specialized products (cameras, handheld calculators, etc) have been roughly static or had a minor drop in quality. I'd say since the Monsanto House of the Future[10] the general quality and durability of products has gone down due to lower-quality plastics overtaking metal as the primary material used (high-quality plastics, as are becoming more common in some products now, are actually very good and may rival metal in many ways). I'd say that the Industrial Revolution and its consequences haven't necessarily been a complete disaster in terms of destroying product quality, especially since all of the products analyzed here would be economically impossible to produce without mass-production techniques, and mass-production doesn't mean a product is low-quality, it's just a matter of how cheaply the product was designed, which can transcend all methods of manufacturing.
@@ -60,6 +68,11 @@ I think if you managed to run an accurate study on the quality of mass-produced 
 => gemini://vault.transjovian.org:1965/full/en/Monsanto%20House%20of%20the%20Future    [10]: Gemini Wikipedia: Monsanto House of the Future
 
 
+```
+  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+```
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-21.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-21.gmi view likes and comments!

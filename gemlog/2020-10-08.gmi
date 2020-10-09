@@ -53,6 +53,11 @@ As a general rule, audio tape decks tend to eat tapes just because the decks are
 => https://www.youtube.com/watch?v=qT8Oho2plic As a final little bonus, here's a VCR eating a tape
 
 
+```
+  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+```
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-08.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-08.gmi view likes and comments!

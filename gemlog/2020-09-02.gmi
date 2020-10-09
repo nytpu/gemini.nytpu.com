@@ -20,7 +20,6 @@ I'm trying out replying like you would reply on gopher (although I'm not sure th
 I originally derived "nytpu" from my name via a **super-secret method** because I wanted something that was short and relatively memorable while being random enough to be available on most platforms. It seems I was successful at this, although it wasn't available on twitter for some miraculous reason, not that I really use twitter regularly anyways. The point I'm trying to make here is that nytpu wasn't originally meant to be a pseudonym that I actively try to keep separate from my real identity, and that means I'm left with some lingering connections to my identity that I have to work around, whereas a pseudonym like swiftmandolin's was created with the explicit purpose of being pseudonymous, and allows more freedoms because of that.
 
 ## becoming private
-
 ### the tug-of-war of privacy
 
 > Keeping your privacy isn't an absolute, all-or-nothing, venture.
@@ -34,7 +33,6 @@ These tradeoffs are why imperfect, but still secure services like signal are so 
 
 
 ### my personal privacy
-
 > In my opinion, we should begin in total privacy and choose to open what we want instead of having to "reclaim" our privacy. But, c'est la vie.
 	— swiftmandolin
 
@@ -63,13 +61,17 @@ Stuff that I know I should fix but don't:
 
 
 ## concluding things
-
 > I couldn't think of a good quote about conclusions so now I'm quoting myself
 	— nytpu
 
 In the end, I believe that privacy is a human right, and the fact that you have to do this kind of shit to get even a façade of privacy is literally disgusting. I'm gonna cut myself off here, but somehow have even more to say about this, and even just this post got really out of hand, I originally intended it to be a quick reply. I've never really written anything about privacy before despite me being so privacy oriented, so I just had a lot that I wanted to get out. I didn't even get into free speech stuff yet! Maybe in a future post…
 
 
+```
+  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+```
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-02.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-02.gmi view likes and comments!
