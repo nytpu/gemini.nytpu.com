@@ -68,11 +68,8 @@ I think if you managed to run an accurate study on the quality of mass-produced 
 => gemini://vault.transjovian.org:1965/full/en/Monsanto%20House%20of%20the%20Future    [10]: Gemini Wikipedia: Monsanto House of the Future
 
 
-```
-  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
- / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
-```
+⁂
+
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-21.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-21.gmi view likes and comments!

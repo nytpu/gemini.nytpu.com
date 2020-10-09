@@ -12,17 +12,13 @@ I believe most people didn't like these proposals to change gemtext, but some pe
 
 Basically, what I'm trying to say is that gemini gives you the greatest freedom ever to use whatever file formats you want for your content, and people get stuck thinking they absolutely have to use gemtext, and then start complaining about the "limitations" of gemtext while completely missing the point that those limitations are deliberate. It definitely seems like bikeshedding[3], because no one talks about whether TLS 1.2 should be allowed, or if there should be a response body terminator for clients to check that the full page was transferred.
 
-
 => gemini://vault.transjovian.org:1965/full/en/Not%20invented%20here [1] Gemini Wikipedia: Not Invented Here Syndrome
 => https://xkcd.com/927/ [2] xkcd 927
 => gemini://vault.transjovian.org:1965/text/en/Law%20of%20triviality [3] Gemini Wikipedia: Law of triviality (bikeshedding)
 
 
-```
-  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
- / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
-```
+⁂
+
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-18.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-18.gmi view likes and comments!

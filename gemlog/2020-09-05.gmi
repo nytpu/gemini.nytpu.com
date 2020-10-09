@@ -4,6 +4,7 @@
 
 As of writing this post, I'm in the middle of writing a really long gemlog post (like, >5 print pages) analyzing Ad Astra, and it's forced me to decide on how I want to format images, links, cross-references, etc. on gemini. I need to include screenshots of certain points, and I'm linking heavily to places like tmdb when I mention other movies, and I'm occasionally cross-referencing within my post itself. I've experimented with a number of options, which I'll enumerate here.
 
+
 ### the ones i decided to use (i'm not sure which one though)
 
 I finally decided to use the "footnote" style of links taken from markdown's id links[1], where I add a number and at the bottom of the paragraph I add all the links, but the main thing I can't decide on is whether to link at the end of a paragraph or at the end of a section. It's not easily apparent or demonstrable here, but if I have a long section then you'll have to scroll all the way down, view the link, then scroll back up and try to find where you were reading. However, having it at the end of a paragraph breaks the flow of writing, and if the section is small then it destroys having nice, organized links in one place. I think I'm going to go with at the end of a section. I need more links here, so here's a cooper's hawk[2] and a red-tailed hawk[3].
@@ -11,6 +12,7 @@ I finally decided to use the "footnote" style of links taken from markdown's id 
 => https://daringfireball.net/projects/markdown/syntax#link [1]: https://daringfireball.net/projects/markdown/syntax#link
 => /photos/20200904_Coopers_2_small.png                     [2]: /photos/20200904_Coopers_2_small.png
 => /photos/20200513_Red-Tailed_2_small.png                  [3]: /photos/20200513_Red-Tailed_2_small.png
+
 
 ### other ones i considered
 
@@ -31,11 +33,8 @@ The next one I thought of was to bundle all the links at the end of the paragrap
 => https://invidious.snopyta.org/watch?v=dQw4w9WgXcQ https://duckduckgo.com/?q=this+link+definitely+goes+where+i+say+it+does
 
 
-```
-  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
- / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
-```
+⁂
+
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-05.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-05.gmi view likes and comments!
