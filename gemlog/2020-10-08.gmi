@@ -1,0 +1,57 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# a history and description of tapes and a reply to “Video tapes and helical scan”
+=> gemini://gemini.circumlunar.space/~solderpunk/gemlog/video-tapes-and-helical-scan.gmi inspired by solderpunk's post
+
+I love old tech, it's one of my primary fascinations. I have a large number of links in my buku[a] database dedicated to old tech, analog storage formats in particular. This isn't a *response* to solderpunk's post per se, but it was inspired by their post so I'm calling it a reply. I'm just going to be spouting interesting facts, giving some history, and linking to interesting sites about all this, so this should be interesting (for me at least).
+
+=> https://github.com/jarun/Buku/ [a]: buku - browser-independent bookmark manager
+
+
+## compact cassettes
+
+> When the door of a casette deck opens to accept the tape, you can peek inside it and see what's there , and even when it's closed with a tape inside, the doors were always transparent so you could keep looking and be sure there were no surprises.
+Neat thing: on my tape deck (Optimus SCT-54), there's a gap in the bottom of the tape carrier so you can see the head and such in action, video here: [b], using a tape with a pink leader for better contrast.
+
+Tapes are really simple in theory, you shove a capstan through a hole in the cassette, press a pinch roller to it to pinch the tape between the capstan and the roller, and press the read head under the pressure pad, and just go. In reality there's a lot that goes into making sure you have consistent pressure on the tape and keep it spinning at a constant rate, see the anatomy of a tape deck[c]. When it doesn't spin at a constant rate, that's what causes it to eat tapes (or, rarely, snap them), because it is pulling tape off of the supply reel faster than it is being wound onto the take-up reel.
+
+Tapes actually have four parallel tracks side-by-side (a pair of left and right tracks each for side a and b), and the head only reads one-half the tape, which is why you flip the tape. The audio tracks are parallel with the tape, and the head should be perfectly perpendicular to the tape (an adjustment called the azimuth) so they read the tracks[f] as accurately as possible. Many new (comparatively) decks can actually play through both sides of a tape, usually by flipping the head around. Video on my tape deck here: [d]. This can slightly misalign the head, which can (greatly) reduce the already subpar audio quality of tapes, so some fancy tape decks flip the whole tape[e], which is why Nakamichi decks almost reached the fidelity of CDs (with type iv tapes). Wider tapes (usually 1 inch reel-to-reel for commercial recording) often have many tracks (4–12) that can all be played simultaneously or individually, and 8-tracks have 8 tracks (4 pairs of l-r stereo tracks) that are played sequentially.
+
+I mentioned type iv tapes, and a thing that people don't think about for magnetic media is that a lot of it is actually the chemistry of the tape itself. I'm no chemist, let alone something as specific as this, so read up about the formulations themselves on wikipedia[g] if you're interested. Basically, there's four types of tapes. Ferric tapes (Type I) are the most common and the only type still produced today, and have (very) bad treble but good bass reproduction. Chrome tapes (Type II) are the next most common, and are basically the opposite of type I: good treble, bad bass. Ferrichrome tapes (Type III) were introduced but were produced in extremely low quantities, and they were basically prototypes for Type IV tapes. Metal tapes (Type IV) have very good treble *and* very good bass, but were extremely expensive & out of reach of the average consumer, and are rather hard to find nowadays. The only downside to them is that you need a very high-quality and well-maintained deck to actually make use of the potential they have, because a lot of lower-end decks have very bad internals in them since normal tapes don't have high quality audio anyways (which is why they tend to eat tapes too, is because they're just made cheap).
+
+=> /gemlog/files/tape-deck.mp4                 [b]: (1.9mib) shaky video of my tape deck in action
+=> https://www.cse.iitk.ac.in/users/amit/courses/371/adarsh/contents.html [c]: anatomy of a tape deck
+=> /gemlog/files/tape-deck.mp4                 [d]: (1.2mib) tape head switching
+=> https://www.youtube.com/watch?v=z0MgJKx5Ay0 [e]: a fancy nakamichi
+=> https://commons.wikimedia.org/wiki/File:Visualisierung_der_magnetisch_gespeicherten_Informationen_auf_einer_Stereo-Audiokassette_(Aufgenommen_mit_CMOS-MagView)..jpg [f]: visualization of the magnetic field of 1kHz test tracks on compact cassette
+=> https://en.wikipedia.org/wiki/Compact_Cassette_tape_types_and_formulations [g]: wikipedia - cassette tape types and formulations
+
+
+# video cassettes
+
+I managed to ramble on for a really long time about the “simple” cassette tapes, and now we're actually getting on to the really interesting world of videotapes. Go read solderpunk's post[h] for a pretty good rundown of how they all actually work, which is the really interesting part of all this. Continuing what they say, the way the tape is threaded into the player is called the tape path, and each type of tape (betamax, vhs, etc.) has a different tape path with their own positives and negatives. MisterBetamax (who's website looks like it's from 20 years ago[i], at least it's html and not flash) has a good compilation of tape paths here: [j], and if you click on each of the paths you'll be linked to an actual teardown of each cassette type!
+
+To get into a little history, magnetic tapes have been in use for a while, but the first consumer videotape format was Cartrivision, launched in 1972. At any given time nowadays, there is *maybe* one-half of a cartrivision deck in “working order” at any given time, and not for people's lack of trying. The thing is, they were *really* expensive, ~US$7,775 with inflation, and they were only sold as a full TV console, not as a standalone player. They were also only manufactured for thirteen months, from June 1972 to July 1973, and, in those 13 months, they discovered that all the tapes they had stored in their warehouse had gone bad due to humidity! However, it was the first home video system that offered prerecorded tapes of movies, but like with any new industry, it made a lot of movie companies really scared. They generally refused to release films on it, even with its convoluted watch-once system[k]. The most interesting thing about it was a bunch of archivist's attempt to recover the only surviving recording of the knicks game in the 1973 NBA finals (which was apparently the last time they won), because the TV stations managed to lose or overwrite their tapes of it. There's a really interesting series of articles on it here: [l]. If you want to read more about cartrivision, foone on twitter has a pretty good thread on it[m].
+
+A few years after cartrivision's demise, Sony launched Betamax, which was (and probably still is) one of the best ways to record tape. It had the same problem the Game Gear had, it was technically superior, but was expensive and had too little “time,” in the Game Gear's case the battery life was abysmal, and in Beta's case the tape just didn't record enough for the price. VX and VHS came out, and even though they were significantly worse, they could record for a lot longer for a lot cheaper, and that's all people care about. VHS has a lot of problems: the tape gets stretched and distorted around the drum, there's a lot of friction against the drum which wears out everything and you have to wind out the tape before rewinding or fast forwarding, and the graphite coating they put on it means the machines have to have constant maintenance. There's more details on how they work and the competition between them here: [n].
+
+=> gemini://gemini.circumlunar.space/~solderpunk/gemlog/video-tapes-and-helical-scan.gmi [h]
+=> https://mrbetamax.com/                      [i]: mrbetamax
+=> https://mrbetamax.com/BetaThruVHSHist1.htm  [j]: various tape paths and also anatomy of tapes
+=> https://en.wikipedia.org/wiki/Cartrivision#Retail [k]: Wikipedia on Cartrivision's retail system
+=> https://www.msgnetworks.com/2013/04/12/restoring-its-former-glory-part-i/ [l]: saving a cartrivision tape
+=> https://twitter.com/Foone/status/1138952744352354304 [m]: foone on cartrivision
+=> https://mrbetamax.com/TapeHistory.htm       [n]: betamax & vhs tape history
+
+
+## actually answering solderpunk's question
+
+> To my memory, audio casette tapes were a lot more liable to get chewed up by the tape deck than VHS tapes were liable to get chewed up by the VCR, but now knowing what happens under the hood this seems like a perfectly backward state of affairs.  Is my memory bad, or was I lucky enough to grow up with an unusually high quality VCR?
+
+As a general rule, audio tape decks tend to eat tapes just because the decks are made cheaply, while VCRs tend to eat tapes because they're mechanically complex and are expected to have regular maintenance but no one got them maintained unless they were actually broken (and they're often made cheaply as well). As a little interesting tidbit, when VCRs eat the tape, it's not actually unspooling at the wrong speed, as in audio cassettes, but it's actually because the VCR didn't wind out the tape from the read head, so the tape is still hooked on all the doodads and doohickeys.
+
+=> https://www.youtube.com/watch?v=qT8Oho2plic As a final little bonus, here's a VCR eating a tape
+
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/filename.gmi backlinks
