@@ -12,7 +12,7 @@
 
 => / go back home
 
-=> by-topic.gmi click here to view photos sorted chronologically
+=> /photos/by-date.gmi click here to view photos sorted chronologically
 
 => gemini://nytpu.com/cgi-bin/gemlikes/view?by-topic.gmi view likes and comments!
 
