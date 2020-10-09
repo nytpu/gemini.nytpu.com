@@ -21,7 +21,7 @@ I mentioned type iv tapes, and a thing that people don't think about for magneti
 
 => /gemlog/files/tape-deck.mp4                 [b]: (1.9mib) shaky video of my tape deck in action
 => https://www.cse.iitk.ac.in/users/amit/courses/371/adarsh/contents.html [c]: anatomy of a tape deck
-=> /gemlog/files/tape-deck.mp4                 [d]: (1.2mib) tape head switching
+=> /gemlog/files/tape-switch.mp4                 [d]: (1.2mib) tape head switching
 => https://www.youtube.com/watch?v=z0MgJKx5Ay0 [e]: a fancy nakamichi
 => https://commons.wikimedia.org/wiki/File:Visualisierung_der_magnetisch_gespeicherten_Informationen_auf_einer_Stereo-Audiokassette_(Aufgenommen_mit_CMOS-MagView)..jpg [f]: visualization of the magnetic field of 1kHz test tracks on compact cassette
 => https://en.wikipedia.org/wiki/Compact_Cassette_tape_types_and_formulations [g]: wikipedia - cassette tape types and formulations
