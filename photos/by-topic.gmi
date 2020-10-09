@@ -14,7 +14,7 @@
 
 => by-topic.gmi click here to view photos sorted chronologically
 
-=> gemini://nytpu.com/cgi-bin/gemlikes/view?first-post.gmi view likes and comments!
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?by-topic.gmi view likes and comments!
 
 # by topic
 
