@@ -70,4 +70,7 @@ Stuff that I know I should fix but don't:
 In the end, I believe that privacy is a human right, and the fact that you have to do this kind of shit to get even a façade of privacy is literally disgusting. I'm gonna cut myself off here, but somehow have even more to say about this, and even just this post got really out of hand, I originally intended it to be a quick reply. I've never really written anything about privacy before despite me being so privacy oriented, so I just had a lot that I wanted to get out. I didn't even get into free speech stuff yet! Maybe in a future post…
 
 
+=> gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-02.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-02.gmi view likes and comments!
+
