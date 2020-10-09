@@ -16,14 +16,17 @@
 
 hi! i'm alex, and i do a lot of programming and electronics projects for old things. i also watch an extreme number of movies and sometimes write about those.
 
-stuff i make & do:
+
+### stuff i make & do:
+
 => gemini://nytpu.com/gemlog/ my gemlog where i write on a variety of topics
 => gemini://nytpu.com/photos/ photos i've taken
 => gemini://nytpu.com/txt/ text files, ascii art, and more
 => gemini://nytpu.com/about.gmi about & contact
 
 
-stuff i like:
+### stuff i like:
+
 => gemini://astrobotany.mozz.us astrobotany
 => gemini://tilde.team:1965/ tilde.team
 => gemini://rawtext.club/~sloum/geminews/ geminews

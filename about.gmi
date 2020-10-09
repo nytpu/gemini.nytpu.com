@@ -1,6 +1,7 @@
 # about
 
 ## contact me / services i'm on
+
 => mailto:alex@nytpu.com alex@nytpu.com
 => /pubkey.asc gpg key
   fingerprint: 43A5 890C EE85 EA1F 8C88 9492 ECCD C07B 337B 8F5B
@@ -13,7 +14,9 @@
 => https://bandcamp.com/nytpu bandcamp
 => gopher://nytpu.com/ check me out on gopher (i have nothing there though…)
 
+
 ## faq about me
+
 q: why are you so self-deprecating?
 a: because it's true
 
@@ -23,7 +26,9 @@ a: because i'm a crazy person
 q: why do you use gemini?
 a: well if you're reading this then you're using it too, and are probably pretty far down the rabbit hole to find me, so you probably already know the most common answers to that
 
+
 ## copyright
+
 this site is © 2020 nytpu
 => https://www.gnu.org/licenses/agpl-3.0.html the source of this gemsite is covered under the terms of the gnu affero general public license.
 => https://tildegit.org/nytpu/gemini-nytpu.com/ the source is available here
@@ -31,3 +36,4 @@ this site is © 2020 nytpu
 => https://github.com/makeworld-the-better-one/gemlikes this site uses gemlikes by makeworld-the-better-one, which is licensed under the terms of the gnu affero general public license.
 
 => https://creativecommons.org/licenses/by-sa/4.0/ all content on this site—including, but not limited to: text, code, images, and videos—unless otherwise noted, is licensed under the terms of the creative commons attribution-sharealike 4.0 license.
+

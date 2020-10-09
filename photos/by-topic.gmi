@@ -16,6 +16,7 @@
 
 => gemini://nytpu.com/cgi-bin/gemlikes/view?by-topic.gmi view likes and comments!
 
+
 # by topic
 
 ## animals
@@ -92,5 +93,8 @@ taken with a 200mm lens, around 150 shots "stacked" with the siril image process
 => 20170000_small.png                    [1.6mib] the u.s. capital building
 
 
+⁂
+
+=> / go back home
 => http://creativecommons.org/licenses/by-nc-sa/4.0/ all images are licensed under the terms of the creative commons attribution-noncommercial-sharealike 4.0 international license.
 
