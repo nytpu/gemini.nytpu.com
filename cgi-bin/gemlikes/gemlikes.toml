@@ -8,7 +8,7 @@ data = "/home/alexgentilucci/gemlikes"
 # Directories will be created as needed, don't create them yourself.
 
 # The list of directories where files exist that can be liked and commented on:
-dirs = ["/var/gemini/nytpu.com/gemlog", "/var/gemini/nytpu.com/"]
+dirs = ["/var/gemini/nytpu.com/gemlog", "/var/gemini/nytpu.com/photos"]
 # IMPORTANT: There can't be any files with same name in any of these directories,
 # if you want gemlikes to work with them.
 # Nothing bad will happen, but if you try and view the likes and comments, you'll get an error page.

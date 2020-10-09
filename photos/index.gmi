@@ -16,6 +16,8 @@ i was planning on posting these pictures on the web, but instead i decided to pu
 
 => by-topic.gmi click here to view photos sorted by subject
 
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?first-post.gmi view likes and comments!
+
 # photos chronologically
 
 ## 2020
