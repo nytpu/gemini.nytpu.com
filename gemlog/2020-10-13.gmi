@@ -14,6 +14,6 @@ Anyways, I looked at webp, and I wasn't too thrilled with the lossless encoding 
 ⁂
 
 => gemini://nytpu.com/gemlog/ go back to index
-=> gemini://gus.guru/backlinks?nytpu.com/gemlog?2020-10-13.gmi backlinks
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-13.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-13.gmi view likes and comments!
 
