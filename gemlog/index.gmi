@@ -31,7 +31,7 @@
 => / go home
 => /gemlog/old/ click here to view an archive of my old gemlog
 
-=> https://nytpu.com/files/atom.xml this gemlog has an atom feed at: https://nytpu.com/files/atom.xml
-=> gemini://nytpu.com/gemlog/atom.xml or through gemini at: gemini://nytpu.com/gemlog/atom.xml
+=> gemini://nytpu.com/gemlog/atom.xml this gemlog has an atom feed at: gemini://nytpu.com/gemlog/atom.xml
+=> https://nytpu.com/files/atom.xml or through the web at: https://nytpu.com/files/atom.xml
 
 => https://tildegit.org/nytpu/gemlog.sh generated with gemlog.sh

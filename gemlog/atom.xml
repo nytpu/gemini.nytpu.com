@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>yet another tech gemlog</title>
   <subtitle>yatg</subtitle>
-  <link rel='self' href='https://nytpu.com/files/atom.xml'/>
+  <link rel='self' href='gemini://nytpu.com/gemlog/atom.xml'/>
   <link rel='alternate' href='gemini://nytpu.com/gemlog/index.gmi'/>
-  <updated>2020-10-14T09:21:38-06:00</updated>
+  <updated>2020-10-14T10:01:48-06:00</updated>
   <author>
     <name>nytpu</name>
     <email>alex@nytpu.com</email>
