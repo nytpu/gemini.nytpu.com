@@ -10,12 +10,20 @@
  (_/_______________/
 ```
 
+
+## 2020
+
 => gemini://nytpu.com/gemlog/2020-10-13.gmi 2020-10-13 — Re: I am the preëminent server of WebP in Geminispace
 => gemini://nytpu.com/gemlog/2020-10-08.gmi 2020-10-08 — a history and description of tapes and a reply to “Video tapes and helical scan”
+
 => gemini://nytpu.com/gemlog/2020-09-21.gmi 2020-09-21 — Re: Mass Produced Quality in the 21st Century
 => gemini://nytpu.com/gemlog/2020-09-18.gmi 2020-09-18 — what gemtext is and isn't
 => gemini://nytpu.com/gemlog/2020-09-05.gmi 2020-09-05 — experimenting with ways to format documents on gemini
 => gemini://nytpu.com/gemlog/2020-09-02.gmi 2020-09-02 — re: so who/what is swiftmandolin?
+
+=> gemini://nytpu.com/gemlog/2020-08-26.gmi 2020-08-26 — i despise zoom
+
+=> gemini://nytpu.com/gemlog/2020-05-26.gmi 2020-05-26 — playing with the steam controller
 
 
 ⁂
