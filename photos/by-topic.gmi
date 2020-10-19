@@ -13,6 +13,7 @@
 => / go back home
 
 => /photos/by-date.gmi click here to view photos sorted chronologically
+=> /photos/by-topic-nowebp.gmi can't view webp? click for a nonwebp version.
 
 => gemini://nytpu.com/cgi-bin/gemlikes/view?by-topic.gmi view likes and comments!
 
@@ -23,74 +24,74 @@
 
 ### birds
 
-=> 20200904_Coopers_2_small.png          [3.6mib] a cooper's hawk friend i made in my backyard
-=> 20200904_Coopers_3_small.png          [2.6mib] the same cooper's hawk from a different angle
+=> 20200904_Coopers_2_small.webp          [3.1mib] a cooper's hawk friend i made in my backyard
+=> 20200904_Coopers_3_small.webp          [2.0mib] the same cooper's hawk from a different angle
 
-=> 20200513_Red-Tailed_1_small.png       [4.4mib] a red-tailed hawk that i regularly see on a path i walk on, these are the only shots i've gotten of it though
-=> 20200513_Red-Tailed_2_small.png       [4.2mib] looking around
-=> 20200513_Red-Tailed_3_small.png       [3.4mib] relocated, munching on its rabbit
-=> 20200513_Red-Tailed_4_small.png       [1.5mib] very suspicious a few seconds later, i made a noise accidentally
+=> 20200513_Red-Tailed_1_small.webp       [4.0mib] a red-tailed hawk that i regularly see on a path i walk on, these are the only shots i've gotten of it though
+=> 20200513_Red-Tailed_2_small.webp       [3.9mib] looking around
+=> 20200513_Red-Tailed_3_small.webp       [3.1mib] relocated, munching on its rabbit
+=> 20200513_Red-Tailed_4_small.webp       [1.1mib] very suspicious a few seconds later, i made a noise accidentally
 
 
 ### kitty cats
 
-=> 20200726_Clouded-Leopard_small.png    [4.2mib] a clouded leopard taking a nap
+=> 20200726_Clouded-Leopard_small.webp    [4.0mib] a clouded leopard taking a nap
 
-=> 20200726_Amur-Tiger_1_small.png       [3.9mib] a big boi in a strange sleeping position
-=> 20200726_Amur-Tiger_2_small.png       [4.2mib] a hungry girl
-=> 20200726_Amur-Tiger_3_small.png       [10.4mib] she standing
-=> 20200726_Amur-Tiger_4_small.png       [5.3mib] nom nom
+=> 20200726_Amur-Tiger_1_small.webp       [3.5mib] a big boi in a strange sleeping position
+=> 20200726_Amur-Tiger_2_small.webp       [8.7mib] a hungry girl
+=> 20200726_Amur-Tiger_3_small.webp       [8.7mib] she standing
+=> 20200726_Amur-Tiger_4_small.webp       [4.5mib] nom nom
 
-=> 20200726_Lion_1_small.png             [4.0mib] lion around
-=> 20200726_Lion_2_small.png             [4.0mib] awoken
-=> 20200726_Lion_3_small.png             [3.7mib] annoyed
-=> 20200726_Lion_5_small.png             [3.9mib] still annoyed
-=> 20200726_Lion_6_small.png             [5.0mib] he s t r e t c h
+=> 20200726_Lion_1_small.webp             [3.9mib] lion around
+=> 20200726_Lion_2_small.webp             [3.4mib] awoken
+=> 20200726_Lion_3_small.webp             [3.4mib] annoyed
+=> 20200726_Lion_5_small.webp             [3.6mib] still annoyed
+=> 20200726_Lion_6_small.webp             [4.9mib] he s t r e t c h
 
-=> 20200726_Serval_1_small.png           [4.5mib] the classic serval experssion
-=> 20200726_Serval_2_small.png           [4.5mib] long legs
+=> 20200726_Serval_1_small.webp           [4.3mib] the classic serval experssion
+=> 20200726_Serval_2_small.webp           [4.2mib] long legs
 
 
 ### dogs
 
-=> 20200726_African-Wild-Dog_1_small.png [4.6mib] a sleepy african wild dog first thing in the morning
-=> 20200726_African-Wild-Dog_3_small.png [4.4mib] later in the day and a little more active
-=> 20200726_African-Wild-Dog_2_small.png [4.2mib] the same awd a short while later
+=> 20200726_African-Wild-Dog_1_small.webp [4.1mib] a sleepy african wild dog first thing in the morning
+=> 20200726_African-Wild-Dog_3_small.webp [3.9mib] later in the day and a little more active
+=> 20200726_African-Wild-Dog_2_small.webp [3.8mib] the same awd a short while later
 
 
 ### other
 
-=> 20200411_American-Bison_small.png     [3.9mib] american bison at rocky mountain arsenal (yum chemical weapons)
-=> 20191226_small.png                    [2.1mib] a reef shark
-=> 20180328_Manta_small.png              [1.3mib] a manta ray
+=> 20200411_American-Bison_small.webp     [3.7mib] american bison at rocky mountain arsenal (yum chemical weapons)
+=> 20191226_small.webp                    [1.5mib] a reef shark
+=> 20180328_Manta_small.webp              [1.1mib] a manta ray
 
 
 ## landscapes
 
-=> 20200319_1_small.png                  [10mib] zion national park
-=> 20200321_small.png                    [4.3mib] somewhere in utah
-=> 20190630_spire_small.png              [10.2mib] a spire thing at an unknown location
-=> 20180820_small.png                    [1.8mib] the backside of the great sand dunes
+=> 20200319_1_small.webp                  [8.9mib] zion national park
+=> 20200321_small.webp                    [3.9mib] somewhere in utah
+=> 20190630_spire_small.webp              [9.5mib] a spire thing at an unknown location
+=> 20180820_small.webp                    [1.2mib] the backside of the great sand dunes
 
 
 ## facing upwards
 
-=> 20200418_plane-group-close_small.png  [4.0mib] f-16s flying over my house
-=> 20200418_plane-group-zoom_small.png   [3.8mib] closeup
+=> 20200418_plane-group-close_small.webp  [3.7mib] f-16s flying over my house
+=> 20200418_plane-group-zoom_small.webp   [3.6mib] closeup
 
 in my first and only foray into astrophotography, i took a picture of jupiter when it was
 => https://bgr.com/2019/06/06/jupiter-moons-june-2019-telescope/ really close and easy to see.
 taken with a 200mm lens, around 150 shots "stacked" with the siril image processing program
-=> 20190610_jupiter_cropped_small.png    [276.1kib] digitally zoomed in to see more detail (and the horrible chromatic aberration of my lens)
-=> 20190610_jupiter_uncropped_small.png  [2.0mib] the uncropped version of the previous photo
+=> 20190610_jupiter_cropped_small.webp    [261.0kib] digitally zoomed in to see more detail (and the horrible chromatic aberration of my lens)
+=> 20190610_jupiter_uncropped_small.webp  [1.9mib] the uncropped version of the previous photo
 
 
 ## man-made things
 
-=> 20190318_14_small.png                 [2.5mib] an underwater hallway
-=> 20190318_16_small.png                 [3.0mib] a very liminal space
+=> 20190318_14_small.webp                 [2.1mib] an underwater hallway
+=> 20190318_16_small.webp                 [2.3mib] a very liminal space
 
-=> 20170000_small.png                    [1.6mib] the u.s. capital building
+=> 20170000_small.webp                    [1.2mib] the u.s. capital building
 
 
 ⁂

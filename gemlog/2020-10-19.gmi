@@ -1,0 +1,55 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# WebP Revisited (a little more in-depth this time)
+### october 19, 2020
+
+=> gemini://gemini.circumlunar.space/~adiabatic/scrawlspace/ a reply to adiabatic's post
+=> gemini://carcosa.net/journal/commonplace-book.gmi         and to jfm's post
+
+Fourth reply in a row? Why do I do this, I literally have a post finished and I decided to forgo that to write this instead. I guess there's nothing stopping me from posting twice in one day.
+
+
+## lossy webp
+
+> I used lossy WebP on some The Legend of Zelda: Breath of the Wild screenshots (originally JPEG, much to my dismay) and they looked OK. The space savings was impressive.
+> Then, many months later, I looked again, more closely, flipping back and forth between the original and the lossy-WebP-recompressed version, and the WebP was clearly inferior.
+
+This is what just happened to me. Most of my images that I currently have converted to webp were png (which I compressed losslessly), but a few were jpg and I figured I might as well just compress them lossily, and they looked good at a glance. I just looked closer at the lossy ones, and they are… not good, stuff is pretty distorted (even at quality 90!). It's not like JPG with it's characteristic fuzzy edges and blocky artifacts, but it's definitely there and noticeable at most zoom levels. I guess that's why the lossy algorithm is intended for thumbnails and the like where it's already reduced quality. I actually think I like the webp ones better because the jpg artifacts are way more annoying and noticeable, and the webp smooths those out and its own artifacts are a whole lot less noticable (see [a] and [b]). I'm debating whether or not to restore those images to their full jpg “glory,” but pursuing lossless compression is still something I'm interested in since I don't have to worry about the end result image quality at all.
+
+=> /gemlog/files/sample-webp.webp [a]: (21.6kib) sample region from /gemlog/files/ae1.webp (originally converted from jpg)
+=> /gemlog/files/sample-jpg.webp  [b]: (21.3kib) same exact region from the *original* jpg
+
+
+## lossless webp
+
+> At any rate, I’m a teeny bit surprised someone would use imagemagick(1) to compress WebP, but that’s probably a handy swiss-army knife to a lot of people. I wonder what kind of lossless compression ratios nytpu (linked above) would get if `cwebp -z 9` were run on all the PNGs.
+
+Adiabatic was right, using `cwebp` instead of imagemagick was a lot better. I just use imagemagick because I don't want to install anything when just playing around with a new format, but coincidentally I already had libwebp installed because it's apparently required by everything (see [d]), but I didn't know that until I checked.
+
+Using lossless webp isn't particularly amazing, but it seems to do exceptionally well with large blocks of color (like most compression algorithms), such as in screenshots. I got an average 57.28% reduction on 10 various screenshots with `cwebp -z 9` vs `optipng -o7 --strip all`. However, on real images, I only got an average reduction of 10.56% over 36 images[c], which isn't *stellar*, but enough to make it worthwhile. I think for my photos page I'll be making a separate page for non-webps, but I'm not sure what I'm going to be doing for my gemlog, so I'll be using just webps for this (keeping archives of the non-webp images for when I come up with something).
+
+=> /photos/ [c]: the sample images, which I do think represent a pretty good range of various real-world images.
+
+
+## webp support
+
+> Here's what that smiling calculator webp looks like on Elpher (Emacs 28.0.50):
+> [Screenshot of elpher saying that gemini://nytpu.com/gemlog/files/happyface.webp is "Not an image"]
+
+Does elpher not have any configurable fallback to a different image viewer for unsupported types? WebP support isn't *that* bad (it's over ten years old now), I know that imagemagick and ffmpeg have support for it and most imlib2 distributions have the webp loader, so anything based off of those should work. Looking at the arch pkgbuild[d] there's a lot that relies on libwebp, the google-provided webp library. Even libcaca[e] apparently supports it[f]! Gwenview, KDE's image viewer, supports it, and I assume that GNOME's image viewer supports it too. I don't intend to be mean here, I don't like “it works on my system” more than anybody else, but it's just weird that emacs/elpher uses a built-in image viewer that lacks support for newer filetypes without some sort fallback beyond downloading it and manually opening it. Unless they wrote their own custom backend for displaying images (why‽), it seems that the most common libraries—that I know of at least—support it. Even if there's no easy way to support it built-in, xdg-open or its associated freedesktop apis are a safe fallback option if you're in a graphical environment.
+
+=> https://www.archlinux.org/packages/extra/x86_64/libwebp/ [d]: Required by: allegro, chromium, converseen, efl, emby-server, fbida, ffmpeg, freeimage, gd, gimp, gogglesmm, graphicsmagick, gst-plugins-bad, gthumb, imlib2, leptonica, lib32-libwebp, libvips, mapnik, matrix-synapse, matrix-synapse (testing), motion, netsurf, openimageio, qt5-imageformats, qt5-webkit, sdl2_image, skia-sharp, webkit2gtk, weston, imagemagick (optional), libmagick6 (optional), pqiv (optional), python2-pillow (optional), python-pillow (optional)
+=> http://caca.zoy.org/wiki/libcaca [e]: libcaca is a graphics library that outputs text instead of pixels, so that it can work on older video cards or text terminals.
+=> https://asciinema.org/a/DgcOCseS3vuorDggQvScCpjzq [f]: I happen to love me some ascii-arted images myself
+
+
+## (why do i insist on having a separate title for the) conclusion
+
+I guess even if it's (fairly) safe to use webp on the web, gemini/gopherspace is probably the place where you're most likely to have a lack of support for it considering that a big appeal for the small web is being able to run on retro or other obscure hardware that may not have all the luxuries that a modern system has. I'm probably going to keep using it but possibly have some sort of page where you can access non-webp versions. It'd probably be more painful for blog posts to constantly switch back and forth over just downloading the images though, especially if your gemini browser doesn't have tabs. Possibly an opportunity for using CGI and having a setting for webp/non-webp based off of user certificates.
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-19.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-19.gmi view likes and comments!

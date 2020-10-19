@@ -1,6 +1,8 @@
 => gemini://nytpu.com/gemlog/ go back to index
 
 # Re: I am the preëminent server of WebP in Geminispace
+### october 13, 2020
+
 => gemini://gemini.circumlunar.space/~adiabatic/scrawlspace/ a reply to adiabatic's post
 
 I don't know what I'm doing. This is literally my 3rd reply in a row on this gemlog, I guess I just have a lot to say about what other people have to say.
@@ -16,4 +18,3 @@ Anyways, I looked at webp, and I wasn't too thrilled with the lossless encoding 
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-13.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-13.gmi view likes and comments!
-
