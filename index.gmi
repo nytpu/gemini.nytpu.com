@@ -34,4 +34,3 @@ hi! i'm alex, and i do a lot of programming and electronics projects for old thi
 => gemini://gemini.circumlunar.space/capcom/ capcom geminispace aggregator
 => gemini://rawtext.club:1965/~sloum/spacewalk.gmi spacewalk geminispace aggregator
 => gopher://gopherpedia.com:70/1/ gopherpedia
-

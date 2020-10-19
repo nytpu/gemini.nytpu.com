@@ -17,4 +17,3 @@ i was digging through some old drives and found some old text files (you know, t
 
 => airlines.txt if operating systems ran the airlines
 => real_programmers.txt real programmers don't use pascal
-

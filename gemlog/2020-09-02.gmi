@@ -1,6 +1,7 @@
 => gemini://nytpu.com/gemlog/ go back to index
 
 # re: so who/what is swiftmandolin?
+### september 2, 2020
 
 => gemini://gemini.circumlunar.space/~swiftmandolin/gemlog/01-9-20-swiftmandolin.gmi a reply to swiftmandolin's post
 
@@ -76,4 +77,3 @@ In the end, I believe that privacy is a human right, and the fact that you have 
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-02.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-02.gmi view likes and comments!
-

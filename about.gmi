@@ -36,4 +36,3 @@ this site is © 2020 nytpu
 => https://github.com/makeworld-the-better-one/gemlikes this site uses gemlikes by makeworld-the-better-one, which is licensed under the terms of the gnu affero general public license.
 
 => https://creativecommons.org/licenses/by-sa/4.0/ all content on this site—including, but not limited to: text, code, images, and videos—unless otherwise noted, is licensed under the terms of the creative commons attribution-sharealike 4.0 license.
-

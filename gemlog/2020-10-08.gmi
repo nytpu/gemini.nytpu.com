@@ -1,6 +1,8 @@
 => gemini://nytpu.com/gemlog/ go back to index
 
 # a history and description of tapes and a reply to “Video tapes and helical scan”
+### october 8, 2020
+
 => gemini://gemini.circumlunar.space/~solderpunk/gemlog/video-tapes-and-helical-scan.gmi inspired by solderpunk's post
 
 I love old tech, it's one of my primary fascinations. I have a large number of links in my buku[a] database dedicated to old tech, analog storage formats in particular. This isn't a *response* to solderpunk's post per se, but it was inspired by their post so I'm calling it a reply. I'm just going to be spouting interesting facts, giving some history, and linking to interesting sites about all this, and generally ramble on about something I'm interested in, so this should be interesting (for me at least).
@@ -58,4 +60,3 @@ As a general rule, audio tape decks tend to eat tapes just because the decks are
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-08.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-08.gmi view likes and comments!
-

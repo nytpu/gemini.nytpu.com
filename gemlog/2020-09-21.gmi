@@ -1,6 +1,7 @@
 => gemini://nytpu.com/gemlog/ go back to index
 
 # Re: Mass Produced Quality in the 21st Century
+### september 21, 2020
 
 => gemini://dctrud.randomroad.net/gemlog/20200920-mass-produced.gmi a reply to dctrud's post
 
@@ -73,4 +74,3 @@ I think if you managed to run an accurate study on the quality of mass-produced 
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-21.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-21.gmi view likes and comments!
-

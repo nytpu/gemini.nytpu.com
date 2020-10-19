@@ -1,6 +1,7 @@
 => gemini://nytpu.com/gemlog/ go back to index
 
 # experimenting with ways to format documents on gemini
+### september 5, 2020
 
 As of writing this post, I'm in the middle of writing a really long gemlog post (like, >5 print pages) analyzing Ad Astra, and it's forced me to decide on how I want to format images, links, cross-references, etc. on gemini. I need to include screenshots of certain points, and I'm linking heavily to places like tmdb when I mention other movies, and I'm occasionally cross-referencing within my post itself. I've experimented with a number of options, which I'll enumerate here.
 
@@ -38,4 +39,3 @@ The next one I thought of was to bundle all the links at the end of the paragrap
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-09-05.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-09-05.gmi view likes and comments!
-

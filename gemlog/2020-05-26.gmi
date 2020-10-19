@@ -3,6 +3,7 @@
 NOTE: migrated from my old gemlog on: October 14th, 2020.
 
 # playing with the steam controller
+### originally posted on: may 26, 2020
 
 WARNING: This post is written in my long, rambling epistolary style because I haven't really planned out what I wanted to say before writing it, so be prepared.
 
@@ -41,4 +42,3 @@ The Steam Controller is a very strange, unique controller that simultaneously is
 => gemini://nytpu.com/gemlog/ go back to index
 => gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-05-26.gmi backlinks
 => gemini://nytpu.com/cgi-bin/gemlikes/view?2020-05-26.gmi view likes and comments!
-
