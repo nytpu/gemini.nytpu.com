@@ -12,7 +12,8 @@
 
 => / go back home
 
-=> /photos/by-date.gmi click here to view photos sorted chronologically
+=> by-date-nowebp.gmi click here to view photos sorted chronologically
+=> by-topic.gmi love webp? click for a webp version.
 
 => gemini://nytpu.com/cgi-bin/gemlikes/view?by-topic.gmi view likes and comments!
 
