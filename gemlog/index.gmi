@@ -13,6 +13,7 @@
 
 ## 2020
 
+=> gemini://nytpu.com/gemlog/2020-10-29.gmi 2020-10-29 — hello minidisc :)
 => gemini://nytpu.com/gemlog/2020-10-19.gmi 2020-10-19 — WebP Revisited (a little more in-depth this time)
 => gemini://nytpu.com/gemlog/2020-10-13.gmi 2020-10-13 — Re: I am the preëminent server of WebP in Geminispace
 => gemini://nytpu.com/gemlog/2020-10-08.gmi 2020-10-08 — a history and description of tapes and a reply to “Video tapes and helical scan”

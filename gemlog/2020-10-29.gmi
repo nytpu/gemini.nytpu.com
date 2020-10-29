@@ -1,0 +1,84 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# hello minidisc :)
+### october 29, 2020
+
+I decided to buy a minidisc recorder/player because I was emailing with solderpunk about my post about tapesᵃ and he mentioned minidiscs and reading their post on themᵇ made me really interested in them. I also just recently got rid of my car with a tape deck and then my walkman broke (as they have a propensity to do), so now the only tape player I have is my not-portable deck. Not wanting to use my phone (I'm trying to minimize what I use my phone for, not maximise it), I looked at minidiscs because portable tape players are just so shitty and I'm tired of trying to fix them (with a ~50% success rate) then having to throw it out and buy a new oneᶜ.
+
+Minidisc really interesting technologically, exploiting the “magneto-optical kerr effect” where magnetic domains reflect light differently depending on their polarity. Read about its engineering here: [d]. However, the fact that you get the benefits of a tape and the benefits of a cd in a form factor that's half the size of both is enough to sell me on it. I ordered a Sony MZ-R700, which I found to have the best mix of modern availability, features, and average price. I believe it's coincidentally the same model that solderpunk got. I was a bit worried about the build quality considering how shitty tape walkmen (walkmen or walkmen?) are, but I have a CD walkman and it's built a lot better than the cassette walkman so I figured Sony's later, more expensive optical walkmen are probably better made.
+
+Anyways, if you don't want to read me going more in-depth on stuff and just want to know whether or not I like it, my opinion is that it's amazing and if you're the slightest bit interested you should get one.
+
+=> gemini://nytpu.com/gemlog/2020-10-08.gmi [a]: a history and description of tapes (by me)
+=> gopher://zaibatsu.circumlunar.space:70/0/~solderpunk/phlog/actually-listening-to-music-again-2.txt [b]: solderpunk — actually listening to music again, pt 2
+=> gopher://zaibatsu.circumlunar.space:70/0/~solderpunk/phlog/lithium-blues.txt [c]: i hate doing this, it's so so so wasteful. at risk of referencing solderpunk's stuff too often, they have a good post on obsolescence, due to cheap quality or planned
+=> https://en.wikipedia.org/wiki/Magneto-optical_drive [d] wikipedia: magneto-optical drive
+
+
+## hackerman: he's the most powerful hacker of all time.
+
+The player just arrived a few days agoᵉ, and after testing that it works, what's the first thing I do? Why hack it of courseᶠ! I don't really need most of the features it unlocks, but I really wanted the personal disc memory and program play so I decided to “risk”ᵍ it. I've done hacks before that involve doing convoluted crap because the manufacturer tries to stop you from modifying it, so this was refreshingly easy since Sony didn't bother trying to obfuscate it beyond just using unlabeled memory addresses. I didn't even have to do anything myself really, someone already figured out all the stuff you have to do, I just had to follow instructions. I'd recommend doing it if you have one of these players that support it: MZ-R700, -R500, -G750, -N707, -N505, and -N710.
+
+[e]: i delayed this post a few days because i wanted a few days of real use before giving my opinion on it.
+=> https://www.minidisc.org/mzr700_to_mzr900.html [f]: how to modify the sony mz-r700's eeprom settings to add advanced features
+[g]: it's not really a risk, it's a lot harder than it seems to mess stuff like this up unless you just hit random buttons and can't follow basic instructions. the authors of this sort of thing just plaster warnings about destroying your device because they don't want to be harassed by the one idiot that messes their recorder up.
+
+
+## impressions
+
+I'm very pleased with this little thing, it's definitely going to be my primary portable music device. My favorite feature is being able to re-record over specific sections or continue recording from the end without having to wipe the full disc like with a CD-RW. I've messed up recording a few songs already, but instead of having to erase the full disc and try again I could just record over the one song like a tape. It's really flexible too, you can remove and add track markers arbitrarily, which is useful since its auto-track placement when recording tends to miss the break on albums that crossfade songs. I guess breaking apart tracks wherever you want could be useful for like… djing or something too. It also lets you move around tracks into a different order whenever you want, which is a wonderful feature that not even tapes have, and is useful for making a mixmd (“mixminidisc” doesn't sound quite right). I love the fact that it has both analog and digital optical input, although I don't know how well the digital works yet because my cable managed to break in storage and I don't have the ToSLink miniplug adapters anyways. Recording from my FLAC “masters”ʰ through a Behringer UCA202 DAC sounds fine though, so I don't feel that using digital is absolutely necessary.
+
+[h]: You absolutely *should* transcode your music to something else for general listening, particularly on devices with limited storage such as phones or laptops. Even on high-end equipment humans can't pick out the difference between FLAC and V0/320kbps MP3 (although I recommend 128kbps vbr OPUS for both size and quality) any better than random chance, and the space savings between high quality lossy and lossless is massive. However, you should keep FLAC copies of all your music somewhere in case you want to transcode them to a different format or need to reencode them, because transcoding from lossy is never very smart. If you're downloading from Bandcamp, still keep a copy of the FLAC *downloaded* in case the music is removed or Bandcamp somehow shuts down and you lose all your music.
+
+
+### compactness is a virtue, thinness at the expense of compactness is not
+
+I love the size of minidiscs and their player, they're perfect. Even if I wanted to use CDs, my CD walkman (which I found in perfect working order in a dumpster) is so bulky that I'd have to have a backpack or some other bag if I ever wanted to use it. Even my tape walkman is too bulky to fit in a pocket, but the minidisc recorder is so small that it fits pretty much anywhere. It is a little fat, but no thicker than the cassette walkman and I'd much rather have it be thick like that than have it be thin and huge (looking at you, tablet-sized cell phones). See the size comparison of the players: [i]. The physical media is even smaller, see [j] for a comparison between various formats. Sony marketing compared them to 3.5in floppy disks a lot, but that must be more because of the sliding door than the size because minidiscs are a lot smallerᵏ. 
+
+=> /gemlog/files/player-size-comparison.webp     [i]: (2.0mib) a comparison between cd player (huge) vs cassette walkman (big) vs minidisc recorder (perfect size). they're all on the sony walkman line which actually isn't deliberate, i'm not a huge fan of sony.
+=> /gemlog/files/minidisc-size-comparison.webp   [j]: (2.4mib) media size comparison between a tape, minidisc, and cd, with a 12 inch/30 centimeter ruler for scale.
+=> /gemlog/files/minidisc-floppy-comparison.webp [k]: (2.4mib) minidisc vs 3.5in floppy disk. the floppy has a side length ~3.5 inches, but the minidisc is ~3.5 inches diagonally so its side length is more like 2.5 inches.
+
+
+### audio quality
+
+Despite being lossy, the ATRAC compression is good enough that I don't notice any real loss at standard compression. Even LP2 mode is excellent, and I don't notice anything in average listening. I have a few tracks that are notorious for compressing badly and the two I've tried turned out fine in both standard and LP2, but I've yet to try them all out.
+
+
+### labelling music
+
+I like that you can label songs and the disc, as even commercially produced CDs generally ignored CD-Textⁱ and most burners don't write it even if your player supports reading it. On minidisc it's a little tedious to label though, the typing system is about as quick as it can be with the buttons available, but it's definitely not the most convenient. I painstakingly labelled all the tracks on the discs that I'm permanently keeping with certain albums, but with all the discs that I'm erasing and rerecording regularly I'd definitely not bother. Especially after labelling Simon & Garfunkel's Parsley, Sage, Rosemary And Thymeʲ I don't feel the urgency I'd usually feel to have everything nicely labelled.
+
+=> https://en.wikipedia.org/wiki/CD-Text  [i]: cd-text is an extension of the compact disc specifications that allows for storage of additional information (e.g. album name, song name, and artist name) on an audio cd
+=> /gemlog/files/simon-and-garfunkel.webp [j]: (31.8kib) all the titles in this album is so fucking long: song titles, album title, artist, everything.
+
+
+### battery life
+
+The battery life on this thing is amazing. I got 13–14 hours of use from the single AA battery it runs on, and that's with me recording ~9 hours of music (which is what JEITA claims the battery life is for recording) and labelling everything & listening normally for the rest of the time. My CD walkman with 2 AAs gets that much battery life just from playback. JEITA claims it gets 40 hours of standard playback on alkaline batteries, and considering how much I went over their estimate for recording and playback I assume I'll get a lot more, which is amazing from a single battery on such a complex little machine. I'm going to pick up some nice recharagables (eneloops are really good I've heard?), but right now standard alkaline batteries get really good battery life where I don't feel like I'm wasting batteries (my IPS-modded GBA eats 2 alkalines every 4 hours and that's wasteful enough to stop me from regularly playing it).
+
+
+### downsides
+
+Like all things, there are some downsides. I can't record at >1x speed like you can with CD burning, but leaving it recording when I'm doing something else alleviates that. When labelling or rearranging tracks, my recorder starts skipping, but luckily it goes away as soon as you write the updated table of contents. I'm guessing it's because it has to store the modified copy of the table of contents in memory until the changes are finalized and written to disc, and keeping that in memory takes some away from the playback buffer and it keeps emptying the buffer and causes playback to block until the buffer gets suitably filled again. The final downside I've noticed is that if you skip ahead a whole bunch of tracks it has really long (3–4 second) seek times, but that's minor because I usually listen to albums all the way through. I haven't checked if shuffle is the same way, I've only noticed it when pressing ⏭️ a whole bunch of times in a row.
+
+
+### miscellanea
+
+Have I mentioned that thisᵏ little portable thing is a recorder as well as a player? This tiny thing records, which I haven't seen in any other portable music device: MP3 players usually require a computer connection to load files, CD walkmen don't burn (and would require a computer if they did), tape walkmen certainly don't record, and digital audio recorders aren't suited for music playback, just recording. Mine even supports powered microphones as well as standard line in *and* S/PDIF in.
+
+Also, apparently even thought the discs are magnetic they aren't affected by normal strength magnets because changing the polarization requires using a heating laser, so the discs are inert when being played or when in storage. I'm always scared of this because I usually have a HDD stored in my backpack for supplemental storage, and I have to be extremely careful if I'm packing floppy discs or other drives, but I don't have to worry about it with minidiscs (although I'm still going to be careful).
+
+=> /gemlog/files/minidisc.webp [k]: (1.3mib) it's *adorable*
+
+
+## recommendation
+
+If your interest is even slightly piqued, then I definitely recommend getting something minidisc. If you enjoy listening to music from your cell phone or your… ipod? (if regular mp3 player ipods still exist?), you probably shouldn't bother getting something that uses physical discs, but if you are currently using a tape walkman or are looking for something other than your phone to listen to music then I definitely recommend it.
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-10-29.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-10-29.gmi view likes and comments!
