@@ -8,7 +8,7 @@
 => https://getaether.net @nytpu on aether
   (aether://user/22262a061f1dca376d8640a1ada3364ac3307b370bfbf868c1ea4cf64d4e2c38)
 => https://tilde.zone/@nytpu @nytpu@tilde.zone on mastodon
-nytpu on rawtext.club
+=> gemini://rawtext.club/~nytpu nytpu on rawtext.club
 => https://tildegit.org/nytpu tildegit
 => https://letterboxd.com/nytpu/ letterboxd
 => https://bandcamp.com/nytpu bandcamp
