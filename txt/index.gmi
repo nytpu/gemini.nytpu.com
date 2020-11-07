@@ -13,12 +13,18 @@
 
 => / go back home
 
-i was digging through some old drives and found some old text files (you know, the kind that would circulate on bbses and usenet) and figured that it would be nice to host a selection of my favorites. i'm still sorting through it all so more will occationally be added.
-(txt art doesn't necessarily mean ascii art, it means any work of art done with text, prose included)
+(txt art doesn't necessarily mean ascii art, it means any work of art done with text, prose included. the reason the art for this page is a hawk/eagle is because i drew a birdy and i wanted to put it somewhere, and i had no other fitting art for this page)
+
+i was digging through some old drives and found some old text files (you know, the kind that would circulate on bbses and usenet) and figured that it would be nice to host a selection of my favorites. i'm still sorting through it all so more will occasionally be added. i'll also put stuff i drew here, mostly the art i drew to use as headers for all my gemini pages.
+
+### stuff i've made:
 
 => codepage437.txt for your unicode ansi art needs, a table i made of the unicode equivalents of the characters in ibm code page 437
 => myart.txt ascii and ansi art i've made. 
 
+
+### stuff i've found:
+
 => airlines.txt if operating systems ran the airlines
 => real_programmers.txt real programmers don't use pascal
-=> apollo.txt an ascii art of the apollo moon lander that i found somewhere
+=> apollo.txt ascii art of the apollo moon lander that i found somewhere
