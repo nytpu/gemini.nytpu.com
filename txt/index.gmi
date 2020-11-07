@@ -1,16 +1,20 @@
-```txt
-░░░░░░░▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▓
-░░██████████▓▓██▒▒▒▒▒▒██▒▒██████████▓▓
-░░░░░▓██▓▓▓▓▓▓▓▒██▒▒██▒▒▒░░░░░██░░░▓▓▓
-░░░░▓▓██▓▓▓▓▓▓▒▒▒▒██▒▒▒▒░░░░░░██░░▓▓▓▓
-░░░▓▓▓██▓▓▓▓▓▒▒▒██▒▒██▒░░░░░░░██░▓▓▓▓▓
-░░▓▓▓▓██▓▓▓▓▒▒██▒▒▒▒▒▒██░░░░░░██▓▓▓▓▓▓
-░▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▓▓▓▓▓▓▓
+```txt art
+\.\.        ,/,/    __       __
+ \\\\      ////    / /__  __/ /_
+ _\  \   -/  /    / __/ |/_/ __/
+  -\_>) _/>-)    / /__>  </ /_
+    \-\\/-///,   \__/_/|_|\__/  __
+    <         \     ____ ______/ /_
+   //,<-___-\(,\   / __ `/ ___/ __/
+  ///  /  \   \)  / /_/ / /  / /_
+ /'/  /\  \\      \__,_/_/   \__/
+     ( )) ( ))
 ```
 
 => / go back home
 
 i was digging through some old drives and found some old text files (you know, the kind that would circulate on bbses and usenet) and figured that it would be nice to host a selection of my favorites. i'm still sorting through it all so more will occationally be added.
+(txt art doesn't necessarily mean ascii art, it means any work of art done with text, prose included)
 
 => codepage437.txt for your unicode ansi art needs, a table i made of the unicode equivalents of the characters in ibm code page 437
 => myart.txt ascii and ansi art i've made. 
