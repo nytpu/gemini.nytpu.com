@@ -1,0 +1,35 @@
+# faq
+
+### how long until you actually have something on here?
+
+I dunno, I tend to be lazy so whenever I get around to it I guess.
+
+
+### why project gemini and not apollo or mercury?
+
+Guess why.
+
+In all seriousness though, Gemini is seriously ignored, even by space/spacecraft enthusiasts. There's the entire Virtual AGC project dedicated to getting every single engineering spec, diagram, and document even tangentially related to Apollo, and Mercury is well known as it's the first manned U.S. space program, but Gemini is largely ignored despite the fact that most of the pre–moon-landing accomplishments were done by Gemini, not Mercury. There doesn't really seem to be a central repository dedicated to Project Gemini stuff, so who knows, maybe this will become the definitive central source.
+
+
+### why did you start this project
+
+I love space and the history of spaceflight, so I knew more about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it when I sort-of fleshed it out more on irc:
+```
+<login> ah, so what is a physical Gemini capsule?
+...snip...
+<nytpu> login: physical gemini capsule: https://upload.wikimedia.org/wikipedia/commons/d/de/Gemini_7_in_orbit_-_GPN-2006-000035.jpg
+<login> ah
+<nytpu> speaking of which i've been meaning to mirror virtual agc's gemini archive on gemini
+<nytpu> https://www.ibiblio.org/apollo/Gemini.html
+<nytpu> and i'd also mirror the apollo stuff
+<nytpu> https://www.ibiblio.org/apollo/links.html#Gemini_spacecraft_computer
+<adcw> hell yes nytpu
+<adcw> that sounds aweosme
+```
+
+
+# can i help?
+
+well sure, if you have some source that i don't have mentioned anywhere then send it to me at alex@nytpu.com, or see my about page for other methods of contact:
+=> /about.gmi gemini://nytpu.com/about.gmi

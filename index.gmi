@@ -20,6 +20,7 @@ hi! i'm alex, and i do a lot of programming and electronics projects for old thi
 ### stuff i make & do:
 
 => gemini://nytpu.com/gemlog/ my gemlog where i write on a variety of topics
+=> gemini://nytpu.com/geminiarchive/ an semi-comprehensive archive containing anything and everything about project gemini (the spaceflight program)
 => gemini://nytpu.com/photos/ photos i've taken
 => gemini://nytpu.com/txt/ text files, ascii art, and more
 => gemini://nytpu.com/about.gmi about & contact
