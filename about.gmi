@@ -1,5 +1,7 @@
 # about
 
+=> / go back home
+
 ## contact me / services i'm on
 
 => mailto:alex@nytpu.com alex@nytpu.com

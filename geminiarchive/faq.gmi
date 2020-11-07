@@ -29,7 +29,12 @@ I love space and the history of spaceflight, so I knew more about the whole U.S.
 ```
 
 
-# can i help?
+### can i help?
 
 well sure, if you have some source that i don't have mentioned anywhere then send it to me at alex@nytpu.com, or see my about page for other methods of contact:
 => /about.gmi gemini://nytpu.com/about.gmi
+
+
+### why is your work on this licensed under cc0?
+
+Since all of the work I'm pulling from for this project is licensed in the public domain, it feels unfair that work I contribute would have restrictions that the rest of the documents don't. Since my work here is primarily derivative anyways, I'd feel particularly scummy taking public domain work and turning it into a copyright restricted work. The main reason I usually use copyleft licenses in the first place is to stop companies from taking my freely given work and making a proprietary copy, and relicensing public domain under copyleft feels similar (although it's obviously not as bad since copyleft is still open).

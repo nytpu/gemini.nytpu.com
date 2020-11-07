@@ -11,8 +11,6 @@
 |_______________|       \__,_/_/   \___/_/ /_/_/ |___/\___/
 ```
 
-=> / go back home
-
 I'm christening this project the “Project Gemini Gemini Archive.” Really rolls off the tongue doesn't it? It's meant to be a semi-comprehensive archive of everything about Project Gemini hosted in geminispace. So far I'm planning to pull from:
 => http://tothemoon.ser.asu.edu/gallery/Gemini the nasa/arizona state university gemini archive
 => https://www.ibiblio.org/apollo/Gemini.html virtual agc's page detailing the gemini spacecraft computer
@@ -21,4 +19,14 @@ I'm christening this project the “Project Gemini Gemini Archive.” Really rol
 I may also add some select pieces from Project Mercury and the Apollo Program too, but I'm focusing on Project Gemini first.
 
 It's a work in progress, check in later for some stuff
-=> faq.gmi i wrote a basic faq
+=> faq.gmi i wrote a faq
+
+
+⁂
+
+=> / go back home
+
+=> https://creativecommons.org/publicdomain/zero/1.0/ all works created by nytpu on this page, unless otherwise noted, are licensed under the terms of the creative commons cc0 public domain dedication.
+=> https://creativecommons.org/publicdomain/zero/1.0/ all works that originated from the virtual agc project are licensed under the terms of the creative commons cc0 public domain dedication.
+=> http://tothemoon.ser.asu.edu/about arizona state university's march to the moon archive have granted non-express permission to use their works for personal, educational, and research uses.
+=> https://www.usa.gov/government-works all works that originated from the united states government are placed in the public domain.
