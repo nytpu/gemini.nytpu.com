@@ -9,7 +9,7 @@ I dunno, I tend to be lazy so whenever I get around to it I guess.
 
 Guess why.
 
-In all seriousness though, Gemini is seriously ignored, even by space/spacecraft enthusiasts. There's the entire Virtual AGC project dedicated to getting every single engineering spec, diagram, and document even tangentially related to Apollo, and Mercury is well known as it's the first manned U.S. space program, but Gemini is largely ignored despite the fact that most of the pre–moon-landing accomplishments were done by Gemini, not Mercury. There doesn't really seem to be a central repository dedicated to Project Gemini stuff, so who knows, maybe this will become the definitive central source.
+In all seriousness though, Gemini is largely ignored, even by space/spacecraft enthusiasts. There's the entire Virtual AGC project dedicated to getting every single engineering spec, diagram, and document even tangentially related to Apollo, and Mercury is well known as it's the first manned U.S. space program, but Gemini is largely ignored despite the fact that most of the pre–moon-landing accomplishments were done by Gemini, not Mercury. There doesn't really seem to be a central repository dedicated to Project Gemini stuff, so who knows, maybe this will become the definitive central source.
 
 
 ### why did you start this project
