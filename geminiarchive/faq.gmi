@@ -14,7 +14,7 @@ In all seriousness though, Gemini is largely ignored, even by space/spacecraft e
 
 ### why did you start this project
 
-I love space and the history of spaceflight, so I knew more about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it when I sort-of fleshed it out more on irc:
+I love space and the history of spaceflight so I knew more than usual about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it when I sort-of fleshed it out more on irc:
 ```
 <login> ah, so what is a physical Gemini capsule?
 ...snip...
@@ -29,6 +29,11 @@ I love space and the history of spaceflight, so I knew more about the whole U.S.
 ```
 
 
+### why is there so much about the guidance computers?
+
+Well, there's a wealth of information about the computers thanks to the Virtual AGC project, but the reason I know about their archives in the first place is because I have a (probably unattainable) goal of building a model Apollo Guidance Computer. I wouldn't model the computing part of the computer itself (hand-made core memory doesn't sound fun to replicate), I'd probably use an atmega128 or something similar (I'd be more of a model DSKY with a simulated AGC). But anyways, I have a particular interest in those early guidance computers because it's just so amazing that they could do so much with so little. Even with the assistance of a human pilot, it's still amazing what those little computers could do.
+
+
 ### can i help?
 
 well sure, if you have some source that i don't have mentioned anywhere then send it to me at alex@nytpu.com, or see my about page for other methods of contact:
@@ -38,3 +43,5 @@ well sure, if you have some source that i don't have mentioned anywhere then sen
 ### why is your work on this licensed under cc0?
 
 Since all of the work I'm pulling from for this project is licensed in the public domain, it feels unfair that work I contribute would have restrictions that the rest of the documents don't. Since my work here is primarily derivative anyways, I'd feel particularly scummy taking public domain work and turning it into a copyright restricted work. The main reason I usually use copyleft licenses in the first place is to stop companies from taking my freely given work and making a proprietary copy, and relicensing public domain under copyleft feels similar (although it's obviously not as bad since copyleft is still open).
+
+As a side-note since I'm talking about copyright here, but how can the government restrict the use of public domain works (use of nasa insignia is restricted under 14 cfr 1221)? I get that they're the government so they can just do whatever they want, but it's weird that they wouldn't just make a public domain exception instead of releasing it into the public domain and then proceeding to restrict use.

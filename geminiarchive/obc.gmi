@@ -1,0 +1,829 @@
+=> /geminiarchive/ go back to index
+
+# Gemini Spacecraft On-Board Computer (OBC)
+
+## editor's note
+
+This page was ported from Virtual AGC's write up, accessable here:
+=> https://www.ibiblio.org/apollo/Gemini.html Virtual AGC — AGS — LVDC — Gemini: Gemini Spacecraft On-Board Computer (OBC)
+
+Many links on this page will lead back to the ibiblio site as they haven't been ported to this archive yet.
+
+Considering how long this page is, and how many cross-references there are, this might be a good place to use a browser with outline generation functionality that lets you jump between sections.
+
+
+## What is the Gemini Spacecraft Computer (OBC)?
+
+The Gemini spacecraft computer is, as the name implies, the onboard computer of the Gemini spacecraft. The computer seems to have been referred to variously as the "spacecraft computer", the "digital computer", or the "On-Board Computer" (OBC). It was the Gemini equivalent of Apollo's AGC, though with more limited capabilities and functionality. Its basic use was in the post-launch phases of missions (orbit phase, retrograde phase, re-entry phase), because the Titan II rocket which carried the Gemini spacecraft into orbit was guided by its own (separate) ACS-15 guidance computer, but there was provision also for switchover to the Gemini computer for backup guidance if the need arose. Interestingly, the OBC could be used for automatic attitude control of the spacecraft, but not automatic velocity control; rather, it performed necessary calculations for maneuvers such as orbital insertion or re-entry, and the pilots then performed the manual chores of actually adjusting the spacecraft velocity appropriately.
+
+=> img/GeminiComputerPhoto.jpg (157.3kib) The Gemini VIII OBC, with cover removed (Smithsonian National Air & Space Museum)
+=> img/GeminiPhysicalLayout.jpg (43.1kib) Location of the OBC in the spacecraft
+
+The OBC was designed and manufactured by IBM's Federal Systems Division, in Owego, New York, just as Apollo's Launch Vehicle Digital Computer (LVDC)ᵃ was. The OBC and the LVDC are extraordinarily similar at the CPU level.
+
+=> https://www.ibiblio.org/apollo/LVDC.html [a]: Launch Vehicle Digital Computer (LVDC)
+
+
+## Peripheral Devices
+
+This section contains a general overview of the OBC's peripheral devices, but many of them are discussed in much greater detail in later sections.
+
+From a user standpoint, the most visible of the OBC's peripheral device was the Manual Data Insertion Unit (MDIU)—the Gemini equivalent of the Apollo DSKYᵇ—which comprised the Modular Display Keyboard (MDK) and the Modular Display Readout (MDR).
+
+=> img/GeminiMDK.png (15.2kib) Modular Display Keyboard (MDK)
+=> img/GeminiMDR.png (19.3kib) Modular Display Readout
+
+These were on the Pilot's (as opposed to the Command Pilot's) side of the control panel, at the lower right in the drawing below. The small image below is from the familiarization manual, but if you click on it you'll get a much bigger, much more detailed drawing from the Gemini 5 Mission Report.
+
+=> img/GeminiPanels-small.png (56.3kib) the small image
+=> img/Gemini5-panels.png (343.4kib) the detailed drawing
+
+A basic inventory of the guidance sub-systems includes:
+* Attitude Control and Maneuver Electronics (ACME), which is the sub-system that directly controls the propulsion system.
+* Inertial Guidance System (IGS), including the Inertial Measurement Unit (IMU) and the OBC itself.
+* Horizon Sensors
+* Time Reference System (TRS)
+
+The diagram below shows a very simplified block diagram of the guidance system, but if you click it you'll get a (different) more-detailed block diagram.
+
+=> img/GeminiGuidanceSystemBlockDiagram-small.jpg (66.2kib) the simplified block diagram
+=> img/GeminiGuidanceSystemBlockDiagram.jpg (691.1kib) the detailed block diagram
+
+The IMU is the usual gimballed stable platform with accelerometers and angular resolvers as in Apollo, except for a key difference that the Gemini IMU had four gimbals rather than the three gimbals of Apollo. This means that it was not subject to the phenomenon of "gimbal lock", and hence the software used to adjust spacecraft alignment could be simpler than with three gimbals. The value of the 4th gimbal can be appreciated when considering incidents like the mishap in Gemini VIII in which an uncontrolled roll occurred. (If the IMU had had only three gimbals, my understanding is that gimbal lock would have occured when the roll angle was too great.)  On the other hand, at that point the spacecraft was under manual control anyway, and I'm sure that the notion that the IMU would have to be realigned later would have been the least of Neil Armstrong and Dave Scott's worries.
+
+=> https://www.ibiblio.org/apollo/yaDSKY.html [b]: DSKY
+
+
+## Gemini Documentation
+
+Sadly, documentation [Virtual AGC has] been able to collect for the OBC lags far behind that of the AGC or even that of the Abort Guidance System (AGS). What little survives that we have been able to access can be found in our Document Libraryᶜ. There's a lot of unique stuff there contributed by original Gemini developers.
+
+Of particular note are the portions of the Gemini Operations Handbook, for spacecraft 7 and 10, and especially subsection 2.5.7 of those handbooks. These provide user instructions for the flight-computer software, and in the case of spacecraft 10 are particularly detailed. For example, in the case of spacecraft 10, there's a complete list, with explanations, scope, and format, of all of the memory variables (addresses 0-162) accessible from the MDIU/DCS.
+
+=> files/ [c]: Document Library
+
+
+## Evolution of the Flight Software…or, "Everybody Loves Math Flow 7"…or, "What is software, my man?  What is software?"
+
+Information about the Gemini OBC software is hard to come by. Useful information we don't have includes any actual OBC software that's contemporary to the Gemini project itself, and that's a lot not to know. But the situation isn't all bad, partly because the development method of the Gemini OBC software causes us to question what the notion of having the original software even means. I'll explain more about that shortly, but there's an important sense in which we actually do have significant portions of the software at our disposal.
+
+But before turning our attention to such lofty matters, let's begin with some of the more-mundane details. Firstly, as far as naming is concerned, the flight software seems to have been called simply the "operational program". On the subject of versioning of the operational program, we have only partial information, from the familiarization manual, from James Tomayko's Computers in Spaceflightᵈ, Chapter 1, section 4, and from this short memoᵉ. (Where there's any discrepancy, I personally believe in the memo.)
+
+The operational programs were characterized in terms of something called the "Math Flow". In brief, the Math Flow is the complete design of the software, expressed in Gemini as a series of very detailed flowcharts. The development of the Math Flow eventualy went through 7 major versions, designated MF-1 through MF-7. But there were differing revisions for each of the major versions as well.
+
+The overall software design was partitioned into several different areas of basic functionality. In math-flow MF-1 through MF-6, these functional areas were integrated into a single operational program. (Though for some missions, unneeded functionality could be omitted. Thus, Catch-up & Rendezvous were omitted in spacecraft GT-3, GT-4, and GT-7.)  In MF-7, the code was refactored into 6 different high-level "Program Modules", which could be loaded into memory from the Auxiliary Tape Memory (ATM)ᶠ when needed during specific mission phases, though Module I was in memory at all times and didn't need to be loaded from the ATM. The modules were as follows:
+```
+╔═════════╦══════════════════════════════════════════════════╗
+║  Module ║ Basic Functionality                              ║
+╠═════════╬══════════════════════════════════════════════════╣
+║   MOD I ║ Executor                                         ║
+║         ║ Pre-Launch                                       ║
+║         ║ Diagnostics                                      ║
+║         ║ Computational subroutines (SINCOS, SQROOT, etc.) ║
+║         ║ ATM-read                                         ║
+╠═════════╬══════════════════════════════════════════════════╣
+║  MOD II ║ Ascent (with abort capability)                   ║
+║         ║ Catch-up (without radar)                         ║
+║         ║ Re-entry for ascent-abort                        ║
+╠═════════╬══════════════════════════════════════════════════╣
+║ MOD III ║ Catch-up (with radar)                            ║
+║         ║ Rendezvous                                       ║
+╠═════════╬══════════════════════════════════════════════════╣
+║  MOD IV ║ Touchdown-predict                                ║
+║         ║ Re-entry                                         ║
+║         ║ Re-entry initialization                          ║
+╠═════════╬══════════════════════════════════════════════════╣
+║   MOD V ║ Simplified functions as backup for ATM failure:  ║
+║         ║ * Ascent (without abort capability)              ║
+║         ║ * Catch-up and Rendezvous (without self-test)    ║
+╠═════════╬══════════════════════════════════════════════════╣
+║  MOD VI ║ Orbit-predict                                    ║
+║         ║ Orbit-navigation                                 ║
+║         ║ Orbit-determination                              ║
+╚═════════╩══════════════════════════════════════════════════╝
+```
+
+The astronauts used the Computer Mode rotary switch on the Pilots' Control and Display Panelᵍ to select from amount the following mission phases to indirectly affect the active functionality areas:  Pre-launch, Ascent, Catch-up, Rendezvous, or Re-entry.
+
+All of these functionality areas are self-explanatory, except "Executor". Executor is the interface that interrelates the other software modules and allows them to interact with each other, as well has implementing certain common functionality among them.
+
+As far as the relationship between this stuff and the missions is concerned, the best info I have at present is as follows:
+```
+╔════════════╦═════════════╦═══════════╦════════════════════════╦══════════════════════════════════════════════════╗
+║ Spacecraft ║   Mission   ║ Math Flow ║     Program number,    ║ Comments                                         ║
+║            ║ Designation ║  version  ║        revision        ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-1    ║   Gemini 1  ║    n/a    ║           n/a          ║ Unmanned mission. Since Gemini I was apparently  ║
+║            ║             ║           ║                        ║ intended principally as a structural test of     ║
+║            ║             ║           ║                        ║ the spacecraft, it may not have had a computer   ║
+║            ║             ║           ║                        ║ onboard.                                         ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-1   ║            -           ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-2   ║            -           ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-3   ║       6444540, Bʰ      ║ Flowcharts that we have! Seemingly, one minor    ║
+║            ║             ║           ║                        ║ revision prior to the software flown in the      ║
+║            ║             ║           ║                        ║ Gemini 2 unmanned mission. You'll notice,        ║
+║            ║             ║           ║                        ║ though, that the first manned missions (Gemini   ║
+║            ║             ║           ║                        ║ 3 and 4) still used MF-3, though in a later      ║
+║            ║             ║           ║                        ║ minor revision.                                  ║
+║            ║             ║           ║                        ║                                                  ║
+║            ║             ║           ║                        ║ It's useful to know that:                        ║
+║            ║             ║           ║                        ║ * Rendezvous begins on p. 1                      ║
+║            ║             ║           ║                        ║ * Gimbal Angle and CLOCK subroutines are on      ║
+║            ║             ║           ║                        ║   p. 8                                           ║
+║            ║             ║           ║                        ║ * SINCOS and ARCTAN subroutines are on p. 9      ║
+║            ║             ║           ║                        ║ * Re-entry begins on p. 10                       ║
+║            ║             ║           ║                        ║                                                  ║
+║            ║             ║           ║                        ║ * SHIFT, SQRT (also computes arcsin), and LOG    ║
+║            ║             ║           ║                        ║   subroutines are on p. 15                       ║
+║            ║             ║           ║                        ║ * MDIU subroutine is on p. 16                    ║
+║            ║             ║           ║                        ║ * Ascent guidance begins on p. 17                ║
+║            ║             ║           ║                        ║ * Fast-loop ascent guidance begins on p. 19      ║
+║            ║             ║           ║                        ║ * Root sum subroutine begins on p. 22            ║
+║            ║             ║           ║                        ║ * Executor, Accelerometer, DCS, and DAS are      ║
+║            ║             ║           ║                        ║   on p. 23                                       ║
+║            ║             ║           ║                        ║ * MDIU scaling stuff starts on p. 24             ║
+║            ║             ║           ║                        ║ * AGE is on p. 26                                ║
+║            ║             ║           ║                        ║ * Standby, TRS, and I/O subroutines are on       ║
+║            ║             ║           ║                        ║   p. 27                                          ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║  MF-3(?)  ║     62-564-0020, B     ║ Flowcharts that we have!  See pp. 2-3 of the     ║
+║            ║             ║           ║    (Ascent Guidance    ║ linked document. The document contains a lot     ║
+║            ║             ║           ║     and Fast Ascent    ║ of other helpful stuff like detailed             ║
+║            ║             ║           ║     Guidance only)ⁱ    ║ explanations of the variables, some              ║
+║            ║             ║           ║                        ║ additional theory, and source code of a          ║
+║            ║             ║           ║                        ║ FORTRAN implementation.                          ║
+║            ║             ║           ║                        ║                                                  ║
+║            ║             ║           ║                        ║ I'm not really clear where this goes in the      ║
+║            ║             ║           ║                        ║ development chronology, merely that it is a      ║
+║            ║             ║           ║                        ║ few months later than the corresponding          ║
+║            ║             ║           ║                        ║ elements from the Detailed Math Flow in the      ║
+║            ║             ║           ║                        ║ preceding entry.                                 ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-2    ║   Gemini 2  ║    MF-3   ║       6444541, C       ║ Unmanned mission.                                ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-3    ║  Gemini III ║    MF-3   ║       6444566, C       ║ First manned mission.                            ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-4    ║  Gemini IV  ║    MF-3   ║       6444909, C       ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-4   ║            -           ║ Work stopped prior to "sell off".                ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-5   ║            -           ║ Work stopped prior to release or sell off.       ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-5    ║   Gemini V  ║    MF-6   ║       6444871, B       ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-6    ║ Gemini VI-A ║    MF-6   ║       6444871, D       ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-7    ║  Gemini VII ║    MF-6   ║       6444871, D       ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-7    ║  Gemini VII ║    MF-6   ║       6444871, D       ║                                                  ║
+║    GT-8    ║     n/a     ║    MF-6   ║       6444871, E       ║                                                  ║
+║  (backup)  ║             ║           ║                        ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-8    ║ Gemini VIII ║    MF-7   ║    MOD I: 6449856, C   ║ The principal difference between MF-6 and        ║
+║            ║             ║           ║    MOD II: not used    ║ MF-7 was the reworking of the integrated         ║
+║            ║             ║           ║    MOD III: not used   ║ operational program into 6 individual Modules    ║
+║            ║             ║           ║   MOD IV: 6449864, B   ║ (here referred to as MOD I through MOD VI)       ║
+║            ║             ║           ║    MOD V: 6449812, B   ║ that were treated as independent programs,       ║
+║            ║             ║           ║    MOD VI: not used    ║ loadable into main memory at runtime from        ║
+║            ║             ║           ║                        ║ the new Auxiliary Tape Memory (ATM). One         ║
+║            ║             ║           ║                        ║ consequence is that each of the 6 Modules        ║
+║            ║             ║           ║                        ║ in MF-7 now had its own individual program       ║
+║            ║             ║           ║                        ║ number and revision.                             ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-9    ║ Gemini IX-A ║    MF-7   ║    MOD I: 6449856, C   ║                                                  ║
+║            ║             ║           ║    MOD II: not used    ║                                                  ║
+║            ║             ║           ║    MOD III: not used   ║                                                  ║
+║            ║             ║           ║   MOD IV: 6449864, B   ║                                                  ║
+║            ║             ║           ║    MOD V: 6449812, B   ║                                                  ║
+║            ║             ║           ║    MOD VI: not used    ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║     n/a    ║     n/a     ║    MF-7   ║    MOD III: 6449883ʲ   ║ Flowcharts that we have! Later than any          ║
+║            ║             ║           ║                        ║ Module III flown prior to the ATM, and           ║
+║            ║             ║           ║                        ║ therefore presumably algorithmically mature,     ║
+║            ║             ║           ║                        ║ but preceding (by some unknown number of         ║
+║            ║             ║           ║                        ║ revisions) the first use of Module III as an     ║
+║            ║             ║           ║                        ║ integrated program loaded from the ATM in        ║
+║            ║             ║           ║                        ║ Gemini X and therefore presumably relatively     ║
+║            ║             ║           ║                        ║ immature in terms of its implementation in OBC   ║
+║            ║             ║           ║                        ║ assembly language. But remember, we don't have   ║
+║            ║             ║           ║                        ║ any of the original OBC assembly language, and   ║
+║            ║             ║           ║                        ║ it's only the algorithmic correctness that       ║
+║            ║             ║           ║                        ║ concerns us.                                     ║
+║            ║             ║           ║                        ║                                                  ║
+║            ║             ║           ║                        ║ Incidentally, this scan derived from a           ║
+║            ║             ║           ║                        ║ microfilm retrieved from a wastebasket prior to  ║
+║            ║             ║           ║                        ║ the project's move from the Washington, D.C.,    ║
+║            ║             ║           ║                        ║ area in mid-1966. Obviously, we're always trying ║
+║            ║             ║           ║                        ║ to find better sources of material. (If you      ║
+║            ║             ║           ║                        ║ happen to have any wastebaskets from that era    ║
+║            ║             ║           ║                        ║ that are still loaded with microfilm, be sure to ║
+║            ║             ║           ║                        ║ let us know.)                                    ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-10   ║   Gemini X  ║    MF-7   ║  MOD I: 6449856, C (?) ║                                                  ║
+║            ║             ║           ║   MOD II: 6449816, A   ║                                                  ║
+║            ║             ║           ║    MOD III: 6449895    ║                                                  ║
+║            ║             ║           ║ MOD IV: 6449864, B (?) ║                                                  ║
+║            ║             ║           ║  MOD V: 6449812, B (?) ║                                                  ║
+║            ║             ║           ║     MOD VI: 6450027    ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-11   ║  Gemini XI  ║    MF-7   ║            ?           ║                                                  ║
+╠════════════╬═════════════╬═══════════╬════════════════════════╬══════════════════════════════════════════════════╣
+║    GT-12   ║  Gemini XII ║    MF-7   ║            ?           ║                                                  ║
+╚════════════╩═════════════╩═══════════╩════════════════════════╩══════════════════════════════════════════════════╝
+```
+
+Finally, let's return to odd question of whether or not we're in possession of any of the original flight software. This question is related to the serious if somewhat facetiously-phrased question asked in this title's heading, namely:  "What is software?"  In the context of the Virtual AGC project --- and I think in the minds of most currently-active computer programmers (2011) --- the question "What is software?" is very easily answered:  If you have the source code of the program (and some way of compiling or assembling that code) or if you have the binary executable of the program (and some way to execute it), then you have the software. If you have all of the instructions for how to compile/assemble it, so much the better. But the OBC software developers had a somewhat different view of this question, and their view is bound up in the method used to develop the software.
+
+The most important thing to understand about the software-development process for the OBC software is that it was very heavily dependent on design as opposed to coding. What I mean by that is the following:
+1. Great attention was given to deriving the mathematics needed for achieving the objectives, and great attention was given as well to verifying the correctness of that mathematics.
+2. Then (and only then), great attention was given to developing the "Math Flow". To repeat what I said earlier, the Math Flow was a series of a flowcharts specifying the algorithms to be implemented in very great detail. The flowcharts described the algorithms in such detail that the programmer had very few options left open to him in actually coding that software into a form that could be compiled or assembled.
+3. Then (and only then), software was coded. But the coding was almost entirely a slavish detail-by-detail translation of the flowchart into computer source-code form.
+
+It was interesting (and at first frustrating) for me to discuss the matter of existence of the software with OBC developers, because from my point of view the software (source code) seemingly no longer existed, while from the point of view of the OBC developers the software did still exist to the extent that the flowcharts still existed…because to them the software is the flowchart and not the source code. The source code could always be reproduced from the flowchart, albeit with great effort, and not necessarily byte-for-byte identical to the original. When viewed from this perspective, it makes little difference how the flowchart is translated into computer language—whether into FORTRAN as was done for simulation purposes or into OBC assembly language for the mission computer—because regardless, it's the same flowchart so it's the same program.
+
+Now, in the preceding paragraph I probably exaggerated the OBC developers' somewhat in order to make my point, but I think there is nevertheless a lot of validity in the viewpoint that was expressed: If we have the Math Flow charts, then we have the software. You'll notice from the table above that we do have some of the Math Flow charts, though the validity of what we have could be debated.
+
+I'll leave it as an exercise for the reader to decide whether or not we actually have any of the software, or whether or not we're rationalizing.
+
+=> https://www.hq.nasa.gov/office/pao/History/computers/Ch1-3.html [d]: James Tomayko's Computers in Spaceflight
+=> files/GeminiSoftwareHistory.pdf [e]: (69.6kib) short memo
+[f]: see the section titled Auxiliary Tape Memory (ATM) later on this page
+=> https://www.ibiblio.org/apollo/Gemini.html#PCDP [g]: Pilots' Control and Display Panel
+=> files/GeminiMinnickMathFlow.pdf [h]: (45.4mib) 6444540, B
+=> files/GeminiAscentAppendixE.pdf [i]: (2.1mib) 62-564-0020, B (Ascent Guidance and Fast Ascent Guidance only)
+=> files/GeminiOBC-MathFlow-III.pdf [j]: (3.2mib) MOD III: 6449883
+
+
+## OBC Architecture and Interfacing
+
+### References
+
+The principal known sources of information about the computer itself are the "Guidance and Control" sections (Section VIII) of the Project Gemini Familiarization Manual, Volume 1ᵏ and Volume 2ˡ, and most of the information on this web-page was extracted from those sources. If you find my redigesting of the material too poor, you may want to read the Manual instead. However, any simulation software, assemblers, etc., will be based on my understanding and hence on the content of this web-page, so please bring any errors to my attention.
+
+Also, I should state that there's a lot of information on this page that comes from personal communications with original OBC developers, and can't be found in any other reference that's going to be available to the reader…or probably, to anyone. While I present a general acknowledgements and "homage" to the original OBC developers in general at the very end of this web-page, let me mention here the OBC developers who have been so directly helpful to me. In no particular order:
+* Gene Mertz
+* Charlie Leist
+* Alden Minnick
+* Don O'Neill
+
+=> files/GeminiManualVol1Sec2.pdf [k]: (12.7mib) Volume 1
+=> files/GeminiManualVol2Sec2.pdf [l]: (16.3mib) Volume 2
+
+
+### General Characteristics of the OBC
+
+The OBC measured 18.9"(H)×14.5"(W)×12.75"(D), and weighed 58.98 pounds. OBC power was supplied by the IGS Power Supply, which was itself powered from the spacecraft's main +28VDC bus or (for very brief main-power outages or brownouts) the Auxiliary Computer Power Unit (ACPU). The OBC required various voltages (+27.2VDC, +9.3VDC -27.2VDC, +20VDC, +28VDC, and 26VAC, but the existing documentation is inconsistent on the exact voltages used), and itself supplied the MDIU (+25VDC, -25VDC +8VDC) and these latter three voltages were what was actually used internally by the OBC itself.
+
+The computing characteristics were:
+* 39 bits per memory word. Each memory word comprised three "syllables" (syllable 0, syllable 1, and syllable 2) of 13 bits each.
+* 4096 words of memory, in a ferrite core array. All of this RAM was writable—i.e., there was no read-only memory—but the readout of the memory was non-destructive.
+* The memory was logically divided into 16 "sectors" of 256 words each.
+* At any given time only 2 sectors are actually accessable, the current sector (selectable under program control) and the "residual" sector (sector 17 octal).
+* The third syllables of memory words were writable by the OBC hardware, but this function was disabled after the spacecraft left the hangar, so at that point the 3rd syllables were effectively read-only. Consequently, data words always needed to be placed into the first two syllables of memory words. The addressing of data by CPU instructions enforced this data alignment anyway.
+* "Instruction words" were 13 bits each, and "data words" were 26 bits each, so any given memory word could have had a data word and/or several instruction words packed into it. There were also provisions for "short" data words of 13 bits, but these short data words could be used only for testing purposes by Aerospace Ground Equipmentᵐ (AGE), and so were irrelevant for software.
+* Integer arithmetic was 2's-complement.
+* Instruction cycle time was 140 μs and all instructions required a single cycle except for MLT and DIV.
+
+[m]: see the section titled Aerospace Ground Equipment (AGE) later on this page
+
+
+### Layout of Memory Words
+
+I should make it clear that in this section I'm describing my perspective on the organization of OBC memory, in terms of how the original OBC programmers would have worked with it, in terms of how one would work with it using the tools I've created for this site, and in terms of what I think would be the thinking of "modern" programmers at the time I'm writing these words (2011). I'm not slavishly reproducing here the material on memory orgainization from the most-complete documentation available to us, namely the "Guidance and Control" sections (Section VIII) of the Project Gemini Familiarization Manual, Volume 1ᵏ and Volume 2ˡ, because that documentation seems to me to conflict with what I"ve been told by actual OBC programmers. The specific area of difficulty is bit-ordering within memory words. You see, the memory was accessed by a kind of serial interface, and the natural hardware view is in terms of the time-order in which the bits are shifted in and out…whereas the natural software or mathematical view is in terms of which bits are the most-significant or least-significant—or as normally represented, which bits are on the "left" and which are on the "right". So I'll adopt the latter perspective, but if you wish to explore what the documentation says on the topic of bit-ordering, feel free to do so.
+
+In all cases, when I show you binary or octal representations of OBC memory, it will use the notation common today, in which the least-significant bits or octal digits are on the right and the most-significant bits or octal digits are on the left.
+
+As mentioned earlier, memory words are 39 bits, comprising three 13-bit "syllables". In most ways, the syllable is really the natural memory unit, and not the word. Except in one specific case, storing and retrieving 26-bit data, syllables within a memory word are completely unrelated to (and independent of) each other. So you're really best served by thinking of memory as a set of syllables rather than a set of words.
+
+Not all syllables are created equal. In the normal operating mode of the OBC at mission time, the following rules apply:
+* All CPU instructions which fetch, store, or otherwise operate on data stored in memory work only with 26-bit (2-syllable) data words in which the less-significant syllable is stored in syllable 0 of memory and the more-significant word is stored in syllable 1 (in the same word) of memory.
+* Only syllables 0 and 1 are cabable of being modified. Syllable 2 is read-only.
+* Therefore, as you can imagine, all data other than code is allocated in syllables 0 and 1.
+* Code is commonly stored in syllable 2…though since data does not use all of syllables 0 and 1, some code will be stored in syllables 0 and 1 as well.
+
+(There's also a less-common operating mode called "half-word mode" which has somewhat different rules, but this mode has limited usage so we'll return to it later rather than diverting the main discussion.)
+
+Now let's look at some common syllable or double-syllable formats.
+
+Every CPU instruction consists of a single syllable, in the following bit layout:
+```
+PPPPAAAAAAAAA
+```
+where `PPPP` is a 4-bit code identifying the specific CPU instruction (the "op code") and `AAAAAAAAA` is a 9-bit code (3 octal digits) identifying (in a way that varies by instruction type) the operand for the instruction. Conventionally, OBC programmers name the individual bits like so:
+* OP4` is the most-significant bit of `PPPP` and OP1 is the least-significant.
+* A9 is the most-significant bit of `AAAAAAAAA` and A1 is the least-significant.
+
+In most instruction types, A1-A8 select a particular memory word. Since there are only 8 bits, only 256 different words are accessible. Recall, moreover, that memory consists of 16 sectors of 256 words each of 3 syllables each. So the instruction is able to select a specific word address, but the sector containing the word and the syllable within the word can't be selected…those have to be known by other means, which we'll discuss later; for now, just realize that at any time there's some "current sector" and "current syllable", and that whatever the CPU is doing operates within that current selection. When A1-A8 is interpreted in this way, A9 can be used to override the current sector and instead to do a one-time selection of sector 0, which is referred to as the "residual sector". A9=0 means to use the current sector and A9=1 means to use the residual sector. But there's no way to select a different sector or a different syllable on an individual-instruction basis.
+
+Several instructions use a scheme in which the field consisting of bits A1-A3 is given the name "X" and A4-A6 are given the name "Y", thus giving the instruction two independent parameters.  In those cases, A7 and A8 are unused, and A9 may or may supply additional functionality
+
+For normal 26-bit data, recall that a standard 2's-complement format is used.  OBC programmers conventionally refer to the sign bit (i.e., the most-significant bit if interpreting the data as an unsigned integer) as S, to the most-significant non-sign bit as M25, and to the least-significant bit as M1. Therefore, in a word containing such data, syllable 1 will contain S and M25-M14; syllable 0 will contain M13-M1.
+
+Numerical data can be interpreted in two different ways, depending on the interpretation of the software.  Obviously, the data could be interpreted as a simple 2's complement integer.  It can also be interpreted as a fractional value with absolute value less than 1.0.  In the latter interpretation, there is some scaling factor needed to relate the actual value of the number to the binary value that's stored in memory. The OBC and its software have no method for dealing with scaling factors, and it was up to the programmer to understand which interpretation was used, as well as to explicitly scale values during computations to avoid overflow and loss of significant bits.
+
+An important variation in which 26 bits of data aren't numerical in nature is the so-called "HOP constant".  A "HOP constant" is used by a dedicated CPU instruction (HOP)  to change things such as the currently-selected memory sector and syllable by loading a hidden CPU register that can't be accessed by other means. The layout of a HOP constant is as follows:
+```
+xxxxxxxxHxSSxPPPPAAAAAAAAA
+```
+In this scheme:
+* Bits AAAAAAAAA are given names A9-A1 and are interpreted as described earlier, in that they allow selection of a word address (0-255) and provide an override for current-sector vs. residual sector. After the HOP instruction executes, this setting persists within the CPU's hidden HOP register only for the current instruction and is then incremented to the next sequential word (or to some other word if a branch occurs).
+* Bits SS, respectively given the names SYB and SYA,  specify the current syllable:  00 for syllable 0, 01 for syllable 1, and 10 for syllable 2. After the HOP instruction executes, this setting persists until another HOP instruction changes it.
+* Bits PPPP, respectively given the names S4-S1, specify the current sector. After the HOP instruction executes, this setting persists until another HOP instruction changes it, though as we've seen it can be overridden to instead use sector 0 on an instruction-by-instruction basis using the A9 feature possessed by some of the CPU instructions.
+* H selects between "normal" mode (H=0) and "half-word" mode (H=1), and this mode persists until another HOP instruction changes it. "Normal" mode is what I've been describing to you up to this point. In half-word mode (HWM), the data comes from syllable 2  rather than syllables 0,1, and therefore is only 13 bits rather than 26. When the CPU fetches such data from memory, it fills the least-significant 13 bits of the CPU's accumulator register, while the most-significant 13-bits are all 0. An interesting consequence of being in the half-word mode is that any HOP instruction will return to normal mode (since H is among the higher 13 bits of a HOP constant) and the current syllable will always become 0 (since SYB and SYA are also among the 13 more-signficant bits). Moreover, since the the OBC's ability to write to syllable 2 is disabled after the spacecraft has left the hangar, no STO or SPQ have any effect in half-word mode.
+* At power-up, the behavior differed between the early Gemini missions without ATM (Auxiliary Tape Memory), and the later ones with ATM:
+* Without ATM, it is as if a HOP constant is loaded that puts the unit in normal mode (i.e., not half-word mode) at syllable 0 of word 0 in sector 0.
+* With ATM, it is as if a HOP constant is loaded that puts the unit into half-word mode at syllable 2 of word 0 in sector 0.
+
+You may wonder what half-word mode is good for?  Well, originally, it seems to have been intended for testing purposes. Later, when the flight-program outstripped the size of available memory, it became necessary to add the ATM and use it to overlay programs at runtime. In that case, I guess, it's useful to be able to run a program entirely within syllable 2 (which is read-only) without fear that the ATM can overlay it. But you know, I'm not really sure.
+
+### Instruction Sequencing
+
+You may naïvely suppose (I did!) if you did not read the preceding section in great detail, that the everyday usage of the words "word" and "syllable" applies similarly in stepping through the OBC (or LVDC) instructions. In proceeding through a sentence of natural language like English, you use up all of the syllables in a word before proceeding to the next word. So you might suppose that OBC instructions would sequence in a manner something like the following:  word N syllable 0, word N syllable 1, word N syllable 2, word N+1 syllable 0, word N+1 syllable 1, and so on. In fact, this is not the case at all, and (as you may infer from the instruction definitions in the following section) would have caused insuperable difficulties. So get the naïve interpretation right out of your head!
+
+Instead, the instruction sequencing was like this:
+	word 0 syllable N
+	word 1 syllable N
+	word 2 syllable N
+	etc.
+so that the syllable number never changed automatically as you progressed through the program. But you could always change the syllable manually by executing an instruction (HOP) and a HOP constant specifically designed to change the syllable number.
+
+In retrospect, from an outsiders point of view, it would perhaps have been less confusing in terms of instruction sequencing if the OBC hardware designers had used the word "paragraph" rather than "syllable". Alas! it's a bit late to worry about that now. The OBC programmers I've consulted seem to think that this is a perfectly natural scheme, and don't seem to have experienced any confusion over the concept of "syllables".
+
+
+### Editor's Note on CPU Instructions, I/O Signals, & Discrete Inputs
+
+The list of opcodes, i/o signals, and discrete inputs is *very* long, you can access it on the web here:
+=> https://www.ibiblio.org/apollo/Gemini.html#CPU_Instructions CPU Instructions
+=> https://www.ibiblio.org/apollo/Gemini.html#IO_Ports_For_PRO_Instruction I/O Signals
+=> https://www.ibiblio.org/apollo/Gemini.html#Discrete_Inputs_For_CLD_Instruction Discrete Inputs
+
+If anyone wants me to go and convert it to gemini then I'll be happy to, but otherwise I'm fine focusing on archiving other useful information first.
+
+
+### Subroutines
+
+As weird as it may seem in modern terms, the Gemini OBC CPU had no mechanism for easily implementing subroutines. Further, the assembly-language source code for the OBC slavishly implemented what is basically a state machine, using the separately designed "math flow" as a pattern. Therefore the OBC software developers had little need for subroutines. You may think I'm wrong about this, but I've pursued this question with several OBC developers to an extent they probably consider tiresome—fortunately, they've been very patient!—and I think that this is an inescapable conclusion. Therefore, while the OBC may have been a splendid mechanism for developing state machines, it would have been very tiresome for developing general-purpose software without any easy subroutine mechanism.
+
+Now, there were a few subroutines, but they weren't created willy-nilly during development as we often do today. Indeed, the full list (give or take a few due to errors), including some explanation of how to set up the inputs and retrieve the outputs of the subroutines, can be found in the Gemini Programming Manual. In modern terms, we'd probably think of these as library routines, but in Gemini they were the only subroutines. I'll return to this topic of library routines at the end of the section.
+
+Naturally, since there were some subroutines, there had to be some software workaround for the fact that the CPU itself didn't support subroutines, and it seems to have been this:
+* Before calling a subroutine such as SQROOT, the calling program would load the accumulator with the HOP constant of the location to which the subroutine was supposed to return, and then HOP to the subroutine.
+* While we don't actually have any of the math subroutines to look at, presumably the math subroutine would have to:
+	• Save the accumulator in a variable.
+	• Do whatever computations it was supposed to do.
+	• HOP to the saved return address.
+
+In terms of the native capabilities of the machine code, it's actually very cumbersome to accomplish all of this, since it's necessary to set up several HOP constants (one for the subroutine entry point and one for each potential return address), each of which has names that must be distinct from the names of the subroutine and return points themselves. But you may have noticed from the earlier descriptions of the HOP, CLA, and STO instructions that the assembler implements a feature for them in which left-hand symbols can be used as their operands (which would otherwise be illegal), and the assembler simply automatically creates HOP constants as necessary. Therefore, even though what's going on behind the scenes is somewhat more complex, the assembly language for the subroutine linkage as described above simply looks like this:
+```
+        CLA    RETADR    # Set up the return address.
+        HOP    SUBROU    # HOP to the subroutine.
+RETADR  ...              # Subroutine returns to here.
+        ...
+RSUBROU                  # Variable to hold SUBROU's return address.
+SUBROU  STO    RSUBROU   # Enter SUBROU, store return address.
+        ...              # Do stuff inside of SUBROU.
+        HOP    RSUBROU   # Return from SUBROU.
+```
+
+There are several HOP constants used here ("(SUBROU)" and "(RETADR)"), but the assembler creates them transparently, and the programmer doesn't have to know about them unless he suddenly finds himself out of memory. In this example, RSUBROU also holds a HOP constant, but is neverthless just a normal variable that hasn't been handled in any special way by the assembler. (A construct like "CLA *+2" seems like it would be useful here, since it would have eliminated the need to explicitly define the symbol RETADR. But the OBC developers haven't mentioned doing anything like that, so I haven't bothered to implement it. This makes sense in light of the Math Flow diagrams from which the code was created, because they include the detail of setting up the return addresses. Hence to conform to the Math Flow, the coders would have explicitly set up the return addresses anyway.)
+
+I suppose I should make it clear that I'm not honestly sure that the original OBC assembler worked in this way. But multiple OBC developers have made it clear to me that this is the way they recall handling subroutines, even though the explanation of why it was legal to do so (in light of the contradictory machine-code characteristics) has been lost in the ensuing decades. So I see little alternative to supposing that the original assembler did indeed have a similar feature.
+
+Before leaving the subject of subroutines, let me just briefly return to the list of existing subroutines on pages 21-24 the Gemini Programming Manualᵒ that I mentioned earlier. One of the most important subroutines is I/O, which seems to be rather mysterious and we're unfortunately told little about it; it appears to be an exception in that no return address was supposed to be supplied to it. The most complete information is available for the subroutines listed on page 22 of the manual, since for those routines there's actually some documentation about how to set up the inputs and how to fetch the outputs of the subroutines. I've collected a little additional information on some of those routines not covered by the manual, and will present that info here just for the sake of completeness:
+* ROOTSUM computed the square root of the squares of its two arguments.
+* SQROOT seemingly accepted its input in the variable ALPHA1 and output the square root in variable ALPHA3. The input variable ALPHA2 was a first guess at the result, to speed up the computation.
+* SINCOS, listed in the manual as "SIN COS" is a single routine that returns both the sine and cosine. The input was in units of degrees.
+* ATANGM, computed the arctangent, probably of the ratio GAMMA1/GAMMA2 of the input variables. The output is thought to be in units of radians.
+* There was also a routine to compute the tangent, even though it's missing from the tables.
+* LOG is the base 10 logarithm.
+
+Sadly, I'm not aware of what most of the other routines actually did. Though not a subroutine as such, the code identified as the "Executer" was very important and deserves some special attention. Also known as the executive program (commonly called Hard Core), it was assigned to sector 00 and contained code common to all mode programs(Pre-Launch, Ascent, Catch-up, Rendezvous, Re-entry), such as:
+* resetting discrete outputs
+* reading time programs
+* subroutines
+* timing programs
+* go-nogo-go routine
+* setting computer malfunction light
+* AGE routine
+* logic to jump to the mode programs
+
+The Executer and whatever mode program happened to be active functioned somewhat like coroutines. After each pass through a mode program, there was always a return to the beginning of the executive program, where the discrete outputs were set, time was read again, and so forth. After the Executer pass, control was passed back to the mode program again, and this process of cycling back and forth between the Executor and the mode program continued.
+
+There's also a little information available on placement of some of these subroutines (and other programs) in memory…though, other than the Executer and MDIU programs, I'm told that the placement of the various subprograms in memory may not have been terribly important. As of early 1963, prior to the ATM and in-flight swapping of programs in and out of memory, the following is known about memory placement (thanks to notes by Alden Minnick):
+```
+╔══════════════════════╦══════════════════════════════════════════════════════════════════════════════╗
+║        Program       ║ Starting address                                                             ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║      Rendezvous      ║ 01-2-007 ... but I've also been told 02-2-105, 01-2-105, 06-2-007, 03-2-306. ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║       Catch Up       ║ 01-2-105                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║        Reentry       ║ 06-2-000                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║        Sin Cos       ║ 05-2-000                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║ Square root, Arcsine ║ 05-2-325 ... but I've also been told 05-2-000                                ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║         MDIU         ║ 11-0-060                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║    Ascent Guidance   ║ 13-2-002                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║       Executor       ║ 00-0-000                                                                     ║
+╠══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║        Standby       ║ 00-1-023                                                                     ║
+╚══════════════════════╩══════════════════════════════════════════════════════════════════════════════╝
+```
+
+But I suspect these allocations changed a lot after that as, for example, I'm also told that at some point the MDIU was assigned to sector 17 (octal) rather than 11 (octal).
+
+=> files/GeminiProgrammingManual.pdf [o]: (49.0mib) Gemini Programming Manual
+
+
+### Telemetry
+
+Uplink
+
+It was possible to digitally uplink data from ground control to the OBC, via the Digital Command System (DCS). The procedure for fetching a single word from the DCS is as follows:
+1. Poll CLD06 at intervals of 50 ms. or less to determine if data is ready.
+2. When data is ready:
+	• PRO01 to tell the enable the DCS to send the data.
+	• PRO00 to fetch the 24-bit data word into the accumulator bits M1-M24.
+
+In the fetched word, bits M1-M18 contain a data value, while bits M19-M24 contain an address in the range 000-077. The flight software is expected to store the data at the specified address.
+
+The obvious limitations here are that full 26-bit data words are not provided and that the address-range covered is limited. As a variation, there is an "extended" protocol that transmits word pairs rather than single words. The extended protocol allows 26-bit data words and slightly extends the covered address range. It works as follows:
+* Consecutive command words are transmitted to address 20 followed by address 21. 
+* Rather than writing to either address 20 or 21, the two 18-bit data fields are combined into a 36-bit structure.
+* A full 26-bit data field and up to 10 address bits can be extracted from the 36-bit structure. The locations of these fields are TBD.
+* The 26-bit data is actually written to the 10-bit address, if the 10-bit address was in the range 000-117 octal.
+
+
+Downlink
+
+Conversely, telemetry data could be digitally downlinked from the OBC to ground control. The flight software output 21 data words to the Instrumentation System (IS) for downlinking every 2.4 seconds. The flight software would snapshot the values of 21 memory locations (dependent on the operational mode) into a memory buffer, and then to output the contents of that buffer for transmission. Specifically, the way it works is that:
+1. CLD07 is polled at 50 ms. or less intervals. When it becomes active (accumulator negative), the steps below are taken.
+2. CLD12 is tested.
+	• If the accumulator is negative, then the software should snapshot the mode-dependent 21 memory locations into the buffer and output the first buffer word with a PRO10 instruction.
+	• If instead the accumulator positive or zero, then the software should output the next buffer word in sequence using a PRO10 instruction.
+
+
+### Rendezvous Radar
+
+For those spacecraft having a Rendezvous Radar, the following procedure is used to fetch data from it:
+1. PRO63 is used to reset the radar's discrete input buffer.
+2. PRO01 is used to tell the radar that the OBC wants data.
+3. Wait 20 ms.
+4. Test if data available using CLD00.
+5. If data is ready (i.e., if accumulator is negative), perform a code-sequence like the following:
+```
+PRO00
+STO     RANGE   # 15 BITS
+PRO00
+STO     SINAZI  # SINE OF AZIMUTH, 10 BITS
+PRO00
+STO     SINELEV # SINE OF ELEVATION, 10 BITS
+```
+
+The Range data is positive (being a magnitude), and is stored in accumulator bits M8-M24. The least-significant bit (M25) is thus not used. If M8-M11, the 4 most-significant bits, are all 1, then the data should be discarded. The two sine values are stored in M15-M24.
+
+
+### Aerospace Ground Equipment (AGE)
+
+The AGE provides a dedicated data link from the OBC to (as implied by the name) aerospace ground equipment, and provides a way of performing tests or other diagnostic activities by connecting special equipment. The technique of reading a word from the AGE is as follows:
+1. Poll CLD32 until active (accumulator negative).
+2. Fetch an 18-bit word by repeating the following 18 times:
+3. PRO23 with accumulator negative. (Starts a pulse on the AGE data clock.)
+4. Wait 2.5 ms.
+5. PRO23 with accumulator positive or zero. (Ends the clock pulse.)
+6. Wait 1.5 ms.
+7. CLD27. (Reads the data bit.)
+8. Wait 1.5 ms.
+
+Assuming that what the software does with this data is to pack it into bits M1-M18 of a data word, with the first bit read going into M1 and so forth, M4-M1 will contain an operation code. The operation-code bits specify the requested operation as follows:
+```
+╔═══════════════════╦══════════════════════════════════════════════════════╗
+║     Mode Bits     ║                                                      ║
+╠════╦════╦════╦════╣                                                      ║
+║ M4 ║ M3 ║ M2 ║ M1 ║                         Mode                         ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 0  ║ 0  ║ 0  ║ None                                                 ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 0  ║ 0  ║ 1  ║ Read words from memory. (See below.)                 ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 0  ║ 1  ║ 0  ║ Set marginal early. The software should use PRO60 to ║
+║    ║    ║    ║    ║ enable the "marginal early" memory-accessing mode.   ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 0  ║ 1  ║ 1  ║ Set computer malfunction on. The software should use ║
+║    ║    ║    ║    ║ PRO34 to turn the MALF light on. (It's unclear how   ║
+║    ║    ║    ║    ║ the MALF light gets turned off. Probably the         ║
+║    ║    ║    ║    ║ astronaut is supposed to do it manually by pressing  ║
+║    ║    ║    ║    ║ the RESET button on the PCDPᵖ.)                      ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 1  ║ 0  ║ 0  ║ Set marginal late. The software should use PRO60 to  ║
+║    ║    ║    ║    ║ disable the "marginal early" memory-accessing mode.  ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 1  ║ 0  ║ 1  ║ Set pitch ladder output. (See below.)                ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 1  ║ 1  ║ 0  ║ Set yaw ladder output. (See below.)                  ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  0 ║ 1  ║ 1  ║ 1  ║ Set roll ladder output. (See below.)                 ║
+╠════╬════╬════╬════╬══════════════════════════════════════════════════════╣
+║  1 ║ 0  ║ 0  ║ 0  ║ Set all ladder outputs. (See below.)                 ║
+╚════╩════╩════╩════╩══════════════════════════════════════════════════════╝
+```
+
+As you can see, one of these commands causes a memory word to be read and reported back through the interface, while the others are supposed to trigger the OBC software to perform some operation.
+
+When data is being read back (operation 0001), the data word read from the AGE link is interpreted as follows:  M5-M12 will contain a data address (A1-A8), M13 (A9) will contain a bit related to AGE internal clock pulse timing, M14-M17 will identify the sector (S1-S4) of the requested data, and S5 will identify the syllable of the requested data. (By selecting S5=0, the data is taken from syllables 0,1. By selecting S5=1, the data is taken from syllable 2 with an implied but fictitious syllable 3 that is entirely 0.)  The first bit transmitted is the most-significant bit of higher selected syllable and the last bit transmitted is the least-significant bit of lower selected syllable. The actual transmission technique is to repeat the following 26 times, in most-significant to least-significant bit order:
+1. Load the accumulator so that the bit to be sent is the sign bit.
+2. PRO22 to output the bit.
+3. Wait 2.5 ms.
+4. PRO23 with accumulator negative. (Start AGE data clock pulse.)
+5. Wait 2 ms.
+6. PRO23 with accumulator positive or zero. (End clock pulse.)
+7. Wait 2 ms.
+8. PRO22 with acculator positive or zero. (Put AGE datalink line back to its normal resting state.)
+9. Wait 1 ms.
+
+(The manual states that specifically that "there is a delay of 4.5 ms. between resetting clock 18 and setting clock 19". I cannot fathom any meaning in this statement, so I simply report it as written.)
+
+As far as the "Set XXX ladder outputs" operations are concerned (0101, 0110, 0111, and 1000), the data word read from the AGE is interpreted as a sign bit at M18 and a 6-bit data word (D1-D6) at M12-M17. What is done with this data is TBD.
+
+[p]: see the section titled PCDP later on this page
+
+
+### Time Reference System (TRS)
+
+The Time Reference System (TRS) keeps track of elapsed time from lift-off, and provides count-down times to retrograde and to equipment reset. It counts in 1/8-second increments. The timings being tracked can be transferred to the OBC or set from the OBC, and they can be set by other means such as manual entry and digital uplink from the ground.
+
+The TRS can be accessed by the OBC in one of two modes:  "readout mode", which is activated by PRO21 with the accumulator negative, and "enter mode", which is activated by PRO21 with the accumulator positive or zero. In readout mode, the elapsed time (ET), the time until retrograde (TR) or the time until equipment reset (TX) is transferred from the OBC to the TRS. In enter mode, the transfer is instead from the TRS to the OBC. If TR reaches zero, then a discrete from the TRS which can be read with CLD05 becomes active, and the software is generally expected to poll this discrete so that it can know when to begin retrograde.
+
+The TRS has three internal 24-bit counter-buffers in which times are counting upward or downward, and a separate 24-bit buffer used to transfer data to/from the OBC.
+
+In order to make sense of the procedures documented in the familiarization manual, the PRO21 instruction must have some unusual behavior, such as the following:
+* It places the accumulator's M25 bit onto the output line to the TRS.
+* It places the signal from the input line from the TRS into the accumulator's M1 bit.
+* It generates a clock pulse for the TRS.
+
+
+Readout Mode
+
+Here's how the OBC can write data to the TRS.
+1. PRO21 with accumulator negative to select readout mode.
+2. Load the accumulator with 24-bit data for the TRS. The data should be in accumulator bits M2-M25.
+3. Repeat the following 24 times:
+	a. PRO20 to output accumulator's M1 to the TRS.
+	b. SHR1 to discard M1 from the accumulator and move the other accumulator bits downward.
+4. With the accumulator negative use (only) one of PRO14, PRO65, or PRO25 to strobe the TRS transfer buffer into one its ET, TR, or TX counter, respectively.
+5. Delay 9-15 ms.
+6. Use the same PRO instruction from step 4, but with the accumulator zero or positive.
+
+
+Enter Mode
+
+Here's how the OBC can read data from the TRS.
+1. PRO21 with accumulator zero or positive to select enter mode.
+2. With the accumulator negative use (only) one of PRO14, PRO65, or PRO25 to load the TRS ET, TR, or TX counter value, respectively, into its transfer buffer.
+3. Delay 9-15 ms.
+4. Use the same PRO instruction from step 2, but with the accumulator positive or zero.
+5. 25 repetitions of the following steps. (Yes, that's 25 repetitions, even though only 24 bits are involved.)
+	a. PRO20 to get the next bit from the TRS into the accumulator's M1 bit.
+	b. SHR1 to logically right-shift the accumulator by one place.
+6. Notice that after the 25th step above, the first bit that was read will have been shifted out of the accumulator entirely, so only the bits from the 2nd through 25th reads will remain.
+
+
+### Auxiliary Tape Memory (ATM)
+
+At some point in the evolution of the operational program, feature creep caused the size of the operational program to overrun the total amount of memory provided by the ferrite array. For Gemini VIII through XII, the approach taken was to modularize the software in a way that allowed it to be reloaded into the OBC during the mission with software that was specialized for the current phase of the mission. So even though we talk (for example) about the "software for Gemini X", the software for Gemini X was really several different programs that were loaded just during the mission phases in which they were used. The programs were stored in the Auxiliary Tape Memory (ATM) and then transferred to the OBC. The actual capacity of the tape was "over 85,000 thirteen-bit words", which is about 7 times the capacity of the ferrite array. I don't know exactly how long it took to load programs from the ATM into the OBC, but the total tape could be read in 67 minutes, so the maximum amount of time a program load could have taken would be about 10 minutes. Since not all of the memory could be overwritten, and since syllable 2 of the 39-bit memory words couldn't be changed in flight anyway, the actual loads would have taken less time, and is estimated at about 7 minutes.
+
+Loading software from the ATM into the OBC is actually a software operation rather than a hardware-only operation, so it requires that some software—namely, the software that does the software loading—remain always in the OBC without being overwritten. That invariant portion of the software is known as "Module I". There were six modules in all, and I've already described them aboveʳ.
+
+I can't tell you (yet) how many separate software loads occurred during the missions, nor which modules were loaded during these loads, but that is probably information we can find or deduce at some point in the future. I believe, however, that loads occurred during the pre-launch phase after diagnostics had been completed, in orbit prior to rendezvous, and after rendezvous but prior to re-entry.
+
+The documentation does not precisely describe how data is read from the ATM. But the following is my best guess as to how the actual OBC/ATM inteface works. 
+
+=> img/GeminiPanelATM.png (26.7kib) Gemini ATM Panel
+
+Various of the PRO/CLD instructions mentioned below are repurposed from interfacing to other peripherals like the TRS. The image above, showing the pilot controls for the ATM, came from the Gemini XII Mission Reportˢ. (I was obliged to replace all of the text to make it legible for presentation here.)  In the AUTO mode, it appears as though data could be written to the tape using the Aerospace Ground Equipmentᵗ (AGE), but only the STDBY, REWIND, WIND, and PROG modes seem to have been useful during the mission.
+
+* The position of the ATM mode switch can be read by combining the two bits from CLD14 and CLD15. I assume that being in STDY or not is what affects the repurposing of the PRO/CLD instructions I mentioned earlier and that the remaining 4 positions are what is reported as the mode. I don't know what numerical codes are associated with which modes.
+* The ATM is commanded by the computer to wind (fast forward), rewind, or to stop winding/rewinding with the PRO15, PRO25, or PRO14 instructions, respectively, on the basis of the positioning of the ATM mode switch. Wind and rewind occur at about 12 inches per second, whereas reading or writing occurs at 1.5 inches per second.
+* The ATM is commanded to verify/reprogram (i.e., to output actual data or, I assume, to pause playback) with the PRO44 instruction.
+* CLD33 is used to determine that the ATM has reached the proper speed for reading (or writing) data from (to) it, and become active roughly 5 seconds after the tape drive has been set in motion.
+* When the ATM is outputting data, the data is provided in 3-bit frames at a rate of 200 frames per second.
+* A new 3-bit data frame is ready to be used when CLD41 becomes active.
+* The 3-bit frame's data is retrieved using the commands CLD44, CLD43, and CLD35 to get the individual bits-positions of the frame.
+* The end or beginning of the tape is detected with CLD34.
+
+The ERROR lamp seems to have been directly controlled from the ATM rather than from the OBC. The 3-bit data frames mentioned above were actually 4 bits each, with the 4th bit being a parity bit, so the ERROR lamp was lit when a parity error was detected. Moreover, the data was triply redundant as well, so a voter circuit could detect an error if there was a mismatch between the redundant data. Finally, the data checks occur even during wind/rewind operations, so the ERROR light can potentially be lit during those activities. On a similar note, it may have been possible to read data from the ATM during a tape wind/rewind operation, but I have no data on that subject. I believe that a PRO14 will extinguish the lamp if it is lit. 
+
+The RUN lamp is also controlled directly by the ATM, and indicates that the tape is in motion; it lights 5 seconds after receiving any command that sets the tape in motion. It will be automatically extenguished if the beginning or end of the tape is reached.
+
+During an ATM search operation, the IVIᵘ was used to show the tape position (in 13-bit words) on the left/right display, and the module words on the fore/aft display.
+
+As far as how the data is actually encoded on the tape—i.e., how the 3-bit frames are recombined into 39-bit memory words, and where those words are placed in memory—I have, as of yet, found no clue in the documentation.
+
+[r]: see the section titled Evolution of the Flight Software earlier on this page
+=> files/Gemini12MissionReport.pdf [s]: (23.5mib) Gemini XII Mission Report
+[t]: see the section titled Aerospace Ground Equipment earlier on this page
+[u]: see the section titled IVI later on this page
+
+
+## OBC Assembly Language
+
+I've given a number of examples of OBC assembly-language above, particularly where describing the various CPU instructions, but I'd like to devote this section and its sub-sections to describing the assembly language and its syntax a little more generally. I'll try to describe the original language used by the OBC developers to the extent possible, but since no documentation of the language or the assembler other than the names of the instructions is known to survive, nor any examples of OBC assembly-language contemporary to Gemini, you can't assume that my description is completely correct. 
+
+On the other hand, my information has been gleaned from a lot of communications with OBC developers, and by some rather extensive modern (2011) recreations of sample code by OBC developers. You can find the sample code here:
+[editor's note: I took the liberty of converting these two from .doc to .pdf]
+=> files/Alden.pdf (75.0kib) Sample code by OBC programmer Alden Minnick
+=> files/Charlie.pdf (67.8kib) Sample code by OBC programmer Charlie Leist
+
+This sample code was produced with the intent of showing the coding style that was employed, and was developed similarly to the way that the original OBC code was developed: namely, by "slavishly" duplicating the extremely detailed flowcharts known as the "math flow". (I got the description "slavish" here from OBC developer Don O'Neill, who was in charge of the assembler program.)  So I think that there's a pretty high degree of authenticity. On the other hand, you have to recognize that the sample code was developed 45 years after the end of Gemini, and that Alden and Charlie had (at the time of creating the samples) neither an assembler nor an OBC simulator, so you have to expect that there's going to be some degree of inconsistency and unavoidable error as well. Charlie has passed along the following additional brief notes that he wrote while creating his own code snippet that I think give a much fuller picture not merely of the production of the sample code, but of the method by which the original OBC software was produced…not that all of the original developers necessarily worked the same way, of course!
+
+=> files/GeminiCharlieLeistRulesForCodeSnippets.pdf (55.3kib) Some rules proposed prior to coding the samples.
+=> files/GeminiCharlieLeistCodeSnippetMethod.pdf (64.8kib) Explanation of the coding method.
+Design diagrams. Charlie's sample code is supposed to be an implementation of page 7 of the 1966 Catch-up & Rendezvous Math Flowʲ. This was transformed into a flowchart more-directly related to OBC assembly languageᵛ and a memory-allocation tableʷ as a preliminary to actual coding.
+=> files/CharliesReview.txt Code review of Alden's code sample.
+
+Here also is a far briefer sample and explanation by Charlie of coding a simple formula in OBC assembly language:
+> I will start out with a simple equation like: Y=MX + B. Here goes:
+>
+> Lets assume the numbers are small as that we won't have to do any fixed point scaling.
+>
+> Lets define B as a constant with the decimal value of +3. The 24 bit memory in binary word would be as. (0 00 000 000 000 000 000 000 011) There is no actual spaces between the binary zeros - it makes it easier for me count the bits and look at the sign bit! The sign bit was the most significant bit while the the least significant bit was the 1.
+>
+> Lets also assume the program is in sector (00) - in octal (zero). There were 16 sectors in octal that you could program in. To change sectors you had to execute a HOP instruction.
+>
+> The first bit of constant (+3) in memory is the sign bit of zero which repents a positive number, A negative number would have a 1 bit.
+>
+> The Gemini symbolic instructions on punch cards fed in to the Assembler would look like this:
+```
+CLA X       Variable Comment
+MPY M       Slope Comment
+SPQ Temp1   Store the product in a memory location Temp1 comment
+ADD B       Constant (+3) comment
+STO Y       Store result in Variable Y memory location
+```
+
+To a certain extent, I have tried to get around some of the problem of having no feedback for detecting coding errors by developing a recreated version of the OBC assembler, which I call yaASM, and an OBC CPU emulator, which I call yaOBC. At this point, these programs are very much works in progress, and I don't claim that they are fully debugged or even that they will run on your computer. For this reason, they have not made their way into the official Virtual AGC software source or binary distribution. But for now you can download the cutting-edge binaries from the temporary Gemini download section on this page.
+=> files/ [Editor's note: you can find the software archives here]
+
+Finally, before starting, let me note that in contemplating the original OBC assembly language, there was a small set of features which (from a modern standpoint) seem to be absolutely necessary to the language, but which don't seem to have existed originally; perhaps they truly existed in some form but have simply been forgotten over time. In those cases, I have taken the liberty of adding those features to yaASM and to the assembly-language syntax. In the description that follows, I have color coded in this brown color any aspects of the language that seem to me to be newly-added and not to have existed in this exact form in the original OBC assembly language.
+
+=> img/GeminiLeistSampleCodeFlowchart.png [v]: (154.2kib) flowchart more-directly related to OBC assembly language
+=> files/GeminiLeistSampleMemAssignments.pdf [w]: (354.1kib) memory allocation table
+
+
+### General format
+
+The format of an individual line of code, corresponding to a single punch-card from the point of view of the original OBC developers or to a line of a source file from the current perspective, is:
+```
+LHS OPERATOR OPERAND COMMENT
+```
+
+Note that these fields are not aligned on an particular column, and are simply separated by white space of any kind. The total number of characters in a line was originally limited to punch-card length (80 characters), as the assembler did not allow for continuation cards, but the current assembler extends that limit to 132 characters. Moreover, since it's a little easier to compose source-code these days (without having to use punch-cards), with newly-written code I think it's nicer to align the columns attractively.
+
+* LHS an optional symbolic name for the memory address at which the line of code or variable/constant allocation is located. (The reason I call this "LHS" is that the OBC developers referred to the symbolic name for a location holding a CPU instruction as a "left-hand symbol". They didn't use that term for names of variables or constants, though for the purpose of describing syntax I'll symbolize all such things as LHS.) LHS is limited to 8 characters or less, and may contain any character which is not white-space. I believe that the original OBC assembler accepted only up to 6 characters, and I further believe that the original OBC developers conventionally used only upper-case characters and digits. yaASMalso treats all words defined by the language itself (such as opcodes) as reserved, and doesn't allow LHS to be a reserved word.
+* OPERATOR is either an opcode or else a pseudo-op.
+* Not all instructions have an OPERAND. Where required, though, the nature of OPERAND differs by OPERATOR type. The descriptions of the individual OPERATOR types elsewhere on this page also list the allowed OPERAND types for them.
+* The optional COMMENT is any string of characters whatever. It is unclear if the original assembler required the comment to be preceded by any special character, and yaASMdoes not require it. However, for convenience purposes,yaASMdoes ignore any text from a '#' character to the end of line, and following this convention has the advantages both of allowing a full-line comment and of allowing the assembler to detect certain syntax errors that would otherwise be undetectable. In fact, for yaASMI arbitrarily disallow comments in without leading '#' in variable allocations since such comments would indistinguishable from misspelled OPERATORs. A full line containing only white-space is also treated as a comment. The following additional conventions related to comments are also useful, though not enforced in any way:
+	• A comment made by the developer of the code should be preceded by a single '#'.
+	• A comment made by a downstream editor of the code (such as the maintainer of this website) should be preceded by "##".
+
+The original OBC developers, I told, formatted the code for submission to the assembler as follows:
+1. A list of all variables used, where a "variable" is the name a memory location whose value can be changed at runtime. In these lines, LHS is present but OPERATOR and OPERAND are not. yaASMtreats such a line as an allocation for an uninitialized variable named LHS, as the original OBC assembly language doesn't seem to have had any other method of making such an allocation. I'm not sure, but I think that lines of the form "LHS SYN REFLHS COMMENT" might be included in this section.
+2. A list of all constants used, where a "constant" is the name of a memory location assigned a value at assembly-time. They're not really "constant", though, since there's nothing to stop the runtime program from changing the values later. In modern terms, it's probably best to think of these as allocations of initialized variables. To my understanding, the OBC programmers used a naming convention in which if the name of the constant began with 'K', the program was not supposed to alter the value. (Interestingly, the original assembler did not have a concept of a symbolic constant that was used only at assembly time without corresponding to a memory location. The pseudo-op EQU which would be used for that purpose in many current assembly languages is, in fact, used for something else.)  In section, OPERATOR is generally DEC, OCT, EQU, or HOPC.
+3. Instructions.
+
+Curiously, I've been unable to ascertain how the original assembler was told what areas of memory were to be used for assembly of instructions or data. Perhaps each memory region was assembled separately, along with job-control directives giving the memory region, and all of the little pre-assembled chunks were merged together later into a single executable image. At any rate, to overcome this, I've found it necessary to invent my own syntax for such things. The following directives for that purpose are completely new in yaASM and didn't exist in this form originally:
+
+HALF
+Tells the assembler that the half-word memory access mode is in effect in following block of code. This remains in effect unti a NORM directive is encountered.
+
+
+NORM
+Tells the assembler that the normal memory access mode is in effect in following block of code. This remains in effect unti a HALF directive is encountered that overrides it.
+
+
+CODE M-PP-S-WWW
+Tells the assembler that the next instruction encountered should be assembled at address M-PP-S-WWW, where M is the module,  PP represents two octal digits giving the memory sector, S is the syllable, and WWW represents three octal digits giving the word number. The word number is incremented by the assembler on each successive instruction encountered, but assumptions about the selected sector and syllable are never changed until another CODE directive is encountered.
+
+The concept of a "module" (M) is completely different in Gemini OBC vs. Apollo LVDC, and yet in some quirk of fate can be treated identically by the assembler. In OBC, the program modules (I, II, III, IV, V, and IV) can be loaded at runtime from the Auxiliary Tape Memory, thus overlaying each other, although module I was intended to always be present. In LVDC, in contrast, there were up to 8 memory modules installed in the computer, each equivalent to 2/3 of the total OBC memory, and there was no ATM. But as far as the assembler is concerned, these two very different types of "modules" can each be treated simply as independent memory areas. To make the handling consistent, yaASM allows 8 modules numbered 0-7 for either case. For OBC, module 0 corresponds to program module I, 1 corresponds to II, and so on.
+
+The discussion that follows pertains solely to the Gemini OBC.
+
+yaASM expects to assemble a complete set of program modules as a single operation, rather assembling the program modules separately and merging them afterward ... which, I gather, was the original procedure in Gemini itself. This makes it easier for all program modules to be aware of the same set of global variables. As a consequence of this feature, however, yaASM requires that progam modules do not redefine left-hand symbols or variable/constant names from one module to the next. So (for example) if you had a variable named X in module I, you couldn't define a different variable X in module II, even though you could continue using X from module I within module II, as long as module II hadn't actually overlaid the portion of module I where X was defined. yaASM has no way of detecting runtime problems where code or data are accessed that aren't actually loaded, so it is the responsibility of the programmer to avoid it. 
+
+One situation that may arise is that some memory location may be used as a variable with two different interpretations in two different modules, and therefore it's desirable to assign two different symbolic names to it. For example, we might desire a specific address to be the variable PHI in module II and the variable EPSILON in module III. Using multiple names for the same address causes no problems if module II and module III use the same region of memory and hence don't coexist. In this case, the SYN pseudo-op could be used to define PHI and EPSILON as synonyms; module II would use only the symbol PHI and module III would use only the symbol EPSILON. The same situation could occur with left-hand symbols as well; for example, if there were two modules for the exact same area of memory, and the entry points for both were at the same address, then two different left-hand symbols would refer to the same address but in two different modules. But generally in this latter situation, the left-hand symbols are all defined naturally just by assembling the code, and therefore no explicit SYN is needed.
+
+
+DATA M-PP-S-WWW
+Tells the assembler that the next variable or constant declaration encountered should be assembled at address M-PP-S-WWW. See the CODE directive for more detail.
+
+
+These directives, with whatever operands they may have, are expected to be placed on lines by themselves, without any left-hand-symbol or comment. However, any desired white-space can be added to make them look pretty. Note that CODE and DATA are completely separate and independent, so that they can logically be use together or separately. I'd think that the most normal usage, though, would be to issue both directives together, like so:
+```
+CODE M-PP-2-000
+DATA M-PP-0-000
+... all of the code, variables, and constants for sector PP ...
+```
+
+Because of the existence of these directives, yaASMhas no need to enforce the original-OBC division into sections (VARIABLE/CONSTANT/CODE) described earlier, and expects that variable- and constant-specifications can be intermixed at random with instructions. However, it is required that blocks of source code be preceded by the appropriate directives HALF/NORM/CODE/DATA describing the memory being used. It's very important to understand that the directives only affect the assembler's assumptions, but don't have any effect at runtime. While the assembler can help to keep the assemble-time assumptions consistent with the runtime conditions, it's still possible for the programmer to fool the assembler and generate code that won't actually execute. For example, for HOP constants generated with HOPC, the runtime effect of a HOP will generally be consistent with the assembler's assumptions about memory use; for HOP constants generated instead by OCT, there's no such expectation. It's ultimately up to the programmer to insure consistency.
+
+In order to allow relatively clean organization of source code, yaASM allows an OBC source file to include the complete contents of another OBC source file within it by placing the name, preceded by the character '$', by itself on a line, like so:
+```
+...
+$IncludeThisFile.obc
+...
+```
+
+Multiple include-files can be used in a single source file, and include-files can include other files. This feature could be used, for example, to organize a program in terms of pages in its math-flow diagram by putting each page in a separate source file.
+
+
+### Shorthands for some instructions
+
+SHR 1
+Same as an SHF with X=1, Y=2.
+
+
+SHR 2
+Same as an SHF with X=0, Y=2.
+
+
+SHL 1
+Same as an SHF with Y=3. The value of X doesn't matter in this case, but our assembler will use X=0.
+
+
+SHL 2
+Same as an SHF with Y=4. The value of X doesn't matter in this case, but our assembler will use X=0.
+
+
+NOP
+A no-operation instruciton that simply advances to the next instruction in sequence. The assembler translates this to "TRA *+1". The existence of NOP.
+
+
+In discussions or in documentation you'll often see references to things like "SHR1" or "PRO43" — in other words, to things that look like SHR, SHL, SHF, PRO, or CLD instructions+operands, but without any space between the operator and operand. Indeed, you'll find references like that on this web page. It remains unclear to me whether the original OBC assembler accepted constructs of this kind, but the yaASMassembler does not:yaASMexpects the instruction and operand to be delimited by space(s) in all these cases. Until/unless actual OBC source code is found so that it can be fed into the assembler, the point is (of course) not of overwhelming concern.
+
+
+### Pseudo-ops
+
+[See "Editor's Note on CPU Instructions, I/O Signals, & Discrete Inputs"]
+=> https://www.ibiblio.org/apollo/Gemini.html#Pseudo-ops here's the web link
+
+
+### Software Examples
+
+Above, you've seen various code snippets of OBC assembly-language generated by me or original OBC developers in the absence of any OBC programming manual or actual examples of OBC code contemporary to Gemini to work from. You may also find the short programming exampleˣ created by John Pultorak instructive. (In John's document, "SGSC" refers to a Gemini-related project of his own, and not to anything that actually existed in the true Gemini project.)  Unfortunately, John is in the same boat as I am, and is working without geniune code or code samples.
+
+=> files/SGSCexample.pdf [x]: (51.7kib) short programming example
+
+
+## Virtual AGC simulation software
+
+Please see
+=> files/ gemini://nytpu.com/geminiarchive/files/
+for downloads and more information on the simulation software
+
+
+## Plea for Data
+
+As you will have noted if you've read this far, there are some pretty serious gaps in the publicly-accessible data about the Gemini computer and its software.  If you know where to find any more information, please tell me about it.  Examples of some of the things that would be interesting to have include:
+* Source code, source code, source code.  Any computer source code—or for that matter, binary code—that ran on the Gemini computer would be useful:
+	• Flight software.
+	• Preflight software.
+	• Test & checkout software.
+	• Even sample code.
+* Manuals explaining the syntax of Gemini assembly-language.
+* Any documents missing from the Document Library.
+* Developers' notes.
+
+Another interesting possibility is to locate a tape from the Gemini Aux Tape Unit.  Since the Aux Tape Unit was used to load software for some mission phases in flight, it is possible such a tape could still hold actual executable OBC software.
+
+[Please email Ron Burkey at info@sandroid.org if you have good info to contribute to his site. You could email me too I guess, I'd be happy to forward anything to interested parties.]
+
+
+## Reminiscences and Factoids from the Original Developers
+
+[Work in Progress]
+
+
+## Homage
+
+Part of my purpose on this web-page is to pay homage to the original Gemini flight-software developers.  I have little information about them, so if you know things about them, feel free to pass your information to me.   What I do know follows:
+
+=> files/GeminiDevelopers.pdf Here's a big list of 70-or-so names (and where recalled) responsibilities of team members, put together by OBC developers Gene Mertz, Charlie Leist, &co.
+* And here are a few other names I got from Gene, which for some reason or other didn't make it onto his official list:
+	• Marv Czarnik, of McDonnell, interface for rendezvous guidance.
+	• Scarborough (?), programmer (?)
+* I'm also informed of the Gemini area of the U.S. Space Walk of Fame, which includes an engraved list of names (pictured at right).  I'm given to understand that (sadly) only a few of the names on the monument seem to from the IBM Gemini flight-software software-development team.
+
+
+⁂
+
+=> /geminiarchive/ go back to index
+
+=> https://creativecommons.org/publicdomain/zero/1.0/ this page is derived from virtualagc, which is licensed under the terms of the creative commons cc0 public domain dedication.
+=> https://creativecommons.org/publicdomain/zero/1.0/ all modifications to the original work are licensed under the terms of the creative commons cc0 public domain dedication.

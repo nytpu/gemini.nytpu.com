@@ -18,8 +18,11 @@ I'm christening this project the “Project Gemini Gemini Archive.” Really rol
 
 I may also add some select pieces from Project Mercury and the Apollo Program too, but I'm focusing on Project Gemini first.
 
-It's a work in progress, check in later for some stuff
-=> faq.gmi i wrote a faq
+=> obc.gmi Gemini Spacecraft On-Board Computer Technical Information
+=> img/ Image Archive (WIP)
+=> files/ Document and Software Archive
+
+=> faq.gmi questions frequently asked
 
 
 ⁂
@@ -30,3 +33,4 @@ It's a work in progress, check in later for some stuff
 => https://creativecommons.org/publicdomain/zero/1.0/ all works that originated from the virtual agc project are licensed under the terms of the creative commons cc0 public domain dedication.
 => http://tothemoon.ser.asu.edu/about arizona state university's march to the moon archive have granted non-express permission to use their works for personal, educational, and research uses.
 => https://www.usa.gov/government-works all works that originated from the united states government are placed in the public domain.
+=> https://www.govinfo.gov/app/details/CFR-2016-title14-vol5/CFR-2016-title14-vol5-part1221 nasa insignia, including mission insignia and logotypes, have restricted use under 14 cfr 1221.
