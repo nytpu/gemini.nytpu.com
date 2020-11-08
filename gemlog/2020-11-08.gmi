@@ -1,0 +1,24 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# [ANN] Project Gemini Gemini Archive
+### november 08, 2020
+
+In a message to the gemini mailing list (gemini@lists.orbitalfox.eu):
+On 2020-11-08 09:13AM, Alex // nytpu wrote:
+> Hey everybody,
+>
+> I've set up an archive about Project Gemini (the space program). So far
+> I've ported Virtual AGC's technical write-up of the Gemini On-Board
+> Computer to gemtext and am mirroring a selection of images, documents,
+> and software. I'm also going to add some Mercury and Apollo stuff in the
+> future once I get the Gemini archive to my satisfaction.
+>
+> The archive is accessible here:
+=> gemini://nytpu.com/geminiarchive/ gemini://nytpu.com/geminiarchive/
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-11-08.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-11-08.gmi view likes and comments!
