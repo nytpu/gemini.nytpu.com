@@ -13,6 +13,8 @@
 
 ## 2020
 
+=> gemini://nytpu.com/gemlog/2020-11-08.gmi 2020-11-08 — [ANN] Project Gemini Gemini Archive
+
 => gemini://nytpu.com/gemlog/2020-10-31.gmi 2020-10-31 — spooky times movie recommendations
 => gemini://nytpu.com/gemlog/2020-10-29.gmi 2020-10-29 — hello minidisc :)
 => gemini://nytpu.com/gemlog/2020-10-19.gmi 2020-10-19 — WebP Revisited (a little more in-depth this time)
