@@ -11,12 +11,10 @@
 |_______________|       \__,_/_/   \___/_/ /_/_/ |___/\___/
 ```
 
-I'm christening this project the “Project Gemini Gemini Archive.” Really rolls off the tongue doesn't it? It's meant to be a semi-comprehensive archive of everything about Project Gemini hosted in geminispace. So far I'm planning to pull from:
-=> http://tothemoon.ser.asu.edu/gallery/Gemini the nasa/arizona state university gemini archive
-=> https://www.ibiblio.org/apollo/Gemini.html virtual agc's page detailing the gemini spacecraft computer
-=> https://www.ibiblio.org/apollo/links.html#Gemini_spacecraft_computer virtual agc's page of documents and schematics for project gemini
+I'm christening this project the “Project Gemini Gemini Archive.” Really rolls off the tongue doesn't it? It's meant to be a semi-comprehensive archive of everything about Project Gemini hosted in geminispace.
 
 I may also add some select pieces from Project Mercury and the Apollo Program too, but I'm focusing on Project Gemini first.
+
 
 => obc.gmi Gemini Spacecraft On-Board Computer Technical Information
 => img/ Image Archive (WIP)
