@@ -1,6 +1,6 @@
 # faq
 
-### how long until you actually have something on here?
+### how long until you get more content on here?
 
 I dunno, I tend to be lazy so whenever I get around to it I guess.
 
@@ -14,24 +14,12 @@ In all seriousness though, Gemini is largely ignored, even by space/spacecraft e
 
 ### why did you start this project
 
-I love space and the history of spaceflight so I knew more than usual about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it when I sort-of fleshed it out more on irc:
-```
-<login> ah, so what is a physical Gemini capsule?
-...snip...
-<nytpu> login: physical gemini capsule: https://upload.wikimedia.org/wikipedia/commons/d/de/Gemini_7_in_orbit_-_GPN-2006-000035.jpg
-<login> ah
-<nytpu> speaking of which i've been meaning to mirror virtual agc's gemini archive on gemini
-<nytpu> https://www.ibiblio.org/apollo/Gemini.html
-<nytpu> and i'd also mirror the apollo stuff
-<nytpu> https://www.ibiblio.org/apollo/links.html#Gemini_spacecraft_computer
-<adcw> hell yes nytpu
-<adcw> that sounds aweosme
-```
+I love space and the history of spaceflight so I knew more than usual about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it so here we are.
 
 
 ### why is there so much about the guidance computers?
 
-Well, there's a wealth of information about the computers thanks to the Virtual AGC project, but the reason I know about their archives in the first place is because I have a (probably unattainable) goal of building a model Apollo Guidance Computer. I wouldn't model the computing part of the computer itself (hand-made core memory doesn't sound fun to replicate), I'd probably use an atmega128 or something similar (I'd be more of a model DSKY with a simulated AGC). But anyways, I have a particular interest in those early guidance computers because it's just so amazing that they could do so much with so little. Even with the assistance of a human pilot, it's still amazing what those little computers could do.
+Well, there's a wealth of information about the computers thanks to the Virtual AGC project, but the reason I know about their archives in the first place is because I have a (probably unattainable) goal of building a model Apollo Guidance Computer. I wouldn't model the computing part of the computer itself (hand-made core memory doesn't sound fun to replicate), I'd probably use an atmega128 or something similar (It'd be more of a model DSKY with a simulated AGC). But anyways, I have a particular interest in those early guidance computers because it's just so amazing that they could do so much with so little, even if they did have the assistance of a human pilot.
 
 
 ### can i help?
