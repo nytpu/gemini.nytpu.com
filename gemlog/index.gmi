@@ -13,6 +13,7 @@
 
 ## 2020
 
+=> gemini://nytpu.com/gemlog/2020-11-11.gmi 2020-11-11 — zoom has officially graduated to breaking my devices
 => gemini://nytpu.com/gemlog/2020-11-08.gmi 2020-11-08 — [ANN] Project Gemini Gemini Archive
 
 => gemini://nytpu.com/gemlog/2020-10-31.gmi 2020-10-31 — spooky times movie recommendations

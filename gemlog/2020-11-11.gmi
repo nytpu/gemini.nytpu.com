@@ -1,0 +1,24 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# zoom has officially graduated to breaking my devices
+### november 11, 2020
+
+I have to use zoom for school, which sucksᵃ. I'm counting my lucky stars that I don't have to use exam proctoring softwareᵇ, but using zoom still sucks all around. The company and app are shitty (see [a]), but it seems zoom has graduated to actually breaking my computer when I use it!
+
+It doesn't permanently break it, but the instant I try to join a zoom call, wireless networking breaks irrepairably until a restart. Even after I close zoom, it stays broken. I can't figure out why, but I upgraded the zoom app yesterday and all of a sudden this started happening, so it's definitely a bug in zoom. I don't see any errors in journalctl (although I'm sure even if there was errors systemdᶜ wouldn't bother capturing them). I restart and it works fine, so I'm assuming zoom tries to muck with some network settings that breaks NetworkManager or something. They do that with the system sound (changing the full system volume, because clearly the only thing I listen to is zoom), so I wouldn't be surprised if in the new update they decided that I really need their own settings in my wpa_supplicant instead of my own. I've restarted all services on my system related to networking (I use a local privoxy, stubby, and dnsmasq cache so I thought they might be messing with those), but no, I can't find anything. I have the notorious broadcom wireless card, and since that driver has issues I figured that broke, but nope, not from what I'm seeing. Wired networkingᶠ works fine too, just wireless breaks for some reason.
+
+This was a short post, but I always need an opportunity to get angry at zoom. If you've found some solution that I'm not smart enough to find (which is likely because I'm no good at debugging my system) please contact me.
+
+=> /gemlog/2020-08-26.gmi [a]: gemlog post for 2020-08-26: i despise zoom
+=> https://news.trust.org/item/20201110125959-i5kmg [b]: online surveillance "proctoring" software invades students' privacy
+[c]: this is the first time in a *very* long time i've had an issue on my system that doesn't directly involve systemd, which is actually refreshing in a way.ᵈ
+[d]: that's right, nested footnotes! house of leaves can eat my shit.ᵉ
+[e]: anyways, i'm still meaning to move to artix, but i have incessant stuff to do so i haven't found an opportunity to stop everything and install it. my current installation is really weird so i'd have to do an actual full repartition which is a big roadblock, whereas i could've been smart and set up a separate /home partition that'd let me easily distro-hop.
+[f]: my current daily-driver is a laptop, and my house doesn't have ethernet or anything run anywhere, so using wired all the time is not possible right now. i can't sit right next to my router all day nor can i run cables all over, wireless is my only option right now. 
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/FILENAME.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?FILENAME.gmi view likes and comments!

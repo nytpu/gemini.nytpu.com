@@ -4,7 +4,7 @@
   <subtitle>yatg</subtitle>
   <link rel='self' href='gemini://nytpu.com/gemlog/atom.xml'/>
   <link rel='alternate' href='gemini://nytpu.com/gemlog/index.gmi'/>
-  <updated>2020-11-08T09:17:25-07:00</updated>
+  <updated>2020-11-11T13:23:18-07:00</updated>
   <author>
     <name>nytpu</name>
     <email>alex@nytpu.com</email>
@@ -13,6 +13,14 @@
   <id>gemini://nytpu.com/gemlog/</id>
   <generator uri='https://tildegit.org/nytpu/gemlog.sh'>gemlog.sh</generator>
   <rights>© nytpu - CC BY-SA 4.0</rights>
+
+  <entry>
+    <title>zoom has officially graduated to breaking my devices</title>
+    <id>gemini://nytpu.com/gemlog/2020-11-11.gmi</id>
+    <link rel='alternate' href='gemini://nytpu.com/gemlog/2020-11-11.gmi'/>
+    <updated>2020-11-11T12:00:00-07:00</updated>
+    <summary>You need a gemini client to view this post. If you have one installed, here is the link to the post: gemini://nytpu.com/gemlog/2020-11-11.gmi</summary>
+  </entry>
 
   <entry>
     <title>[ANN] Project Gemini Gemini Archive</title>
