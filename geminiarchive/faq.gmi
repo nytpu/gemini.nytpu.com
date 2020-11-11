@@ -12,7 +12,7 @@ Guess why.
 In all seriousness though, Gemini is largely ignored, even by space/spacecraft enthusiasts. There's the entire Virtual AGC project dedicated to getting every single engineering spec, diagram, and document even tangentially related to Apollo, and Mercury is well known as it's the first manned U.S. space program, but Gemini is largely ignored despite the fact that most of the pre–moon-landing accomplishments were done by Gemini, not Mercury. There doesn't really seem to be a central repository dedicated to Project Gemini stuff, so who knows, maybe this will become the definitive central source.
 
 
-### why did you start this project
+### why did you start this project?
 
 I love space and the history of spaceflight so I knew more than usual about the whole U.S. line of programs, so the first thing that came to mind when I discovered the Gemini Protocol was that it'd be a funny a joke because haha gemini on gemini, but I was inspired to actually do it so here we are.
 
