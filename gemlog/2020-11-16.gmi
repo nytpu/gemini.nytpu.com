@@ -1,0 +1,75 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# miscellaneous mini posts
+### november 16, 2020
+
+I haven't posted in a while, and I have a lot of ideas brewing, so here's some short snippets in the vein of JFM's Commonplace Bookᵅ or Solderpunk's Pikkulogᵝ. Many of these are probably going to be expanded into “full” posts at some point, but I wanted to expound on them here, partly because I've been lacking the motivation to write long-form recently and partly because I want to gauge how much I have to say on each topic before starting to write a full post.
+
+=> gemini://carcosa.net/journal/commonplace-book.gmi [α]
+=> gemini://gemini.circumlunar.space/~solderpunk/pikkulog/ [β]
+
+
+## a few weeks with minidisc
+
+As an update to my previous post about minidiscᵃ. My impressions are largely the same as when I made that post, but even better now that I've gotten acquainted with it more.
+
+I tried out digital recording with TOSLink and the difference is noticeable, so that's what I've been using since I might as well make use of my computer's digital out. It's nice having synced recording so the track markers are actually at the right spot, which was a problem for a few albums that were crossfaded. Apparently there's :x
+
+I tried out LP2 mode and couldn't find a noticeable quality difference, so I'm using a mix of that and regular mode depending on the length of the album(s) I'm recording.
+
+I've come to appreciate being able to rearrange or record over tracks even more now that I've started playing around with “MixMDs” more. I've been making weekly or bi-weekly recordings of whatever I feel like listening to, usually full albums but also various individual tracks. For instance, last week I was in a synthy mood so I made an md loaded with all sorts of songs from a whole bunch of albums. If I decided that I wanted two tracks together, I can just do that! I don't need to go to a computer, get the playlist back up, wipe the disc, then rerecord it. I filled up the disc so I can't add any more songs, but then I decide to replace a song with another. Easy, I can just delete it and record my new one! It's really wonderful, providing the one feature that something like an mp3 player has that I missed.
+
+=> /gemlog/2020-10-29.gmi [a]: 2020-10-29 — hello minidisc :)
+
+
+## installing linux again, a.k.a. i'm finally free from systemd's tenacious tendrils
+
+I was finally motivated to uninstall Arch and install something else last Thursday, and actually did it completely painlessly on Friday. Systemd has been plaguing me for *years*, but the funny thing is that I was actually motivated to do it after my zoom rantᵇ instead of anything systemd had actually done to me (systemd was pretty docile lately, but I know it would've struck again soon). I was debating between Alpine Linuxᶜ or Artix Linuxᵈ, but decided on Artix because I really do just want Arch, but without systemd. Even though I'm no longer being personally affected by it's shittynessᵉ, you should still be prepared for an incoming rant about systemd.
+
+=> /gemlog/2020-11-11.gmi [b]: 2020-11-11 — zoom has officially graduated to breaking my devices
+=> https://alpinelinux.org/ [c]: alpine linux is a security-oriented, lightweight linux distribution based on musl libc and busybox.
+=> https://artixlinux.org/ [d]: artix linux is a rolling-release distribution, based on arch linux. it uses openrc, runit or s6 as init because pid1 must be simple, secure and stable.
+[e]: well, at least not in my daily life. i still have to deal with it sometimes on servers or on other people's computers :(
+
+
+## keeping good backups
+
+I (try to) follow the 3-2-1 backup rule, although my offsite backup is a hard drive in a safety deposit box that maybe gets backups to it once every couple months. My on-site backups consist of a usb hard drive that I plug in and back up to and a “NAS” (definitely a real server and not a normal tower that I shoved 8 hard drives into) in a ZFS array, which I usually use SFTP or rsync to access. My old backup system was a script that made incremental backups with rsync, which I liked because it lets me browse the files however. The main reason I resisted using a “chunk-based”ᶠ because I worried about being able to access my files, but I discovered borg backup lets you mount backups as block devices, so I finally got around to migrating to backing up with borg backupᵍ as my primary backup solution. The space savings are great, although I'm keeping my old backups still because the main reason I do incremental backups in the first place is to keep a “revision history.” I'm keeping my offsite backup on rsync for now, just so I don't have to worry about accessing it wherever (as long as whatever I'm accessing it on supports luks).
+
+Note to self: get a real offsite backup thing that I can backup to regularly. I keep good offsite backups of all my important files, but it'd be nice to have a full system, or at least a full home directory backup offsite in a way that isn't a hard drive that I have to manually retrieve every time I make a backup.
+
+=> https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs#Chunk-based_increments [f]: arch wiki on chunk- vs file-based backup systems
+=> https://borgbackup.readthedocs.io/en/stable/ [g]: a deduplicating, encrypted incremental backup program
+
+
+## libre and/or federated and/or decentralized clones of exploitative proprietary software are bad
+
+Like the section heading says, I'm of the belief that you can't start from something that was designed from the outset to be addictive, exploitative, or otherwise evil and try to turn it into something that is good and respects its users. You can take something good and turn it badʰ, and you can make clones of the formerly good thing (see aetherⁱ). However, you just can't take something like twitter (which was designed from the outset to maximise “engagement”) and trying to make a “good” version of it (like mastodon), even if you aren't evil. You're still explicitly making design choices based off of the evil source, so you're still intentionally adopting predatory, addictive, and exploitative tacticsʲ into your app, the only difference is that you're not making ad revenue off of it.
+
+[h]: see: reddit's proprietization and steady decline
+=> https://getaether.net/ [i]: an actually good, truly decentralized reddit clone
+=> https://tilde.zone/web/statuses/105212548556713856 [j]: why would mastodon adopt something like this?ᵏ
+=> https://tilde.zone/web/statuses/105212600290996513 [k]: follow up (that inspired this)
+
+
+## strike the earth!
+
+I made the mistake of getting Dwarf Fortressˡ and Dwarf Therapistᵒ set up after installing artix, so I expect my productivity to greatly fall this week. Expect a post about something related. I'm interested in making my own tileset (it's literally code page 437, my favorite) so I may do that, but I'm at least probably going to write a narrative about one of my fortresses for fun, 'cause I don't do enough writing outside of my standard gemlog style and school papers.
+
+=> http://bay12games.com/dwarves/ [l]: dwarf fortress defies explaination, just go checkout the website and the wikiᵐ for more info
+=> https://dwarffortresswiki.org/index.php/ [m]: dwarf fortress wiki
+=> https://github.com/Dwarf-Therapist/Dwarf-Therapist [o]: dwarf therapist is an extension application for the fantastic game dwarf fortress. df is a great game and it's fun to manage dwarves with keyboard menus until about the 50th one shows up.
+
+
+## remarkable tablet
+
+I just ordered a remarkable (version 1, because who can afford $500 for a tablet) because I like how open they are in terms of giving you ssh access and letting you do your own stuff. I'll probably write a post about it when I get it. I'm hoping to use it when planning out stuff instead of typing (and losing the ability to draw) while still being able to read the notes without having to carry my notebook around with me everywhere. I'm also planning to write my own version of (or extension to) goosepaper[p] to aggregate gemini stuff and my rss feeds so I can read them on a nice e-ink display on the go. Finally I'll have something to supplant my kindle, which I wouldn't even be using right now if I didn't have it jailbroken.
+
+=> https://github.com/j6k4m8/goosepaper [p]: generate and deliver a daily newspaper to you or your remarkable tablet
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-11-16.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-11-16.gmi view likes and comments!
