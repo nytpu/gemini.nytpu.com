@@ -3,7 +3,7 @@
 # miscellaneous mini posts
 ### november 16, 2020
 
-I haven't posted in a while, and I have a lot of ideas brewing, so here's some short snippets in the vein of JFM's Commonplace Bookᵅ or Solderpunk's Pikkulogᵝ. Many of these are probably going to be expanded into “full” posts at some point, but I wanted to expound on them here, partly because I've been lacking the motivation to write long-form recently and partly because I want to gauge how much I have to say on each topic before starting to write a full post.
+I haven't posted in a while, and I have a lot of ideas brewing, so here's some short snippets in the vein of JFM's Commonplace Bookᵅ or Solderpunk's Pikkulogᵝ. Many of these are probably going to be expanded into “full” posts at some point but I wanted to expound on them here first, partly because I've been lacking the motivation to write long-form recently and partly because I want to gauge how much I have to say on each topic before starting to write a full post.
 
 => gemini://carcosa.net/journal/commonplace-book.gmi [α]
 => gemini://gemini.circumlunar.space/~solderpunk/pikkulog/ [β]
@@ -13,7 +13,7 @@ I haven't posted in a while, and I have a lot of ideas brewing, so here's some s
 
 As an update to my previous post about minidiscᵃ. My impressions are largely the same as when I made that post, but even better now that I've gotten acquainted with it more.
 
-I tried out digital recording with TOSLink and the difference is noticeable, so that's what I've been using since I might as well make use of my computer's digital out. It's nice having synced recording so the track markers are actually at the right spot, which was a problem for a few albums that were crossfaded. Apparently there's :x
+I tried out digital recording with TOSLink and the difference is noticeable, so that's what I've been using since I might as well make use of my computer's digital out. It's nice having synced recording so the track markers are actually at the right spot, which was a problem for a few albums that were crossfaded. Apparently there's some sort of anti-copy mechanism for discs recorded via optical (but not analog), but I'm the only person I've ever known with minidisc anything so I think I'm okay on that front, *and* I still have all the original sources anyways.
 
 I tried out LP2 mode and couldn't find a noticeable quality difference, so I'm using a mix of that and regular mode depending on the length of the album(s) I'm recording.
 
