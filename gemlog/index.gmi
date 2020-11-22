@@ -1,4 +1,4 @@
-```yet another tech gemlog (yatg) by nytpu
+```yet another tech gemlog
   ,───────────────.
  (_\   _________   \                  __
    │  /__|___|__\  │     __  ______ _/ /_____ _
@@ -13,6 +13,7 @@
 
 ## 2020
 
+=> gemini://nytpu.com/gemlog/2020-11-22.gmi 2020-11-22 — i hate dealing with proprietary software
 => gemini://nytpu.com/gemlog/2020-11-16.gmi 2020-11-16 — miscellaneous mini posts
 => gemini://nytpu.com/gemlog/2020-11-11.gmi 2020-11-11 — zoom has officially graduated to breaking my devices
 => gemini://nytpu.com/gemlog/2020-11-08.gmi 2020-11-08 — [ANN] Project Gemini Gemini Archive

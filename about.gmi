@@ -4,7 +4,8 @@
 
 ## contact me / services i'm on
 
-=> mailto:alex@nytpu.com alex@nytpu.com
+=> mailto:~nytpu/public-inbox@lists.sr.ht public inbox & discussion: ~nytpu/public-inbox@lists.sr.ht
+=> mailto:alex@nytpu.com private email: alex@nytpu.com
 => /pubkey.asc gpg key
   fingerprint: 43A5 890C EE85 EA1F 8C88 9492 ECCD C07B 337B 8F5B
 => https://getaether.net @nytpu on aether

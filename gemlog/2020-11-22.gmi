@@ -1,0 +1,59 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# i hate dealing with proprietary software
+### november 22, 2020
+
+The title is a little misleading as to the content of this post, as I'm only complaining about a specific type of software here (the title is still true in general though). This post started because I just want to play around with an FPGA but all these shitty fucking companies just can't make anything easy, can they? It's especially the worst when it's an industry that has two or three companies that have a 100% market share, so they just do whatever they want. Then, when it's a huge industry (multiple fortune 50 companies), the U.S. Government can't fucking help themselves either and start making things even worse than they are!
+
+Despite all the shortcomings, you literally can't complain about libre software, or even just open source software, when your point of comparison is this shit. Just fuck every company that makes more than $100,000 a year, jesus fucking christ. How fucking hard is it to fucking make one single fucking thing even just partially decent for the end user??????
+
+
+Phew! Okay, now that I got that out of my system, I'll give a little context. I (unfortunately) have to deal with the aforementioned crappy industries' software a lot and surprise surprise, not only are they just proprietary bullshit, they're poorly written, impossible-to-use (or even install), always-online, you need an account for a free license proprietary bullshitᵃ.
+
+[a]: thinking about it, all those added adjectives are a little redundant when used in front of “proprietary software”, aren't they?
+
+
+## solidworks
+
+The story of dealing with this type of software starts with CNG 255 and CNG 262 that I took in concurrent enrollment in high school. I had to use Solidworks for it (I have to use it again this year too :(ᵇ), and Solidworks is *defintely* within this class of software. There's like, two engineering CAD software packages (not including architectural stuff, which is different), Solidworks and AutoCAD. I've never used autocad, but I assume it's the same as solidworks. The most annoying thing I discovered when first using solidworks is that they can't be bothered to even pretend to have cross-platform support; and the installation process is seemingly designed to be as annoying as possible, although not all of it is dassault's fault. To even download the installer you need an account (that asks for unnecessary information), but that's mandated by the U.S. Government because of some export regulations (apparently downloading software from a French company outside of the U.S. counts as “exporting” software from the U.S., which is so fucking stupid). They have this absurd warning: [c], which is almost as stupid as having to say “I am not a fugitive from justice” on the ATF form when buying a gun. It seems stupid, because you can just lie, but I guess it's so they can slap perjury on top of the other charges if you lieᵈ?
+
+So yeah, you have to make an account to download it, then you have to sign into your account again in the actual installer, because the download was just the “web installer” (which is apparently the new thing that's all the rage) and now the actual download can start. What you would do if you wanted to install it on a computer with no internet connection I don't know, although it wouldn't run anyways because it has always-online licensing. Then Solidworks proceeds to crash multiple times a hour, and not just crashing the program but the whole OS. I still don't know if I should blame windows for crashing so easily or blame solidworks for crashing so often.
+
+=> https://xkcd.com/541/ [b]: smileys look weird in parenthetical statements so i put a footnote here
+=> files/solidworks.webp [c]: (36.1kib) they don't have an “i am all of the above” checkbox, so i'm okay.
+[d]: you'd think the perjury charge wouldn't be too important if you're being tried for designing and manufacturing a nuclear, biological, or chemical weapon of mass destruction, or if you are on the u.s. treasury's list of specially designated terroristsᵉ, but i guess they can never have enough charges, can they?
+=> https://www.treasury.gov/ofac/downloads/sdnlist.txt [e]: btw the u.s. list of specially designated individuals is almost 9 *megabytes* of plaintext. props for hard wrapping it properly though.
+
+
+## please xilinx, i just want to play with an fpga
+
+For some more context, the FPGA industry is the same sort of industry as CAD, there's 3 (arguably just 2) major companies: Alteraᶠ and Xilinxᵍ are the big ones, and Lattice Semiconductor (they focus on small, low-power FPGAs and CPLDs).
+
+This whole thing started because I want to mess around with an FPGA, so I started looking for prebuilt dev/prototyping boards for me to play with. On principle I dismissed intel+altera out of hand, so I looked for Xilinx or Lattice boards. It seems like the Xilinx Artix 7 and the Lattice iCE40-HX8K are the two most popular for consumer FPGA boards. I initially decided on a board with the Artix 7, because it had 33,280 LUTs compared to the iCE40's 7,680. Eight thousand LUTs is respectable, and I could do a lot with it, but why not go with the 30k one, because I know I'd try to do something big and hit the limit. I wanted to try to get a dev environment set up before I actually purchased anything, which is a good thing too because otherwise I'd be stuck with a board that I can't even use. Xilinx's bitstream format (similar to bytecode for CPUs) is proprietary, so the only way to compile (“synthesize”) hdl to bytecode is with their propritary Vivado software. I was already irritated just reading about it, because I want to program in my normal environment and use actual version control repos instead of their shitty discount visual studio projects, and I certainly didn't want to use some half-assed IDE over my beautiful command-line dev environment. I was worried they'd cut necessary features for the free version, but looking at their product page it looks like the free version is full featured and the only difference is that the paid version is required for commercial programming, which makes sense, it's like the adobe model where if hobbyists get used to their software then they'll use it later on in a professional environment.
+
+So, I decided to at least give vivado a try, and surprise surprise, the government says you need an account to download itʰ. I was *forced* to give my actual real contact info, so naturally I did so: [i]. They also don't support pluses or periods in emails, so I don't even want to know what their backend is like. So, I finally got it downloaded, I run the installer and get: [j]. I love one-pixel installers, you really need to save that screen real estate! They have a full offline download instead of the “web installer,” but it's 35 gigabytes so I don't want to spend the time downloading it just to find out it doesn't work either. Also, we have to talk about how a thing for like two languages (VHDL and Verilog) and a small number of models is over 238 times larger than a bloated, full compiler toolchain that supports many languagesᵏ and many architectures. I've just given up on Xilinx at this point, I'm going with the ICOBoard using the Lattice iCE40-HX8K. There's the icestormˡ toolchain which is fully open source, and actually lets me make projects how I want instead of how the IDE wants. Even if that doesn't work, Lattice's “iCEcube2” is only ~.5gb, which is a lot more reasonable (although there's still the government-mandated hoops to actually get it downloaded).
+
+[f]: what you guys are referring to as altera, is in fact, intel/altera, or as i've recently taken to calling it, intel plus altera.
+[g]: xilinx was bought by amd last month (october 2020), so it looks like amd and intel are branching out to ensure that they not only hold a duopoly on cpus, but on semiconductors in general.
+=> files/justno.webp [h]: (33.5kib) i love how the u.s. government systems can't handle stuff like accents, probably still using ASCII. Also, apparently even if you're a hobbyist they still expect you to have a company?
+=> files/my-identity-revealed.webp [i]: (104.3kib) that's it, i just gave up all my anonymity because vivado is just so important to me.
+=> files/thanks-xilinx.mp4 [j]: (2.6mib) thanks, just thanks
+=> files/gcc-size.webp [k]: (12.4kib) and 35 gigabytes is the *compressed* size!
+=> http://www.clifford.at/icestorm/ [l]: the only open-source fpga toolchain i've found that is actually functional.
+
+
+## summary
+
+In case you didn't already know this, all commercial and all proprietary software is objectively horrible and inferior in every way. Even if the libre stuff is inferior in terms of listed features, it's always superior in every way. Getting icestorm compiled from scratch was rather painful, but it was a cakewalk compared to trying to get the proprietary shit working. If I could actually get vivado working, I'd contribute to SymbiFlow's project X-Rayᵐ so we can get stuff icestorm for other platforms
+
+In conclusion: Libre software for life, and fuck the semiconductor industry (for both environmental and evil oligopoly reasons).
+
+=> https://github.com/SymbiFlow/prjxray [m]: project x-ray — documenting the xilinx 7-series bitstream format.
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> mailto:~nytpu/public-inbox@lists.sr.ht discussion: ~nytpu/public-inbox@lists.sr.ht
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-11-22.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-11-22.gmi likes and comments
