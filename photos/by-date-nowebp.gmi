@@ -24,13 +24,13 @@ i was planning on posting these pictures on the web, but instead i decided to pu
 
 ## 2020
 
-=> 20201123_Red-Tailed_1_small.png               [1.5mib] my old red-tailed friend in a tree
-=> 20201123_Red-Tailed_2_small.png               [1.0mib] preparing for takeoff
-=> 20201123_Red-Tailed_3_small.png               [1.2mib] flaps goin'
+=> nonwebp/20201123_Red-Tailed_1_small.png       [1.5mib] my old red-tailed friend in a tree
+=> nonwebp/20201123_Red-Tailed_2_small.png       [1.0mib] preparing for takeoff
+=> nonwebp/20201123_Red-Tailed_3_small.png       [1.2mib] flaps goin'
 
-=> 20201016_BaldEagle-HeberUtah_1_small.png      [2.6mib] bald eagle by heber, utah
-=> 20201016_BaldEagle-HeberUtah_2_small.png      [1.3mib] soaring
-=> 20201016_BaldEagle-HeberUtah_3_small.png      [1.0mib] still going
+=> nonwebp/20201016_BaldEagle-HeberUtah_1_small.png [2.6mib] bald eagle by heber, utah
+=> nonwebp/20201016_BaldEagle-HeberUtah_2_small.png [1.3mib] soaring
+=> nonwebp/20201016_BaldEagle-HeberUtah_3_small.png [1.0mib] still going
 
 => nonwebp/20200904_Coopers_2_small.png          [3.6mib] a cooper's hawk friend i made in my backyard
 => nonwebp/20200904_Coopers_3_small.png          [2.6mib] the same cooper's hawk from a different angle
