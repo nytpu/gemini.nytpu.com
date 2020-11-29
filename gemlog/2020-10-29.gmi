@@ -35,9 +35,9 @@ I'm very pleased with this little thing, it's definitely going to be my primary 
 
 I love the size of minidiscs and their player, they're perfect. Even if I wanted to use CDs, my CD walkman (which I found in perfect working order in a dumpster) is so bulky that I'd have to have a backpack or some other bag if I ever wanted to use it. Even my tape walkman is too bulky to fit in a pocket, but the minidisc recorder is so small that it fits pretty much anywhere. It is a little fat, but no thicker than the cassette walkman and I'd much rather have it be thick like that than have it be thin and huge (looking at you, tablet-sized cell phones). See the size comparison of the players: [i]. The physical media is even smaller, see [j] for a comparison between various formats. Sony marketing compared them to 3.5in floppy disks a lot, but that must be more because of the sliding door than the size because minidiscs are a lot smallerᵏ. 
 
-=> /gemlog/files/player-size-comparison.webp     [i]: (2.0mib) a comparison between cd player (huge) vs cassette walkman (big) vs minidisc recorder (perfect size). they're all on the sony walkman line which actually isn't deliberate, i'm not a huge fan of sony.
-=> /gemlog/files/minidisc-size-comparison.webp   [j]: (2.4mib) media size comparison between a tape, minidisc, and cd, with a 12 inch/30 centimeter ruler for scale.
-=> /gemlog/files/minidisc-floppy-comparison.webp [k]: (2.4mib) minidisc vs 3.5in floppy disk. the floppy has a side length ~3.5 inches, but the minidisc is ~3.5 inches diagonally so its side length is more like 2.5 inches.
+=> /gemlog/files/player-size-comparison.jpg     [i]: (4.6mib) a comparison between cd player (huge) vs cassette walkman (big) vs minidisc recorder (perfect size). they're all on the sony walkman line which actually isn't deliberate, i'm not a huge fan of sony.
+=> /gemlog/files/minidisc-size-comparison.jpg   [j]: (4.0mib) media size comparison between a tape, minidisc, and cd, with a 12 inch/30 centimeter ruler for scale.
+=> /gemlog/files/minidisc-floppy-comparison.jpg [k]: (5.0mib) minidisc vs 3.5in floppy disk. the floppy has a side length ~3.5 inches, but the minidisc is ~3.5 inches diagonally so its side length is more like 2.5 inches.
 
 
 ### audio quality
@@ -50,7 +50,7 @@ Despite being lossy, the ATRAC compression is good enough that I don't notice an
 I like that you can label songs and the disc, as even commercially produced CDs generally ignored CD-Textⁱ and most burners don't write it even if your player supports reading it. On minidisc it's a little tedious to label though, the typing system is about as quick as it can be with the buttons available, but it's definitely not the most convenient. I painstakingly labelled all the tracks on the discs that I'm permanently keeping with certain albums, but with all the discs that I'm erasing and rerecording regularly I'd definitely not bother. Especially after labelling Simon & Garfunkel's Parsley, Sage, Rosemary And Thymeʲ I don't feel the urgency I'd usually feel to have everything nicely labelled.
 
 => https://en.wikipedia.org/wiki/CD-Text  [i]: cd-text is an extension of the compact disc specifications that allows for storage of additional information (e.g. album name, song name, and artist name) on an audio cd
-=> /gemlog/files/simon-and-garfunkel.webp [j]: (31.8kib) all the titles in this album is so fucking long: song titles, album title, artist, everything.
+=> /gemlog/files/simon-and-garfunkel.png [j]: (105.3kib) all the titles in this album is so fucking long: song titles, album title, artist, everything.
 
 
 ### battery life
@@ -69,7 +69,7 @@ Have I mentioned that thisᵏ little portable thing is a recorder as well as a p
 
 Also, apparently even thought the discs are magnetic they aren't affected by normal strength magnets because changing the polarization requires using a heating laser, so the discs are inert when being played or when in storage. I'm always scared of this because I usually have a HDD stored in my backpack for supplemental storage, and I have to be extremely careful if I'm packing floppy discs or other drives, but I don't have to worry about it with minidiscs (although I'm still going to be careful).
 
-=> /gemlog/files/minidisc.webp [k]: (1.3mib) it's *adorable*
+=> /gemlog/files/minidisc.jpg [k]: (2.5mib) it's *adorable*
 
 
 ## recommendation

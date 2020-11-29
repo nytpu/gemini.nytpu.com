@@ -16,8 +16,8 @@ Fourth reply in a row? Why do I do this, I literally have a post finished and I 
 
 This is what just happened to me. Most of my images that I currently have converted to webp were png (which I compressed losslessly), but a few were jpg and I figured I might as well just compress them lossily, and they looked good at a glance. I just looked closer at the lossy ones, and they are… not good, stuff is pretty distorted (even at quality 90!). It's not like JPG with it's characteristic fuzzy edges and blocky artifacts, but it's definitely there and noticeable at most zoom levels. I guess that's why the lossy algorithm is intended for thumbnails and the like where it's already reduced quality. I actually think I like the webp ones better because the jpg artifacts are way more annoying and noticeable, and the webp smooths those out and its own artifacts are a whole lot less noticable (see [a] and [b]). I'm debating whether or not to restore those images to their full jpg “glory,” but pursuing lossless compression is still something I'm interested in since I don't have to worry about the end result image quality at all.
 
-=> /gemlog/files/sample-webp.webp [a]: (21.6kib) sample region from /gemlog/files/ae1.webp (originally converted from jpg)
-=> /gemlog/files/sample-jpg.webp  [b]: (21.3kib) same exact region from the *original* jpg
+=> /gemlog/files/sample-webp.png [a]: (34.7kib) sample region from /gemlog/files/ae1.webp (originally converted from jpg)
+=> /gemlog/files/sample-jpg.png  [b]: (31.5kib) same exact region from the *original* jpg
 
 
 ## lossless webp

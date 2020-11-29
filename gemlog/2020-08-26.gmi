@@ -18,7 +18,7 @@ the privacy implications of even having it installed is worrying too, and with t
 
 i don't really have anything else original to say, but i felt the need to rant briefly about zoom, primarily because they are slowly killing keybase which was one my my favorite things.
 
-=> /gemlog/files/keybase-graph.webp [a]: (5.1kib) /gemlog/files/keybase-graph.webp
+=> /gemlog/files/keybase-graph.png [a]: (13.7kib) /gemlog/files/keybase-graph.png
 => https://keybase.io/blog/keybase-joins-zoom [b]: https://keybase.io/blog/keybase-joins-zoom
 => https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/ [c]: https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/
 

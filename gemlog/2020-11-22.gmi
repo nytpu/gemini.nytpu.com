@@ -20,7 +20,7 @@ The story of dealing with this type of software starts with CNG 255 and CNG 262 
 So yeah, you have to make an account to download it, then you have to sign into your account again in the actual installer, because the download was just the “web installer” (which is apparently the new thing that's all the rage) and now the actual download can start. What you would do if you wanted to install it on a computer with no internet connection I don't know, although it wouldn't run anyways because it has always-online licensing. Then Solidworks proceeds to crash multiple times a hour, and not just crashing the program but the whole OS. I still don't know if I should blame windows for crashing so easily or blame solidworks for crashing so often.
 
 => https://xkcd.com/541/ [b]: smileys look weird in parenthetical statements so i put a footnote here
-=> files/solidworks.webp [c]: (36.1kib) they don't have an “i am all of the above” checkbox, so i'm okay.
+=> files/solidworks.png  [c]: (68.0kib) they don't have an “i am all of the above” checkbox, so i'm okay.
 [d]: you'd think the perjury charge wouldn't be too important if you're being tried for designing and manufacturing a nuclear, biological, or chemical weapon of mass destruction, or if you are on the u.s. treasury's list of specially designated terroristsᵉ, but i guess they can never have enough charges, can they?
 => https://www.treasury.gov/ofac/downloads/sdnlist.txt [e]: btw the u.s. list of specially designated individuals is almost 9 *megabytes* of plaintext. props for hard wrapping it properly though.
 
@@ -35,10 +35,10 @@ So, I decided to at least give vivado a try, and surprise surprise, the governme
 
 [f]: what you guys are referring to as altera, is in fact, intel/altera, or as i've recently taken to calling it, intel plus altera.
 [g]: xilinx was bought by amd last month (october 2020), so it looks like amd and intel are branching out to ensure that they not only hold a duopoly on cpus, but on semiconductors in general.
-=> files/justno.webp [h]: (33.5kib) i love how the u.s. government systems can't handle stuff like accents, probably still using ASCII. Also, apparently even if you're a hobbyist they still expect you to have a company?
-=> files/my-identity-revealed.webp [i]: (104.3kib) that's it, i just gave up all my anonymity because vivado is just so important to me.
+=> files/justno.png [h]: (59.4kib) i love how the u.s. government systems can't handle stuff like accents, probably still using ASCII. Also, apparently even if you're a hobbyist they still expect you to have a company?
+=> files/my-identity-revealed.png [i]: (182.2kib) that's it, i just gave up all my anonymity because vivado is just so important to me.
 => files/thanks-xilinx.mp4 [j]: (2.6mib) thanks, just thanks
-=> files/gcc-size.webp [k]: (12.4kib) and 35 gigabytes is the *compressed* size!
+=> files/gcc-size.png [k]: (14.0kib) and 35 gigabytes is the *compressed* size!
 => http://www.clifford.at/icestorm/ [l]: the only open-source fpga toolchain i've found that is actually functional.
 
 

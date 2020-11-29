@@ -10,7 +10,7 @@ I don't know what I'm doing. This is literally my 3rd reply in a row on this gem
 Anyways, I looked at webp, and I wasn't too thrilled with the lossless encoding (`magick -quality 100 -define webp:method=6 -define webp:lossless=true`) compared to using `optipng -o7` (<5% decrease on average), but lossy webp is really interesting. I really hate lossy everything, and usually avoid it like the plague, but I got **86% reduction** on average, using all the photos in my pictures directory[a] as samples. I punch those numbers into my calculator, and it makes a happy face. No, literally it does: [b]. I switched all the already lossy images for my gemlog over to 85% lossy webp, and the lossless gemlog photos over to lossless webp, and I'm not about to convert everything to lossy just yet, but it's an interesting format bar google. (I don't particularly like supporting all the non-standardized standards google is forcing on the web, but webp seems to be “one of the good ones” because having it be actually good benefits google far more than it benefits everyone else).
 
 => /photos/ [a]: i have to plug my pictures now, so go check them out
-=> /gemlog/files/happyface.webp [b]: (624.9kib) I Punch those numbers into my calculator, it makes a happy face
+=> /gemlog/files/happyface.jpg [b]: (3.2mib) I Punch those numbers into my calculator, it makes a happy face
 
 
 ⁂
