@@ -8,11 +8,12 @@
 => mailto:alex@nytpu.com private email: alex@nytpu.com
 => /pubkey.asc gpg key
   fingerprint: 43A5 890C EE85 EA1F 8C88 9492 ECCD C07B 337B 8F5B
+=> https://git.sr.ht/~nytpu/ sourcehut
+=> https://tilde.zone/@nytpu @nytpu@tilde.zone on mastodon
+
 => https://getaether.net @nytpu on aether
   (aether://user/22262a061f1dca376d8640a1ada3364ac3307b370bfbf868c1ea4cf64d4e2c38)
-=> https://tilde.zone/@nytpu @nytpu@tilde.zone on mastodon
 => gemini://rawtext.club/~nytpu nytpu on rawtext.club
-=> https://tildegit.org/nytpu tildegit
 => https://letterboxd.com/nytpu/ letterboxd
 => https://bandcamp.com/nytpu bandcamp
 => gopher://nytpu.com/ check me out on gopher (i have nothing there though…)
