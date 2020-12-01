@@ -4,14 +4,14 @@
   <subtitle>yatg</subtitle>
   <link rel='self' href='gemini://nytpu.com/gemlog/atom.xml'/>
   <link rel='alternate' href='gemini://nytpu.com/gemlog/index.gmi'/>
-  <updated>2020-11-29T11:08:45-07:00</updated>
+  <updated>2020-12-01T11:02:19-07:00</updated>
   <author>
     <name>nytpu</name>
     <email>alex@nytpu.com</email>
     <uri>gemini://nytpu.com/</uri>
   </author>
   <id>gemini://nytpu.com/gemlog/</id>
-  <generator uri='https://tildegit.org/nytpu/gemlog.sh'>gemlog.sh</generator>
+  <generator uri='https://git.sr.ht/~nytpu/gemlog.sh'>gemlog.sh</generator>
   <rights>© nytpu - CC BY-SA 4.0</rights>
 
   <entry>
