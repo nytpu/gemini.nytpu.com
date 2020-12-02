@@ -1,0 +1,33 @@
+# deep-list.gmi
+
+Allows testing on how different fancy clients render multi-depth lists. If they indent first level *'s then it might look weird.
+
+Indented with one space:
+* level 1
+ * level 2
+  * level 3
+   * level 4
+ * level 2
+* level 1
+ * level 2
+* level 1
+
+Indented with two spaces:
+* level 1
+  * level 2
+   * level 3
+    * level 4
+  * level 2
+* level 1
+  * level 2
+* level 1
+
+Stars for each level:
+* level 1
+** level 2
+*** level 3
+**** level 4
+** level 2
+* level 1
+** level 2
+* level 1
