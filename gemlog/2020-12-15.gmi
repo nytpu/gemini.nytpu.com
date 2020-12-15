@@ -1,0 +1,62 @@
+=> gemini://nytpu.com/gemlog/ go back to index
+
+# the ti-99/4a
+### december 15, 2020
+
+Inspired by kevin's posts on the bbc microᵃ, I decided to write on my pet retro computer, the TI-99/4A! Unfortunately it's boxed up right now because I don't have a spot for it to be set up permanently, but I still toy around in the v9t9 emulatorᵇ, trying to get my measly little assembly programs to work with the editor/assembler.
+
+The 99 is a very peculiar—and amazing—machine. It was the first consumer-accessible 16-bit microcomputer at the time, utilizing the TMS9900, the first ever commercially available, single-chip 16-bit microprocessor. It even (sometimes) came with a speech synthesizer, utilizing the TMS5200 that was used in the Speak & Spell toys, which was the first ever single-chip speech synthesizer. It feels a lot like a platform for TI to show off all their miscellaneous innovations that they were making in that era. It could've been a revolutionary computer, except TI made some really shitty business decisions, the hardware is designed so bizarrely, and the expansion hardware was too expensive.
+
+=> gemini://gemini.susa.net/sitemap.gmi [a]: it's just the sitemap, i couldn't find a general posts page or anything, just search for “BBC micro” and you'll find a number of posts.
+=> http://eswartz.github.io/emul/ [b]: a pretty good emulator despite being in java
+
+
+### the hardware
+
+The TI-99/4A is very fancy and 16-bit, with the 16-bit TMS9900 processor clocked at 3MHz, replete with 16 bit data buses, 15-bit address buses, and all external memory multiplexed down to 8 bits! We'll get back to the 8-bit external memory, but first you may ask, a 15 bit address bus? That's right, since all memory is 8-bits, you can only request even addresses (the 1s bit acts like it's disconnected), then the memory gives the 8-bit even address and the 8-bit odd address on the 16-bit data bus. This means that all external memory takes two cycles per access, but is made even worse due to CPU-enforced wait-states totalling 4 cycles. That's right, every external memory access takes 4 CPU cycles. And there's only 256 *bytes* of internal “scratchpad” memory that's directly 16-bit, so stuff runs SLOW despite the 3MHz clock speed.
+
+Even the CPU itself is bizarre. It has precisely 3 internal registers: Program Counter (PC), Status Register (ST), and Workspace Pointer (WP). I guess because they couldn't squeeze registers in with all of the 16-bit-ness packed in, they instead replace internal registers with a 16-word external “workspace” (pointed to by the aptly-named workspace pointer), which acts as 16 general-purpose registers. This is both a great thing and a bad thing. It sucks because it means you have no quick-access registers, it's all external to the CPU. However, it's great because it means you can very easily “backup” registers by changing the WP to a different location, allowing very quick and easy context switching without worrying about destroying existing register content. It even allows you to register WP values alongside saved PC, so when you enter a subroutine or handle an interrupt it will automatically jump the PC *and* switch your workspace for you, and switch it back when you return from the routine. Sadly, you do lose two of your 16 registers for this, because there's no stack, so those instructions save the PC and WP to the last two registers in the new workspace (you can get up to some tricks by messing with those in a subroutine though :P).
+
+The biggest flaw in the 99 has to do with the memory. All memory, other than the 256 byte “scratchpad,” is addressed as 8-bit. This is bad enough, but the 99 actually has all built-in console memory mapped behind the Video Display Processor (VDP). In order to access with it, you first write a destination address to a memory-mapped register, then write your data, one byte at a time, to another register where it will automatically be copied sequentially to VDP memory. This process was originally intended to only be used for writing things like sprites and text to the screen (hence why the chip that manages it is the Video Display Processor), but RAM was expensive, so they realized that instead of adding more to the CPU address space, they could just make programmers use the leftover 15k of space in the VDP's memory instead, not realizing (or not caring) that this means that writing a single word will take at least 8 cycles in the *best case*. If the address is already set, you write in two bytes, with 4 wait states per byte, otherwise it takes 12 cycles as you also write the destination address). So you get 256 bytes of fast-ish memory, and all remaining memory is very, *very* slow.
+
+“So what's done with the 64k of space that is unused” you may ask. Well, the first 8k is the console ROM, which has lots of useful pre-programmed assembly subroutines as well as the BASIC interpreter, boot code, etc. The next 8k is reserved for the so-called “low-memory expansion,” which is memory built into the $1000 Peripheral Expansion Box (PEB). Keep in mind that the 99 was a $100 computer, no one wanted to shell out for the expansion box and its expansion cards no matter what it offered. The next 8k is reserved for the PEB peripheral cards' ROM, for stuff like floppy drive routines, dot-matrix printing utilities, and such. The next 8k is for the cartridges that can be plugged into the computer. The next 8k is where the 16-bit scratchpad ram is mapped, as well as memory-mapped registers for the VDP and sound chip. The remaining 24k is reserved for the ”high-memory expansion,” which was a 32k banked card that slots into the PEB. This means that any real memory is limited to people that can afford the $1000 PEB plus the ~$200 expansion cards (depending on the card). Some cartridges offered user-accessible RAM, such as one called “mini-memory,” which includes 14k of external memory and a (very basic) assembler! This was the only way for most people to do anything other than BASIC, as the only other way to write assembly was to use the Editor/Assembler which required the 32k expansion card and a floppy drive (ordinarily you have to save programs and files using a cassette recorder).
+
+
+## a commercial failure
+
+The 99 was pretty much a failure. Not as much of a failure as its predecessor the TI-99/4 (which cost $1,400 and was generally horrible to use for a variety of reasons), but still a big failure. Its primary reason for failing is the same reason the Game Gear and why better-speced stuff often fails: it's too expensive, packing in those specs results in badly-designed hardware, and there's just not enough software for it. Other than a few bootleg cartridges, pretty much all software made for the 99 was made by TI, which was how TI wanted it! They were very hostile towards anyone that tried to make cartridges or software for it from the start, and in the later hardware revisions (identifiable because they're beige instead of black and silver) they added a hardware lock-out for third party cartridges, which killed the already pitiful commercial scene.
+
+
+## the contemporary ti-99/4a scene
+
+It's quite sad really, there are probably more people making new software and hardware for the 99 now than there ever was in the '80s. People have made everything from a 32k memory expansion that slots into the sidecarᶜᵈ instead of a huge PEB card. Someone even made a raspberry pi connectionᵉ that allows for networking (can telnet into BBSes instead of having to dial in) as well as real hard disk emulation instead of the previous compact-flash based floppy emulators. I love it because it lets me experiment with programming in my normal editor, test on an emulator, and then load onto my real 99.
+
+=>http://www.mainbyte.com/ti99/hardware/sidecar.html [c]: aside from the expansion box, the 99 also had a side port that you could plug a variety of peripherals into. it uses the same bus as the peb so you can make miniaturized peb cards and plug them into the sidecar
+=> https://www.arcadeshopper.com/wp/store/#!/32k-sidecar-memory-expansion-KIT/p/81611057/category=28272181 [d]: a must-have, because pretty much all software worth talking about needs the extra moderate-speed memory.
+=> http://ti994a.cwfk.net/TIPI.html [e]: the amusingly named TIPI is my favorite piece of hardware for my 99.
+
+
+## ti's departure from the home computer market
+
+This isn't particularly relevant, but I find it interesting so I'm going to write about it. The TI Compact Computer 40 (CC-40) is the successor to the 99 (after they decided not to produce the TI-99/8). It is a portable(!) computer that is sort-of fun I guess? I have one, but it only has a one-line display and *NO WAY TO SAVE PROGRAMS*. That's right, the only way to save anything is to keep it resident in RAM. They were working on a high-speed data tape drive, but apparently it suffered from reliability issues and never entered production. The CC-40 was itself a failure (primarily due to the lack of external storage), and its successor (that featured a standard cassette port) never passed prototyping phase. This is the stage when TI decided to move into programmable graphing calculators, and they basically stopped marketing any of their consumer products as “computers” at all. The TI-74 Basicalc was marketed purely as a calculator to moderate success, and yet is generally identical to the complete failure CC-40 other than being more compact.
+
+Oh yeah, the only time I've been successful in modifying one of my TI computers without destroying it was when I upgraded the memory on my CC-40ᶠ. I was hoping it'd encourage me to use it more, but the big problem is, with a one line display, there's not a whole lot of fun stuff you can do with it. You can use it as a calculator, and BASIC is powerful enough to write math functions, but I already have programmable calculators that are actually small enough to carry around in a pocket, so I never really use it.
+
+=> https://atariage.com/forums/topic/271504-internal-memory-upgradethe-compact-computer-40-cc40/ [f]: The Compact Computer 40 Internal Memory Upgrade
+
+
+## conclusions
+
+I'd have liked to make this post more about what I've personally done with the 99, but sadly I've never really progressed beyond proof of concept assembly programs and simple BASIC programs. I have managed to destroy an entire console attempting to clear up the display outputᵍ and destroy a few cartridges attempting to make a “supercart”ʰ but that's about itⁱ. Maybe I should dig it out again so I can work on a game idea… we'll see.
+
+=> http://www.mainbyte.com/ti99/display/display.html [g]: clearer display (resisitor fix)
+=> http://www.mainbyte.com/ti99/supercart/supercart.html [h]: 4 bank 8k supercart
+[i]: does anyone else feel bad when they break old hardware? it's not like anything i broke was particularly rare, but it still makes me feel bad to think about how i took one of a limited number of consoles and cartridges from the world.
+
+
+⁂
+
+=> gemini://nytpu.com/gemlog/ go back to index
+=> gemini://gus.guru/backlinks?nytpu.com/gemlog/2020-12-15.gmi backlinks
+=> gemini://nytpu.com/cgi-bin/gemlikes/view?2020-12-15.gmi likes and comments
+=> mailto:~nytpu/public-inbox@lists.sr.ht discussion: ~nytpu/public-inbox@lists.sr.ht
