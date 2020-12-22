@@ -24,6 +24,10 @@ i was planning on posting these pictures on the web, but instead i decided to pu
 
 ## 2020
 
+=> nonwebp/20201221_great-conjunction.png             [1.1mib] my overexposed and chromatically aberrated attempt at capturing the great conjunction on 2020-12-21.
+=> nonwebp/20201221_great-conjunction_illustrated.png [1.1mib] an annotated version so you can tell what's what
+=> nonwebp/20201221_great-conjunction_alt.png         [947.2kib] an alternate lower-quality image
+
 => nonwebp/20201123_Red-Tailed_1_small.png       [1.5mib] my old red-tailed friend in a tree
 => nonwebp/20201123_Red-Tailed_2_small.png       [1.0mib] preparing for takeoff
 => nonwebp/20201123_Red-Tailed_3_small.png       [1.2mib] flaps goin'

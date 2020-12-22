@@ -84,6 +84,10 @@
 
 ## facing upwards
 
+=> 20201221_great-conjunction.webp             [851.5kib] my overexposed and chromatically aberrated attempt at capturing the great conjunction on 2020-12-21.
+=> 20201221_great-conjunction_illustrated.webp [856.3kib] an annotated version so you can tell what's what
+=> 20201221_great-conjunction_alt.webp         [716.3kib] an alternate lower-quality image
+
 => 20200418_plane-group-close_small.webp  [3.7mib] f-16s flying over my house
 => 20200418_plane-group-zoom_small.webp   [3.6mib] closeup
 
